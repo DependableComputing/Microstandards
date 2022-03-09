@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17788c66ef8"
+        color="#ffffff"
+        name="Intent">
+      The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+
+      <c
+          id="__gsn__17bc0f4de1b"
+          color="#ffffff"
+          name="{-M-}">
+        (-The software module, by sufficient identifier, that is to be formally reengineered-)
+      </c>
+
+      <c
+          id="__gsn__178eb14e648"
+          color="#ffffff"
+          name="{-S-}">
+        (-The set of systems, by sufficient identifiers, for which the software module is to be reengineered to have correct and complete desired behavior.-)
+      </c>
+
+      <c
+          id="__gsn__17788c7575b"
+          name="[intent]">
+        The {defined intended behavior} is correct and complete with respect to the {desired behavior}.
+      </c>
+
+      <c
+          id="__gsn__17788c796a2"
+          name="[defined intended behavior]">
+        The record of the desired behavior. These are the "actual requirements" as defined by John C. Knight in "Fundamentals of Dependable Engineering for Software Engineers".
+      </c>
+
+      <c
+          id="__gsn__17ddd8fbee5"
+          color="#ffffff"
+          name="{interface contract}">
+        A contract that completely defines the assumptions and guarantees of the behavior of the prime software module at an interfacing point of the module utilized by systems of interest. Each assumption or guarantee is written as a natural language statement in a form similar to a requirement.
+      </c>
+
+      <c
+          id="__gsn__17bc0ec1ce9"
+          color="#ffffff"
+          name="[attributes of Interest]">
+        Function and dependability.
+      </c>
+
+      <s
+          id="__gsn__17d15ef978b"
+          color="#ffffff"
+          name="Strategy">
+        By arguing that correct and complete contracts have been developed for the correctly identified target module in clearly defined systems of interest.
+
+        <j
+            id="__gsn__17ddd916d6a"
+            color="#ffffff"
+            name="Justification">
+          A set of assume/guarantee contracts covering the interface of a software module can completely define the desired behavior of that software module as it is utilized by systems. The required interface of the prime software module is a set of implicit design requirements imposed by the prime software module needing to maintain the current interface of the target software module's interactions with systems of interest, which then imposes requirements on how the module might actuate the surrounding system.
+        </j>
+
+        <j
+            id="__gsn__17f084d0038"
+            color="#ffffff"
+            name="Justification">
+          The interface contracts are developed in a process where correct output of previous steps allows for correct output of consequent steps.
+        </j>
+
+        <c
+            id="__gsn__17f06020533"
+            color="#ffffff"
+            name="Process">
+          First the actual behavior requirements of the current software module is captured, then corrections to design faults in surrounding systems and the module implementation are corrected, and finally, changes to design are made to arrive at sufficient interface contracts.
+        </c>
+
+        <public-goal
+            id="__gsn__17ddf141f43"
+            color="#ffffff"
+            name="Correct Input To Contract Development">
+          The definition of the target module and systems of interest that utilize the module are clear and correct.
+
+          <s
+              id="__gsn__17f087a6f95"
+              color="#ffffff"
+              name="Strategy">
+            Over element types to correctly identify
+
+            <g
+                id="__gsn__17ddf46b0c9"
+                color="#ffffff"
+                name="Correct Module Identification">
+              The definition of the target module is clear and correct,
+
+              <e
+                  id="__gsn__17ddf14a39a"
+                  color="#ffffff"
+                  name="Module Definition">
+                The definition of the module {-M-} and sign-off from the team as provided in evidence-fre.xlsx#moduleDefinition
+              </e>
+            </g>
+
+            <g
+                id="__gsn__17ddf46b49f"
+                color="#ffffff"
+                name="Correct System Set Identification">
+              The identification of the set of systems of interest is clear and correct.
+
+              <e
+                  id="__gsn__17ddf14a5ad"
+                  color="#ffffff"
+                  name="Systems Definition">
+                The definition of the systems set {-S-} of the specific systems of interest using the target module provided by the team and signed-off on by the tea in evidence-fre.xlsx#systemsDefinition
+              </e>
+
+              <e
+                  id="__gsn__17ddf478c0f"
+                  color="#ffffff"
+                  name="Completeness Sign-Off">
+                The team and stakeholders agree that the set of systems is complete.
+              </e>
+
+              <e
+                  id="__gsn__17ddf484893"
+                  color="#ffffff"
+                  name="Stakeholder Buy-In">
+                Stakeholders have been identified for each system and all agree (sign) that they are stakeholders for each so-indicated system.
+              </e>
+            </g>
+          </s>
+        </public-goal>
+
+        <g
+            id="__gsn__17f084f0177"
+            color="#ffffff"
+            name="Correct and Complete Contracts Developed">
+          Correct and complete interface contracts have been developed for the identified target model within systems of interest.
+
+          <s
+              id="__gsn__17f084f76a2"
+              color="#ffffff"
+              name="Strategy">
+            Through having correct input of intended behavior of the current software module (in contract form) that is updated through a successful review for intent improvements.
+
+            <g
+                id="__gsn__17789708cd4"
+                color="#ffffff"
+                name="Correct and Complete Intended Behavior Captured">
+              The intended behavior of the original software module {-M-} in system set {-S-} is correctly and completely inferred from it's actual source-code-level behavior.
+
+              <c
+                  id="__gsn__17bc0ea1604"
+                  color="#ffffff"
+                  name="Form of Current Implemented Behavior Capture">
+                The implemented behavior is captured as a set of complete and correct contracts on the original software module backed by a requirement hierarchy.
+              </c>
+
+              <s
+                  id="__gsn__17ddde4ce41"
+                  color="#ffffff"
+                  name="Successful Process Step Results">
+                Through determination of current requirements and then correction for detected design faults in the systems and module.
+
+                <a
+                    id="__gsn__17f0894be9a"
+                    color="#ffffff"
+                    name="Code Functional">
+                  The existing source code module is believed to be sufficiently functional that its reengineering from reverse-engineering of the existing system is considered acceptable.
+                </a>
+
+                <g
+                    id="__gsn__17d15e4c343"
+                    color="#ffffff"
+                    name="Correct and Complete Actual Source-Level Behavior">
+                  The actual source-level behavior of the {target module} is correctly and completely captured as a set of natural language, assume/guarantee contracts completely covering the interactions between the {target module} and systems of interest.
+
+                  <s
+                      id="__gsn__17bc108d51b"
+                      color="#ffffff"
+                      name="Successful Process">
+                    Through successful discovery activities followed by a reconciliation activity.
+
+                    <away-goal
+                        id="__gsn__17f087150fb"
+                        color="#ffffff"
+                        name="Correct Input To Contract Development">
+                      The definition of the target module and systems of interest that utilize the module are clear and correct.
+                    </away-goal>
+
+                    <g
+                        id="__gsn__17d15e6d128"
+                        color="#ffffff"
+                        name="Correct and Complete Interface Contracts from Informal Source Code Inferencing">
+                      A sufficiently correct and complete set of {interface contract}s for {attributes of interest} of {target module} {-M-} in {target system set} {-S-}, relative to actual behavior, has been documented and captured through informal analysis of source code.
+
+                      <m
+                          id="__gsn__177894635cf"
+                          color="#ffffff"
+                          name="Microstandard">
+                        Informal Source Code Inferencing
+                      </m>
+                    </g>
+
+                    <m
+                        id="__gsn__1782d622a6b"
+                        color="#cdcdcd"
+                        optional="true"
+                        name="Documentation Mining">
+                      Written documentation for {-M-} determines a correct and complete-as-possible set of intended and observed behavior.
+                    </m>
+
+                    <m
+                        id="__gsn__177894c40c5"
+                        color="#cdcdcd"
+                        optional="true"
+                        name="Algorithm Analysis">
+                      The module {-M-} refers to an algorithm from which are derived a correct and adequately complete set of performance requirements for software module {-M-} in system set {-S-}.
+                    </m>
+
+                    <g
+                        id="__gsn__179047b8467"
+                        color="#ffffff"
+                        name="Consistency Correction">
+                      Consensus is achieved in the implemented behavior models developed using various reverse-engineering approaches over the systems of interest.
+
+                      <e
+                          id="__gsn__179047e511b"
+                          color="#ffffff"
+                          name="Conflict Resolution Table">
+                        A table of detected conflicts in requirements from various reverse-engineering techniques and their resolution. evidence-fre.xlsx!Contract Conflict Resolution
+                      </e>
+
+                      <e
+                          id="__gsn__179047ed33a"
+                          color="#ffffff"
+                          name="Sign-Off">
+                        The reverse-engineering team agrees that all conflicts have been detected and resolved. evidence-fre.xlsx!Contract Conflict Resolution
+                      </e>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17d1607e7da"
+                    color="#ffffff"
+                    name="Sufficiently Corrected Errors in Contracts">
+                  The final defined intended behavior is sufficiently corrected for errors between defined intended behavior and actual behavior.
+
+                  <s
+                      id="__gsn__17de452011c"
+                      color="#ffffff"
+                      name="Strategy">
+                    By showing that classes of error have been sufficiently identified in difference between intent and actual behavior and that those errors identified have then been sufficiently corrected.
+
+                    <g
+                        id="__gsn__17de52da9bd"
+                        color="#ffffff"
+                        name="Complete Errors Identified to the Extent Practicable">
+                      Error detection is correct and complete to the extent practicable given knowledge of the informal intent of the systems communicated by stakeholders.
+
+                      <s
+                          id="__gsn__17de546d2af"
+                          color="#ffffff"
+                          name="Strategy">
+                        By arguing that ad hoc detection and categorical, enumerative consideration have been applied.
+
+                        <j
+                            id="__gsn__17de5475a98"
+                            color="#ffffff"
+                            name="Justification">
+                          Ad hoc detection in analysis and categorical enumerative consideration are the available techniques when no intent was a priori recorded for the target module.
+                        </j>
+
+                        <g
+                            id="__gsn__17de529d1f1"
+                            color="#ffffff"
+                            name="Adequate Direct Detection">
+                          Erroneous actual behavior in contract is identified through comparison with known intent.
+
+                          <s
+                              id="__gsn__17de52a9164"
+                              color="#ffffff"
+                              name="Strategy">
+                            By arguing that either rigorous comparison is performed against codified intent (e.g. available requirements documentation) and/or through ad hoc detection of error during analysis of the target module.
+
+                            <g
+                                id="__gsn__17de54f02cf"
+                                color="#ffffff"
+                                optional="true"
+                                name="Rigorous Comparison">
+                              A rigorous comparison of existing requirements against actual behavior codified in contracts was performed.
+
+                              <m
+                                  id="__gsn__17bc0f18c42"
+                                  color="#cdcdcd"
+                                  name="Microstandard: Interface Definition from Existing Requirements">
+                                An existing requirement set has been successfully analyzed to capture, to the extent possible, the intended behavior for the current software module {-M-} in system set {-S-} as a set of {interface contract}s.
+                              </m>
+
+                              <e
+                                  id="__gsn__17de52ab739"
+                                  color="#cdcdcd"
+                                  name="Contract Comparison">
+                                Comparison of intent-derived contracts and actual behavior contracts identifies all errors present in the actual behavior contracts.
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17de53f1113"
+                                color="#ffffff"
+                                name="Ad Hoc Comparison Detection">
+                              Ad hoc detection of errors during study of source code behavior was performed.
+
+                              <a
+                                  id="__gsn__17de54fd848"
+                                  color="#ffffff"
+                                  name="Informal Intent">
+                                Informal intent of the systems and module have been defined from interviews with stakeholders.
+                              </a>
+
+                              <e
+                                  id="__gsn__17de5463ae3"
+                                  color="#ffffff"
+                                  name="Analyses Detecting">
+                                A list of the analyses during which each error of each contract was found in analyses of the actual behavior of the software module. See evidence-fre.xlsx!Contract Error Correction#Interface Point Contract Errors#Analyses Detecting
+                              </e>
+                            </g>
+                          </s>
+                        </g>
+
+                        <g
+                            id="__gsn__17de5481fe1"
+                            color="#ffffff"
+                            name="Adequate Categorical, Enumerative Consideration">
+                          Categorical, enumerative consideration of potential contract errors has been adequately performed.
+
+                          <s
+                              id="__gsn__17f0880cd35"
+                              color="#ffffff"
+                              name="Strategy">
+                            By showing that a process was performed with best practicable correct effort.
+
+                            <g
+                                id="__gsn__17de4537c9e"
+                                color="#ffffff"
+                                name="Categorical Consideration">
+                              For each interface point contract, for each property of concern, consideration to erroneous actual behavior and underspecified actual behavior has been adequately applied.
+
+                              <e
+                                  id="__gsn__17de41e1486"
+                                  color="#ffffff"
+                                  name="Lead Sign-Off">
+                                The error evidence lists all IP contracts and has sign-off from the team lead that errors between actual and desired behavior in each contract has been considered for each property of concern (e.g. safety, performance, functionality, etc.). See evidence-fre.xlsx!Contract Error Correction#Interface Point Sign-Off.
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17de455a68e"
+                                color="#ffffff"
+                                name="Enumerated Errors">
+                              Under each category of properties of concern, an attempt has been made to enumerate errors between stated actual behavior and intended behavior.
+
+                              <e
+                                  id="__gsn__17dddd0f420"
+                                  color="#ffffff"
+                                  name="Identified Contract Errors Table">
+                                A table of identified contract errors in the software module. See evidence-fre.xlsx!Contract Error Correction#Interface Point Contract Errors
+                              </e>
+                            </g>
+                          </s>
+                        </g>
+                      </s>
+                    </g>
+
+                    <g
+                        id="__gsn__17de454574f"
+                        color="#ffffff"
+                        name="Correct and Complete Error Correction">
+                      Sufficient correction of identified stated behavior error has been applied to interface contracts.
+
+                      <c
+                          id="__gsn__17de458e88e"
+                          color="#ffffff"
+                          name="Types of Stated Actual Behavior Error">
+                        Erroneous behavior and underspecified behavior are considered as errors in actual behavior stated in contracts.
+                      </c>
+
+                      <s
+                          id="__gsn__17f092c0f77"
+                          color="#ffffff"
+                          name="Strategy">
+                        By correctness and completeness properties
+
+                        <g
+                            id="__gsn__17f092c3c7d"
+                            color="#ffffff"
+                            name="Complete">
+                          All identified errors are corrected.
+
+                          <e
+                              id="__gsn__17de389c279"
+                              color="#ffffff"
+                              name="Error Sign-Off">
+                            For each contract, for each property of concern, sign-off from stakeholders and relevant team members that identified errors are correct and exist. #Contract Error Correction# Error Team Sign-Off and Error Stakeholder Sign-Off
+                          </e>
+                        </g>
+
+                        <g
+                            id="__gsn__17f092c48b9"
+                            color="#ffffff"
+                            name="Correct">
+                          Identified errors are each corrected correctly.
+
+                          <e
+                              id="__gsn__17dddd1b8cc"
+                              color="#ffffff"
+                              name="Corrections">
+                            For each identified behavior error, changes to contracts that correct the erroneous behavior specification are written in the appropriate table. See evidence-fre.xlsx!Contract Error Correction#Error Correction
+                          </e>
+
+                          <e
+                              id="__gsn__17dddecb15b"
+                              color="#ffffff"
+                              name="Corrections Sign-Off">
+                            Sign-off from stakeholders that the error correction is the intended behavior for the software module for all systems of interest. See evidence-fre.xlsx!Contract Error Correction#$ Error Correction Sign-Off
+                          </e>
+                        </g>
+                      </s>
+                    </g>
+                  </s>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17d16214faa"
+                color="#ffffff"
+                name="New and Modified Desired Behavior Captured">
+              Differences between the intended behavior of the original software module and the desired behavior of the prime software module are accounted for in changes to the interface contracts.
+
+              <c
+                  id="__gsn__1782ceec0f2"
+                  color="#ffffff"
+                  name="Context">
+                The original software module can contain behavior that is not desired in the re-engineered version or should be modified. There can also be behavior that should be added to the new version of the software. This must be captured.
+              </c>
+
+              <s
+                  id="__gsn__17dddd8abdc"
+                  color="#ffffff"
+                  name="Strategy">
+                By arguing that stakeholders fully comprehend the desired intent captured at an appropriate level of abstraction and agree that it is not erroneous or incomplete.
+
+                <g
+                    id="__gsn__17dddd9564c"
+                    color="#ffffff"
+                    name="Acceptable Presentation">
+                  Team members agree that abstractions of the interface contracts in presentation for various stakeholder groups are sufficiently complete and correct for review by stakeholders.
+
+                  <e
+                      id="__gsn__17dddda43b9"
+                      color="#ffffff"
+                      name="Presentations">
+                    The presentations of interface contracts given to various stakeholder groups. See evidence-fre.xlsx!Coverage Updates#Team Sign-Off
+                  </e>
+
+                  <e
+                      id="__gsn__17dddda46e8"
+                      color="#ffffff"
+                      name="Team Sign-Off">
+                    Sign-off from team members that the presentations are sufficiently complete and correct. See evidence-fre.xlsx!Coverage Updates#Team Sign-Off
+                  </e>
+
+                  <e
+                      id="__gsn__17ddddb0412"
+                      color="#ffffff"
+                      name="Coverage Analysis">
+                    Table showing which presentations cover which interface point contracts. See evidence-fre.xlsx!Contract Updates#Coverage Analysis
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17d163ed7ed"
+                    color="#ffffff"
+                    name="Stakeholder Comprehension">
+                  Performers agree that stakeholders understand the defined intent captured in the interface contracts or otherwise accurately stated to stakeholders.
+
+                  <e
+                      id="__gsn__17d166835ae"
+                      color="#ffffff"
+                      name="Comprehension Quiz">
+                    A comprehension quiz for each presentation given.
+                  </e>
+
+                  <e
+                      id="__gsn__17d1668704c"
+                      color="#ffffff"
+                      name="Passed Comprehension Quiz">
+                    Taken by stakeholders for a given presentation. See evidence-fre.xlsx!Contract Updates#Quiz Passed
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__177896eacae"
+                    color="#ffffff"
+                    name="Change Consensus">
+                  Stakeholders and team members agree on changes to interface point contracts for the reengineered version of the target software.
+
+                  <e
+                      id="__gsn__17de4d36333"
+                      color="#ffffff"
+                      name="Team Sign-Off on Change">
+                    Team sign-off on changes requested by stakeholders and/or team members. See evidence-fre.xlsx!Contract Updates#Team Sign-Off on Change.
+                  </e>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+
+        <g
+            id="__gsn__17de5631ae1"
+            color="#ffffff"
+            name="Adequate Final Interface Point Contracts">
+          The final interface point contracts representing the defined intent for the next version of the target module are well-formed and adequate.
+
+          <e
+              id="__gsn__17de563e8e2"
+              color="#ffffff"
+              name="Reader Examination">
+            The reader can directly examine the final interface point contracts, found in "evidence-fre.xlsx!IP Contracts".
+          </e>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

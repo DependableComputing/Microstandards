@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17788c66ef8"
+        color="#ffffff"
+        name="Intent">
+      The defined intent of the prime software module {-M-} is correct and complete with respect to the desired behavior of the software module situated within system set {-S-}.
+
+      <s
+          id="__gsn__1778972f7b5"
+          color="#ffffff"
+          name="Strategy">
+        Through showing that the desired behavior of the prime software module has been correctly and completely captured in a quality requirement set.
+
+        <g
+            id="__gsn__1782cf21bc6"
+            color="#ffffff"
+            name="Desired Behavior Captured">
+          The defined intended behavior of prime software module {-M-} is captured in a correct and complete requirements for the desired behavior for the prime software module in system set {-S-}.
+
+          <m
+              id="__gsn__17bc0f18c42"
+              color="#cdcdcd"
+              optional="true"
+              name="Existing Requirement Set Analyzed Successfully">
+            An existing requirement set has been successfully analyzed to capture, to the extent possible, the intended behavior for the current software module {-M-} in system set {-S-}.
+          </m>
+
+          <g
+              id="__gsn__17789708cd4"
+              color="#ffffff"
+              name="Inferred Intended Behavior Captured">
+            The intended behavior of the original software module {-M-} in system set {-S-} is correctly and completely inferred from it's actual source-code-level behavior.
+
+            <s
+                id="__gsn__177896d3760"
+                color="#ffffff"
+                name="Strategy">
+              Through inference of desired behavior from sufficiently correct and complete capture of actual behavior.
+
+              <g
+                  id="__gsn__17d15e4c343"
+                  color="#ffffff"
+                  name="Correct and Sufficiently Complete, Actual Module Source-Level Behavior">
+                The actual source-level behavior of the {target module} is correctly and completely captured as a set of natural language, assume/guarantee contracts completely covering the interactions between the {target module and potentiall
+
+                <s
+                    id="__gsn__17bc108d51b"
+                    color="#ffffff"
+                    name="Strategy">
+                  Through various appropriate techniques depending on resources available to infer actual behavior of the target module's functions and their nonfunctional {attributes of interest}.
+
+                  <g
+                      id="__gsn__17d15e6d128"
+                      color="#ffffff"
+                      optional="true"
+                      name="Informal Source Code Inferencing">
+                    A sufficiently correct and complete set of inferred intended behavior for {attributes of interest} of {target module} {-M-} in {target system set} {-S-}, relative to actual behavior, has been documented and captured through informal analysis of source code.
+
+                    <m
+                        id="__gsn__177894635cf"
+                        color="#ffffff"
+                        name="Microstandard">
+                      Informal Source Code Inferencing
+                    </m>
+                  </g>
+
+                  <m
+                      id="__gsn__1782d622a6b"
+                      color="#cdcdcd"
+                      optional="true"
+                      name="Documentation Mining">
+                    Written documentation for {-M-} determines a correct and complete-as-possible set of intended and observed behavior.
+                  </m>
+
+                  <m
+                      id="__gsn__177894c40c5"
+                      color="#cdcdcd"
+                      optional="true"
+                      name="Algorithm Analysis">
+                    The module {-M-} refers to an algorithm from which are derived a correct and adequately complete set of performance requirements for software module {-M-} in system set {-S-}.
+                  </m>
+
+                  <g
+                      id="__gsn__179047b8467"
+                      color="#ffffff"
+                      name="Consistency Correction">
+                    Consensus is achieved in the implemented behavior models developed using various reverse-engineering approaches.
+
+                    <e
+                        id="__gsn__179047e511b"
+                        color="#ffffff"
+                        name="Conflict Resolution Table">
+                      A table of detected conflicts in requirements from various reverse-engineering techniques and their resolution.
+                    </e>
+
+                    <e
+                        id="__gsn__179047ed33a"
+                        color="#ffffff"
+                        name="Sign-Off">
+                      The reverse-engineering team agrees that all conflicts have been detected and resolved.
+                    </e>
+                  </g>
+                </s>
+              </g>
+
+              <g
+                  id="__gsn__17d1607e7da"
+                  color="#ffffff"
+                  name="Difference Between Actual and Desired Behavior Corrected">
+                The defined intended behavior corrects for errors in and/or requested changes to actual behavior.
+
+                <s
+                    id="__gsn__17d16359358"
+                    color="#ffffff"
+                    name="Strategy">
+                  By arguing that both stakeholders and analysts agree that the defined interface contracts for the {target module} are correct and complete with respect to the desired behavior of the target module in the context of systems of interest from the perspective of the other party.
+
+                  <g
+                      id="__gsn__17d16696067"
+                      color="#ffffff"
+                      name="All Identified Errors Corrected">
+
+                    <s
+                        id="__gsn__17d161f4739"
+                        color="#ffffff"
+                        name="By SignOff">
+                      by class of error or new desires
+
+                      <g
+                          id="__gsn__17d161f6f96"
+                          color="#ffffff"
+                          name="Underspecified Behaviors Corrected">
+                        Behavior that is underspecified against what has been discerned is corrected for through stakeholder interview.
+
+                        <e
+                            id="__gsn__17d16095310"
+                            color="#ffffff"
+                            name="Stakeholder Review and SignOff">
+                        </e>
+                      </g>
+
+                      <g
+                          id="__gsn__17d161f76c9"
+                          color="#ffffff"
+                          name="Erroneous Actual Behaviors Corrected">
+                        The defined intended behavior is corrected for errors captured from erroneous actual behavior of the {target module} in {systems of interest}.
+
+                        <e
+                            id="__gsn__17d1620fa71"
+                            color="#ffffff"
+                            name="Stakeholder Review and SignOff">
+                        </e>
+                      </g>
+
+                      <g
+                          id="__gsn__17d16214faa"
+                          color="#ffffff"
+                          optional="true"
+                          name="New and Modified Desired Behavior Captured">
+
+                        <c
+                            id="__gsn__1782ceec0f2"
+                            color="#ffffff"
+                            name="Context">
+                          The original software module can contain behavior that is not desired in the re-engineered version or should be modified. There can also be behavior that should be added to the new version of the software. This must be captured.
+                        </c>
+
+                        <e
+                            id="__gsn__1782cf114ae"
+                            color="#ffffff"
+                            name="Update Concordance">
+                          The sign-off of stakeholders that a version of the requirements captures modifications desired over the original software.
+                        </e>
+                      </g>
+                    </s>
+                  </g>
+
+                  <g
+                      id="__gsn__17d163ed008"
+                      color="#ffffff"
+                      name="Stakeholder Agreement">
+                    Stakeholers agree that the defined interface contracts for the target module capture the desired behavior of the system.
+
+                    <g
+                        id="__gsn__17d1666921e"
+                        color="#ffffff"
+                        name="No Erroneous Described Behavior">
+                      Stakeholders agree That There Are No Errors in defined behaviors.
+
+                      <e
+                          id="__gsn__17d166851b7"
+                          color="#ffffff"
+                          name="Stakeholder Signoff">
+                        default text
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17d16669428"
+                        color="#ffffff"
+                        name="Nothing Missing">
+                      Stakeholders Agree That There are no Errors of Omission -
+
+                      <e
+                          id="__gsn__17d16690ee8"
+                          color="#ffffff"
+                          name="Stakeholder Signoff">
+                        default text
+                      </e>
+                    </g>
+                  </g>
+
+                  <g
+                      id="__gsn__17d163ed7ed"
+                      color="#ffffff"
+                      name="Comprehension">
+                    Performers agree that stakeholders understand the defined intent captured in the interface contracts or otherwise accurately stated to stakeholders.
+
+                    <e
+                        id="__gsn__17d1668704c"
+                        color="#ffffff"
+                        optional="true"
+                        name="Passed Comprehension Quiz">
+                      Taken by stakeholders
+                    </e>
+
+                    <e
+                        id="__gsn__17d166835ae"
+                        color="#ffffff"
+                        name="Performer SignOff">
+                      default text
+                    </e>
+                  </g>
+                </s>
+              </g>
+            </s>
+          </g>
+        </g>
+
+        <g
+            id="__gsn__177896eacae"
+            color="#ffffff"
+            name="Clear Resulting Requirements Set">
+          The captured requirements are of sufficient coverage and quality.
+
+          <m
+              id="__gsn__1778c903010"
+              color="#cdcdcd"
+              name="Microstandard">
+            Quality Requirements
+          </m>
+
+          <g
+              id="__gsn__17789b94c80"
+              optional="true"
+              name="Certification/Approval">
+            Requirements are certified as complete by relevant certifiers
+
+            <e
+                id="__gsn__1782cf3a984"
+                color="#ffffff"
+                name="Certifiers Sign-Off">
+            </e>
+          </g>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

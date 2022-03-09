@@ -1,0 +1,2726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17f093e23c3"
+        color="#ffffff"
+        name="Satisfactory Reengineered Module {-M-}">
+      The {reengineered implementation} of {-M-} situated in system set {-S-} satisfies its functional, design, and {qualities of interest}.
+
+      <c
+          id="__gsn__17f093ea1b8"
+          color="#ffffff"
+          name="[-M-]">
+        {definition of the subject software module}
+      </c>
+
+      <c
+          id="__gsn__17f093ea1b9"
+          color="#ffffff"
+          name="[-S-]">
+        {definition of the subject system of which the subject software module is a component}
+      </c>
+
+      <c
+          id="__gsn__17f093ea1ba"
+          name="[reengineered implementation]">
+        A reimplementation of an existing system module intended to replace the previous module implementation.
+      </c>
+
+      <c
+          id="__gsn__17f093ea1bb"
+          color="#ffffff"
+          name="[qualities of interest]">
+        Non-functional qualities such as availability, reliability, security, maintainability, observability, etc.
+      </c>
+
+      <s
+          id="__gsn__17f093ea1bc"
+          color="#ffffff"
+          name="Strategy">
+        Through the overarching properties on the prime software module, M'. Where intent of the software Module M' is captured in {interface contract}s.
+
+        <j
+            id="__gsn__17f093ea1bd"
+            name="Justification">
+          The Overarching Properties are intended to define a sufficient set of properties for making approval decisions because if an implementation satisfies them, then it is believed that the implementation invariantly satisfies the desired behavior.
+        </j>
+
+        <c
+            id="__gsn__17f093ea1be"
+            color="#ffffff"
+            name="[original software module]">
+          The software module to be replaced by its reengineered (prime) form.
+        </c>
+
+        <c
+            id="__gsn__17f093ea1bf"
+            color="#ffffff"
+            name="[prime software module]">
+          The software module as designed and implemented as output of the reengineering process.
+        </c>
+
+        <c
+            id="__gsn__17f093ea1c0"
+            color="#ffffff"
+            name="{interface contract}">
+          A contract that completely defines the assumptions and guarantees of the behavior of the prime software module at an interfacing point of the module utilized by systems of interest. Each assumption or guarantee is written as a natural language statement in a form similar to a requirement.
+        </c>
+
+        <g
+            id="__gsn__17f0940ac0e"
+            color="#ffffff"
+            name="Intent">
+          The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+
+          <c
+              id="__gsn__17f0940ac0f"
+              color="#ffffff"
+              name="{-M-}">
+            (-The software module, by sufficient identifier, that is to be formally reengineered-)
+          </c>
+
+          <c
+              id="__gsn__17f0940ac10"
+              color="#ffffff"
+              name="{-S-}">
+            (-The set of systems, by sufficient identifiers, for which the software module is to be reengineered to have correct and complete desired behavior.-)
+          </c>
+
+          <c
+              id="__gsn__17f0940ac11"
+              name="[intent]">
+            The {defined intended behavior} is correct and complete with respect to the {desired behavior}.
+          </c>
+
+          <c
+              id="__gsn__17f0940ac12"
+              name="[defined intended behavior]">
+            The record of the desired behavior. These are the "actual requirements" as defined by John C. Knight in "Fundamentals of Dependable Engineering for Software Engineers".
+          </c>
+
+          <c
+              id="__gsn__17f0940ac13"
+              color="#ffffff"
+              name="{interface contract}">
+            A contract that completely defines the assumptions and guarantees of the behavior of the prime software module at an interfacing point of the module utilized by systems of interest. Each assumption or guarantee is written as a natural language statement in a form similar to a requirement.
+          </c>
+
+          <c
+              id="__gsn__17f0940ac14"
+              color="#ffffff"
+              name="[attributes of Interest]">
+            Function and dependability.
+          </c>
+
+          <s
+              id="__gsn__17f0940ac15"
+              color="#ffffff"
+              name="Strategy">
+            By arguing that correct and complete contracts have been developed for the correctly identified target module in clearly defined systems of interest.
+
+            <j
+                id="__gsn__17f0940ac16"
+                color="#ffffff"
+                name="Justification">
+              A set of assume/guarantee contracts covering the interface of a software module can completely define the desired behavior of that software module as it is utilized by systems. The required interface of the prime software module is a set of implicit design requirements imposed by the prime software module needing to maintain the current interface of the target software module's interactions with systems of interest, which then imposes requirements on how the module might actuate the surrounding system.
+            </j>
+
+            <j
+                id="__gsn__17f0940ac17"
+                color="#ffffff"
+                name="Justification">
+              The interface contracts are developed in a process where correct output of previous steps allows for correct output of consequent steps.
+            </j>
+
+            <c
+                id="__gsn__17f0940ac18"
+                color="#ffffff"
+                name="Process">
+              First the actual behavior requirements of the current software module is captured, then corrections to design faults in surrounding systems and the module implementation are corrected, and finally, changes to design are made to arrive at sufficient interface contracts.
+            </c>
+
+            <public-goal
+                id="__gsn__17f0940ac19"
+                color="#ffffff"
+                name="Correct Input To Contract Development">
+              The definition of the target module and systems of interest that utilize the module are clear and correct.
+
+              <s
+                  id="__gsn__17f0940ac1a"
+                  color="#ffffff"
+                  name="Strategy">
+                Over element types to correctly identify
+
+                <g
+                    id="__gsn__17f0940ac1b"
+                    color="#ffffff"
+                    name="Correct Module Identification">
+                  The definition of the target module is clear and correct,
+
+                  <e
+                      id="__gsn__17f0940ac1c"
+                      color="#ffffff"
+                      name="Module Definition">
+                    The definition of the module {-M-} and sign-off from the team as provided in evidence-fre.xlsx#moduleDefinition
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17f0940ac1d"
+                    color="#ffffff"
+                    name="Correct System Set Identification">
+                  The identification of the set of systems of interest is clear and correct.
+
+                  <e
+                      id="__gsn__17f0940ac1e"
+                      color="#ffffff"
+                      name="Systems Definition">
+                    The definition of the systems set {-S-} of the specific systems of interest using the target module provided by the team and signed-off on by the tea in evidence-fre.xlsx#systemsDefinition
+                  </e>
+
+                  <e
+                      id="__gsn__17f0940ac1f"
+                      color="#ffffff"
+                      name="Completeness Sign-Off">
+                    The team and stakeholders agree that the set of systems is complete.
+                  </e>
+
+                  <e
+                      id="__gsn__17f0940ac20"
+                      color="#ffffff"
+                      name="Stakeholder Buy-In">
+                    Stakeholders have been identified for each system and all agree (sign) that they are stakeholders for each so-indicated system.
+                  </e>
+                </g>
+              </s>
+            </public-goal>
+
+            <g
+                id="__gsn__17f0940ac21"
+                color="#ffffff"
+                name="Correct and Complete Contracts Developed">
+              Correct and complete interface contracts have been developed for the identified target model within systems of interest.
+
+              <s
+                  id="__gsn__17f0940ac22"
+                  color="#ffffff"
+                  name="Strategy">
+                Through having correct input of intended behavior of the current software module (in contract form) that is updated through a successful review for intent improvements.
+
+                <g
+                    id="__gsn__17f0940ac23"
+                    color="#ffffff"
+                    name="Correct and Complete Intended Behavior Captured">
+                  The intended behavior of the original software module {-M-} in system set {-S-} is correctly and completely inferred from it's actual source-code-level behavior.
+
+                  <c
+                      id="__gsn__17f0940ac24"
+                      color="#ffffff"
+                      name="Form of Current Implemented Behavior Capture">
+                    The implemented behavior is captured as a set of complete and correct contracts on the original software module backed by a requirement hierarchy.
+                  </c>
+
+                  <s
+                      id="__gsn__17f0940ac25"
+                      color="#ffffff"
+                      name="Successful Process Step Results">
+                    Through determination of current requirements and then correction for detected design faults in the systems and module.
+
+                    <a
+                        id="__gsn__17f0940ac26"
+                        color="#ffffff"
+                        name="Code Functional">
+                      The existing source code module is believed to be sufficiently functional that its reengineering from reverse-engineering of the existing system is considered acceptable.
+                    </a>
+
+                    <g
+                        id="__gsn__17f0940ac27"
+                        color="#ffffff"
+                        name="Correct and Complete Actual Source-Level Behavior">
+                      The actual source-level behavior of the {target module} is correctly and completely captured as a set of natural language, assume/guarantee contracts completely covering the interactions between the {target module} and systems of interest.
+
+                      <s
+                          id="__gsn__17f0940ac28"
+                          color="#ffffff"
+                          name="Successful Process">
+                        Through successful discovery activities followed by a reconciliation activity.
+
+                        <away-goal
+                            id="__gsn__17f0940ac29"
+                            color="#ffffff"
+                            name="Correct Input To Contract Development">
+                          The definition of the target module and systems of interest that utilize the module are clear and correct.
+                        </away-goal>
+
+                        <g
+                            id="__gsn__17f0940ac2a"
+                            color="#ffffff"
+                            name="Correct and Complete Interface Contracts from Informal Source Code Inferencing">
+                          A sufficiently correct and complete set of {interface contract}s for {attributes of interest} of {target module} {-M-} in {target system set} {-S-}, relative to actual behavior, has been documented and captured through informal analysis of source code.
+
+                          <m
+                              id="__gsn__17f0940ac2b"
+                              color="#ffffff"
+                              name="Microstandard">
+                            Informal Source Code Inferencing
+                          </m>
+                        </g>
+
+                        <m
+                            id="__gsn__17f0940ac2c"
+                            color="#cdcdcd"
+                            optional="true"
+                            name="Documentation Mining">
+                          Written documentation for {-M-} determines a correct and complete-as-possible set of intended and observed behavior.
+                        </m>
+
+                        <m
+                            id="__gsn__17f0940ac2d"
+                            color="#cdcdcd"
+                            optional="true"
+                            name="Algorithm Analysis">
+                          The module {-M-} refers to an algorithm from which are derived a correct and adequately complete set of performance requirements for software module {-M-} in system set {-S-}.
+                        </m>
+
+                        <g
+                            id="__gsn__17f0940ac2e"
+                            color="#ffffff"
+                            name="Consistency Correction">
+                          Consensus is achieved in the implemented behavior models developed using various reverse-engineering approaches over the systems of interest.
+
+                          <e
+                              id="__gsn__17f0940ac2f"
+                              color="#ffffff"
+                              name="Conflict Resolution Table">
+                            A table of detected conflicts in requirements from various reverse-engineering techniques and their resolution. evidence-fre.xlsx!Contract Conflict Resolution
+                          </e>
+
+                          <e
+                              id="__gsn__17f0940ac30"
+                              color="#ffffff"
+                              name="Sign-Off">
+                            The reverse-engineering team agrees that all conflicts have been detected and resolved. evidence-fre.xlsx!Contract Conflict Resolution
+                          </e>
+                        </g>
+                      </s>
+                    </g>
+
+                    <g
+                        id="__gsn__17f0940ac31"
+                        color="#ffffff"
+                        name="Sufficiently Corrected Errors in Contracts">
+                      The final defined intended behavior is sufficiently corrected for errors between defined intended behavior and actual behavior.
+
+                      <s
+                          id="__gsn__17f0940ac32"
+                          color="#ffffff"
+                          name="Strategy">
+                        By showing that classes of error have been sufficiently identified in difference between intent and actual behavior and that those errors identified have then been sufficiently corrected.
+
+                        <g
+                            id="__gsn__17f0940ac33"
+                            color="#ffffff"
+                            name="Complete Errors Identified to the Extent Practicable">
+                          Error detection is correct and complete to the extent practicable given knowledge of the informal intent of the systems communicated by stakeholders.
+
+                          <s
+                              id="__gsn__17f0940ac34"
+                              color="#ffffff"
+                              name="Strategy">
+                            By arguing that ad hoc detection and categorical, enumerative consideration have been applied.
+
+                            <j
+                                id="__gsn__17f0940ac35"
+                                color="#ffffff"
+                                name="Justification">
+                              Ad hoc detection in analysis and categorical enumerative consideration are the available techniques when no intent was a priori recorded for the target module.
+                            </j>
+
+                            <g
+                                id="__gsn__17f0940ac36"
+                                color="#ffffff"
+                                name="Adequate Direct Detection">
+                              Erroneous actual behavior in contract is identified through comparison with known intent.
+
+                              <s
+                                  id="__gsn__17f0940ac37"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By arguing that either rigorous comparison is performed against codified intent (e.g. available requirements documentation) and/or through ad hoc detection of error during analysis of the target module.
+
+                                <g
+                                    id="__gsn__17f0940ac38"
+                                    color="#ffffff"
+                                    optional="true"
+                                    name="Rigorous Comparison">
+                                  A rigorous comparison of existing requirements against actual behavior codified in contracts was performed.
+
+                                  <m
+                                      id="__gsn__17f0940ac39"
+                                      color="#cdcdcd"
+                                      name="Microstandard: Interface Definition from Existing Requirements">
+                                    An existing requirement set has been successfully analyzed to capture, to the extent possible, the intended behavior for the current software module {-M-} in system set {-S-} as a set of {interface contract}s.
+                                  </m>
+
+                                  <e
+                                      id="__gsn__17f0940ac3a"
+                                      color="#cdcdcd"
+                                      name="Contract Comparison">
+                                    Comparison of intent-derived contracts and actual behavior contracts identifies all errors present in the actual behavior contracts.
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0940ac3b"
+                                    color="#ffffff"
+                                    name="Ad Hoc Comparison Detection">
+                                  Ad hoc detection of errors during study of source code behavior was performed.
+
+                                  <a
+                                      id="__gsn__17f0940ac3c"
+                                      color="#ffffff"
+                                      name="Informal Intent">
+                                    Informal intent of the systems and module have been defined from interviews with stakeholders.
+                                  </a>
+
+                                  <e
+                                      id="__gsn__17f0940ac3d"
+                                      color="#ffffff"
+                                      name="Analyses Detecting">
+                                    A list of the analyses during which each error of each contract was found in analyses of the actual behavior of the software module. See evidence-fre.xlsx!Contract Error Correction#Interface Point Contract Errors#Analyses Detecting
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17f0940ac3e"
+                                color="#ffffff"
+                                name="Adequate Categorical, Enumerative Consideration">
+                              Categorical, enumerative consideration of potential contract errors has been adequately performed.
+
+                              <s
+                                  id="__gsn__17f0940ac3f"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By showing that a process was performed with best practicable correct effort.
+
+                                <g
+                                    id="__gsn__17f0940ac40"
+                                    color="#ffffff"
+                                    name="Categorical Consideration">
+                                  For each interface point contract, for each property of concern, consideration to erroneous actual behavior and underspecified actual behavior has been adequately applied.
+
+                                  <e
+                                      id="__gsn__17f0940ac41"
+                                      color="#ffffff"
+                                      name="Lead Sign-Off">
+                                    The error evidence lists all IP contracts and has sign-off from the team lead that errors between actual and desired behavior in each contract has been considered for each property of concern (e.g. safety, performance, functionality, etc.). See evidence-fre.xlsx!Contract Error Correction#Interface Point Sign-Off.
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0940ac42"
+                                    color="#ffffff"
+                                    name="Enumerated Errors">
+                                  Under each category of properties of concern, an attempt has been made to enumerate errors between stated actual behavior and intended behavior.
+
+                                  <e
+                                      id="__gsn__17f0940ac43"
+                                      color="#ffffff"
+                                      name="Identified Contract Errors Table">
+                                    A table of identified contract errors in the software module. See evidence-fre.xlsx!Contract Error Correction#Interface Point Contract Errors
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+                          </s>
+                        </g>
+
+                        <g
+                            id="__gsn__17f0940ac44"
+                            color="#ffffff"
+                            name="Correct and Complete Error Correction">
+                          Sufficient correction of identified stated behavior error has been applied to interface contracts.
+
+                          <c
+                              id="__gsn__17f0940ac45"
+                              color="#ffffff"
+                              name="Types of Stated Actual Behavior Error">
+                            Erroneous behavior and underspecified behavior are considered as errors in actual behavior stated in contracts.
+                          </c>
+
+                          <s
+                              id="__gsn__17f0940ac46"
+                              color="#ffffff"
+                              name="Strategy">
+                            By correctness and completeness properties
+
+                            <g
+                                id="__gsn__17f0940ac47"
+                                color="#ffffff"
+                                name="Complete">
+                              All identified errors are corrected.
+
+                              <e
+                                  id="__gsn__17f0940ac48"
+                                  color="#ffffff"
+                                  name="Error Sign-Off">
+                                For each contract, for each property of concern, sign-off from stakeholders and relevant team members that identified errors are correct and exist. #Contract Error Correction# Error Team Sign-Off and Error Stakeholder Sign-Off
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17f0940ac49"
+                                color="#ffffff"
+                                name="Correct">
+                              Identified errors are each corrected correctly.
+
+                              <e
+                                  id="__gsn__17f0940ac4a"
+                                  color="#ffffff"
+                                  name="Corrections">
+                                For each identified behavior error, changes to contracts that correct the erroneous behavior specification are written in the appropriate table. See evidence-fre.xlsx!Contract Error Correction#Error Correction
+                              </e>
+
+                              <e
+                                  id="__gsn__17f0940ac4b"
+                                  color="#ffffff"
+                                  name="Corrections Sign-Off">
+                                Sign-off from stakeholders that the error correction is the intended behavior for the software module for all systems of interest. See evidence-fre.xlsx!Contract Error Correction#$ Error Correction Sign-Off
+                              </e>
+                            </g>
+                          </s>
+                        </g>
+                      </s>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17f0940ac4c"
+                    color="#ffffff"
+                    name="New and Modified Desired Behavior Captured">
+                  Differences between the intended behavior of the original software module and the desired behavior of the prime software module are accounted for in changes to the interface contracts.
+
+                  <c
+                      id="__gsn__17f0940ac4d"
+                      color="#ffffff"
+                      name="Context">
+                    The original software module can contain behavior that is not desired in the re-engineered version or should be modified. There can also be behavior that should be added to the new version of the software. This must be captured.
+                  </c>
+
+                  <s
+                      id="__gsn__17f0940ac4e"
+                      color="#ffffff"
+                      name="Strategy">
+                    By arguing that stakeholders fully comprehend the desired intent captured at an appropriate level of abstraction and agree that it is not erroneous or incomplete.
+
+                    <g
+                        id="__gsn__17f0940ac4f"
+                        color="#ffffff"
+                        name="Acceptable Presentation">
+                      Team members agree that abstractions of the interface contracts in presentation for various stakeholder groups are sufficiently complete and correct for review by stakeholders.
+
+                      <e
+                          id="__gsn__17f0940ac50"
+                          color="#ffffff"
+                          name="Presentations">
+                        The presentations of interface contracts given to various stakeholder groups. See evidence-fre.xlsx!Coverage Updates#Team Sign-Off
+                      </e>
+
+                      <e
+                          id="__gsn__17f0940ac51"
+                          color="#ffffff"
+                          name="Team Sign-Off">
+                        Sign-off from team members that the presentations are sufficiently complete and correct. See evidence-fre.xlsx!Coverage Updates#Team Sign-Off
+                      </e>
+
+                      <e
+                          id="__gsn__17f0940ac52"
+                          color="#ffffff"
+                          name="Coverage Analysis">
+                        Table showing which presentations cover which interface point contracts. See evidence-fre.xlsx!Contract Updates#Coverage Analysis
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17f0940ac53"
+                        color="#ffffff"
+                        name="Stakeholder Comprehension">
+                      Performers agree that stakeholders understand the defined intent captured in the interface contracts or otherwise accurately stated to stakeholders.
+
+                      <e
+                          id="__gsn__17f0940ac54"
+                          color="#ffffff"
+                          name="Comprehension Quiz">
+                        A comprehension quiz for each presentation given.
+                      </e>
+
+                      <e
+                          id="__gsn__17f0940ac55"
+                          color="#ffffff"
+                          name="Passed Comprehension Quiz">
+                        Taken by stakeholders for a given presentation. See evidence-fre.xlsx!Contract Updates#Quiz Passed
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17f0940ac56"
+                        color="#ffffff"
+                        name="Change Consensus">
+                      Stakeholders and team members agree on changes to interface point contracts for the reengineered version of the target software.
+
+                      <e
+                          id="__gsn__17f0940ac57"
+                          color="#ffffff"
+                          name="Team Sign-Off on Change">
+                        Team sign-off on changes requested by stakeholders and/or team members. See evidence-fre.xlsx!Contract Updates#Team Sign-Off on Change.
+                      </e>
+                    </g>
+                  </s>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17f0940ac58"
+                color="#ffffff"
+                name="Adequate Final Interface Point Contracts">
+              The final interface point contracts representing the defined intent for the next version of the target module are well-formed and adequate.
+
+              <e
+                  id="__gsn__17f0940ac59"
+                  color="#ffffff"
+                  name="Reader Examination">
+                The reader can directly examine the final interface point contracts, found in "evidence-fre.xlsx!IP Contracts".
+              </e>
+            </g>
+          </s>
+        </g>
+
+        <g
+            id="__gsn__17f0941236b"
+            color="#ffffff"
+            name="Correctness">
+          The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+
+          <c
+              id="__gsn__17f0941236c"
+              color="#ffffff"
+              name="[correctness]">
+            The {implementation} is correct with respect to its {defined intended behavior}, under {foreseeable operating conditions}.
+          </c>
+
+          <s
+              id="__gsn__17f0941236d"
+              color="#ffffff"
+              name="Strategy">
+            By showing that all {interface contract} guarantees are satisfied by a set of properties against the reengineered module. Those properties are verified indirectly agains the formal specification or directly against the source code.
+
+            <c
+                id="__gsn__17f0941236e"
+                name="[formal specification]">
+              A specification for which all elements are mathematically defined.
+            </c>
+
+            <c
+                id="__gsn__17f0941236f"
+                color="#ffffff"
+                name="[PVS formal specification]">
+              A specification in PVS consisting of an operational specification of the software module, axioms, and theorems and lemmas over the operational specification and other theorems and lemmas.
+            </c>
+
+            <c
+                id="__gsn__17f09412370"
+                name="[derived source code implementation]">
+              A {source code implementation} generated by a well-defined software synthesis mechanism.
+
+              <c
+                  id="__gsn__17f09412371"
+                  color="#ffffff"
+                  name="[source code implementation]">
+                An implementation of software that is stated in a source code language that is either compiled or interpreted to operate in an executable hardware environment.
+              </c>
+            </c>
+
+            <j
+                id="__gsn__17f09412372"
+                color="#ffffff"
+                name="Justification">
+              There will be some properties that it is easier to prove than, for example, to test (due to problems of state space size, for example). There will be many other properties that are easier to test than prove. Therefore, we must assume that properties from formal specification and testing, together, imply specification and we try to have as much overlap (redundancy) in verified properties as is cost-feasible.
+            </j>
+
+            <a
+                id="__gsn__17f09412373"
+                color="#ffffff"
+                name="Assumption">
+              All {interface contract} assumptions hold at their respective interface points.
+            </a>
+
+            <g
+                id="__gsn__17f09412374"
+                color="#ffffff"
+                name="Implied Contract Guarantees">
+              Each guarantee of each {interface contract} of the {prime software module} is implied to hold by a set of the properties of the software module and the assumptions of each respective interface contract.
+
+              <g
+                  id="__gsn__17f09412376"
+                  color="#ffffff"
+                  name="Completeness">
+                All contract guarantees of all contracts mapped to sufficiently implying properties.
+
+                <e
+                    id="__gsn__17f09412377"
+                    color="#ffffff"
+                    name="Interface Point Sign-Off">
+                  Sign-off from the team lead indicating that each interface point's contract has been fully represented and analyzed for sufficient implicating properties. See "evidence-fre.xlsx#Contract Verification#Interface Point Sign-Off"
+                </e>
+              </g>
+
+              <g
+                  id="__gsn__17f09412378"
+                  color="#ffffff"
+                  name="Adequate Property Implications">
+                Each contract guarantee of each contract has adequate implicating properties defined.
+
+                <e
+                    id="__gsn__17f09412379"
+                    color="#ffffff"
+                    name="Implication Reasoning">
+                  For the reader's inspection, the implication reasoning foreach contract guarantee of each interface contract. See "evidence-fre.xslx#Contract Verification#Implication Reasoning".
+                </e>
+
+                <e
+                    id="__gsn__17f0941237a"
+                    color="#ffffff"
+                    name="Implication Reasoning Sign-Off">
+                  Sign-off from the team lead indicating that the verification team agrees with the rationale implicating each {guarantee term} of each {interface contract}. See "evidence-fre.xlsx#Contract Verification#Implication Reasoning Sign-Off"
+                </e>
+              </g>
+
+              <comment
+                  id="__gsn__17f09412375"
+                  color="#ffffff"
+                  name="Comment">
+                Perhaps an entire microstandard could be devoted to this problem.
+              </comment>
+            </g>
+
+            <g
+                id="__gsn__17f0941237b"
+                color="#ffffff"
+                name="Verified Properties">
+              All of the properties used to imply {interface contract} guarantees are sufficiently verified on the prime software module.
+
+              <c
+                  id="__gsn__17f0941237c"
+                  color="#ffffff"
+                  name="Note">
+                Properties do not include explicit assumptions of the {interface contract}s.
+              </c>
+
+              <s
+                  id="__gsn__17f0941237d"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that the all required properties are {adequately verified} in the union of properties verified indirectly against the formal specification and directly against the source code.
+
+                <c
+                    id="__gsn__17f0941237e"
+                    color="#ffffff"
+                    name="[adequately verified]">
+                  Having been verified to an extent that is practicable with available verification and validation methods that is deemed acceptable for the criticality level of target systems.
+                </c>
+
+                <c
+                    id="__gsn__17f0941237f"
+                    color="#ffffff"
+                    name="Overlap">
+                  The set of properties proven indirectly from the formal specification, and the set of properties proven directly from the source code can overlap as needed.
+                </c>
+
+                <g
+                    id="__gsn__17f09412381"
+                    color="#ffffff"
+                    name="Property Verification Coverage">
+                  All properties are covered by verification. Each property is verified either indirectly on the specification, directly on source code, or both.
+
+                  <e
+                      id="__gsn__17f09412382"
+                      color="#ffffff"
+                      name="Per Property Property Verification Coverage Check">
+                    Each property is covered by verification against specification or verification against source code. See "evidence-fre.xlsx!Contract Verification#Property Verification Coverage"
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17f09412383"
+                    color="#ffffff"
+                    name="Indirect Verified Properties">
+                  A subset of the properties are adequately indirectly verified from the formal specification of the prime software module.
+
+                  <s
+                      id="__gsn__17f09412384"
+                      color="#ffffff"
+                      name="Strategy">
+                    By showing that the properties transitively are {adequately correct} on the implementation because they are verified on the specification, and because of the nature of the implementation relative to the specification.
+
+                    <c
+                        id="__gsn__17f09412385"
+                        color="#ffffff"
+                        name="[adequately correct]">
+                      Having been verified on the specification, the extent to which they hold is sufficient for the contract guarantees they imply to hold on the implementation.
+                    </c>
+
+                    <g
+                        id="__gsn__17f09435dbb"
+                        color="#ffffff"
+                        name="Properties Verified Against Formal Specification">
+                      The {formal specification} {adequately verifies} a set of {invariant properties} of the software module.
+
+                      <c
+                          id="__gsn__17f09435dbc"
+                          color="#ffffff"
+                          name="[formal specification]">
+                        A specification for which all data and functions/procedures are formally defined with clear semantics against which invariant run-time properties might this be proven.
+                      </c>
+
+                      <c
+                          id="__gsn__17f09435dbd"
+                          color="#ffffff"
+                          name="[invariant properties]">
+                        Properties that can be expressed as invariants of the specification's content in one or more logics.
+                      </c>
+
+                      <c
+                          id="__gsn__17f09435dbe"
+                          color="#ffffff"
+                          name="[adequately verified]">
+                        Having been verified to an extent that is practicable with available verification and validation methods that is deemed acceptable for the criticality level of target systems.
+                      </c>
+
+                      <s
+                          id="__gsn__17f09435dbf"
+                          color="#ffffff"
+                          name="Strategy">
+                        By arguing verification coverage of all properties through formal verification and/or animation/testing.
+
+                        <c
+                            id="__gsn__17f09435dc0"
+                            color="#ffffff"
+                            name="Use of PVS">
+                          We try to keep the argument general for application under different formal specification and analysis methods, however, the standard is targeted at {PVS} as a motivating example at this time.
+                        </c>
+
+                        <c
+                            id="__gsn__17f09435dc1"
+                            color="#ffffff"
+                            name="[PVS]">
+                          A system to define a {formal specification} consisting of axioms, theorems and lemmas, over a functional specification, and tools to facilitate proof of those theorems and lemmas against the operational specification. (SEE PVS docs)
+                        </c>
+
+                        <g
+                            id="__gsn__17f09435dc2"
+                            color="#ffffff"
+                            name="Property Coverage by Lemmas">
+                          Each {invariant property} to be verified on the specification is defined formally as a lemma.
+
+                          <e
+                              id="__gsn__17f09435dc3"
+                              color="#ffffff"
+                              name="Coverage Table">
+                            Indication that each {invariant properties} to be verified on the specification are formally defined as a lemma. See "evidence-fre.xlsx!Contract Verification#Lemma" in association with properties.
+                          </e>
+                        </g>
+
+                        <g
+                            id="__gsn__17f09435dc4"
+                            color="#ffffff"
+                            name="Properties Verified by Lemmas">
+                          Each lemma for each property is {adequately verified} for the formal specification.
+
+                          <s
+                              id="__gsn__17f09435dc5"
+                              color="#ffffff"
+                              name="Strategy">
+                            By showing that all lemmas are correct, and that all lemmas are covered by proof or test.
+
+                            <g
+                                id="__gsn__17f09435dc6"
+                                color="#ffffff"
+                                name="Correct Lemma and Axiom Specification">
+                              All lemmas and axioms are correct for verification of intended properties.
+
+                              <s
+                                  id="__gsn__17f09435dc7"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By arguing that all lemmas and axioms are correct. This includes all lemmas that support primary lemmas for {invariant properties}.
+
+                                <g
+                                    id="__gsn__17f09435dc8"
+                                    color="#ffffff"
+                                    name="Lemmas are Correct">
+                                  Each property to verify is accurately stated as a lemma with correct support lemmas in the formal specification.
+
+                                  <s
+                                      id="__gsn__17f09435dc9"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    By arguing that the lemmas state what is intended, rely only on acceptable axiomatics, and are free from common design faults.
+
+                                    <g
+                                        id="__gsn__17f09435dca"
+                                        color="#ffffff"
+                                        name="Correct Encoding">
+                                      Each lemma states the property that is intended for it to state.
+
+                                      <e
+                                          id="__gsn__17f09435dcb"
+                                          color="#ffffff"
+                                          name="Intent Peer Review">
+                                        Peer review and sign-off on the correct encoding of the lemma against the intent of the lemma in the implication for which it is written. See "evidence-fre.xlsx!Contract Verification#Lemma Intention Review Sign-Off"
+                                      </e>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17f09435dcc"
+                                        color="#ffffff"
+                                        name="Common Design Faults Eliminated">
+                                      Common design faults in formal specification are eliminated to the extent reasonable practicable by formal methods practticioners.
+
+                                      <g
+                                          id="__gsn__17f09435dcd"
+                                          color="#ffffff"
+                                          name="Circular Logic is Identified and Repaired">
+                                        Circular logic across the combined set of lemmas, axioms, and declared types are detected and eliminated.
+
+                                        <e
+                                            id="__gsn__17f09435dce"
+                                            color="#ffffff"
+                                            name="Peer Review">
+                                          Peers have reviewed proof and sign-off on no circular logic issues remaining across lemmas, axioms, and types. See "evidence-fre.xlsx!Contract Verification#Circular Logic Not Present Sign-Off"
+                                        </e>
+                                      </g>
+
+                                      <g
+                                          id="__gsn__17f09435dcf"
+                                          color="#ffffff"
+                                          repeat="true"
+                                          name="{-Other-} is Identified and Repaired">
+                                      </g>
+                                    </g>
+                                  </s>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f09435dd0"
+                                    color="#ffffff"
+                                    name="Axiomatics is Acceptable">
+                                  Axioms of the formal specification utilized by the lemmas are acceptable.
+
+                                  <s
+                                      id="__gsn__17f09435dd1"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    By classes of points at which axiomatic premises emerge in PVS formal specifications.
+
+                                    <g
+                                        id="__gsn__17f09435dd2"
+                                        color="#ffffff"
+                                        name="Acceptable Explicit Axioms">
+                                      The axioms of the PVS specification are believed to be true.
+
+                                      <e
+                                          id="__gsn__17f09435dd3"
+                                          color="#ffffff"
+                                          name="Agreement from Domain Experts and Stakeholders">
+                                        Each explicit axiom has sign-off from domain experts and specification team. See "evidence-fre.xlsx!Contract Verification#Explicit Axiom Review Sign-Off"
+                                      </e>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17f09435dd4"
+                                        color="#ffffff"
+                                        name="Implicit Axiomatics are Acceptable">
+                                      All {implicit axioms} are identified and deemed acceptable.
+
+                                      <c
+                                          id="__gsn__17f09435dd5"
+                                          color="#ffffff"
+                                          name="[implicit axioms]">
+                                        An axiom that is present as a result of implicit shared information between lemmas, axioms, and types in a formal specification.
+                                      </c>
+
+                                      <s
+                                          id="__gsn__17f09435dd6"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        By showing complete identification and acceptability of all identified implicit axioms.
+
+                                        <a
+                                            id="__gsn__17f09435dd7"
+                                            color="#ffffff"
+                                            name="Assumption">
+                                          The team has knowledge about what libraries they rely on in a dependency chain and what implicit axioms might exist in those libraries.
+                                        </a>
+
+                                        <g
+                                            id="__gsn__17f09435dd8"
+                                            color="#ffffff"
+                                            name="Acceptably Complete Implicit Axioms Identification">
+                                          An acceptably complete set of implicit axioms in the generated specification and lemmas are identified.
+
+                                          <e
+                                              id="__gsn__17f09435dd9"
+                                              color="#ffffff"
+                                              name="Identified Sources of Implicit Axioms">
+                                            Identification of all libraries that may contain implicit axioms, with identification of domains in which they might exist. See "evidence-fre.xlsx!Contract Verification#Implicit Axioms"
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17f09435dda"
+                                            color="#ffffff"
+                                            name="Implicit Axioms are Acceptable">
+                                          All implicit axioms identified are acceptable.
+
+                                          <e
+                                              id="__gsn__17f09435ddb"
+                                              color="#ffffff"
+                                              name="Agreement from Domain Experts and Stakeholders">
+                                            Each implicit axiom has sign-off from domain experts and specification team. See "evidence-fre.xlsx!Contract Verification#Implicit Axiom Review Sign-Off"
+                                          </e>
+                                        </g>
+                                      </s>
+                                    </g>
+                                  </s>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17f09435ddc"
+                                color="#ffffff"
+                                name="All Lemmas Verified">
+                              All lemmas are verified against the specification.
+
+                              <s
+                                  id="__gsn__17f09435ddd"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                Through proof or testing/animation against the specification.
+
+                                <g
+                                    id="__gsn__17f09435dde"
+                                    color="#ffffff"
+                                    name="Lemma Coverage">
+                                  Each lemma is proven or tested through interpretation/animation, or both.
+
+                                  <e
+                                      id="__gsn__17f09435ddf"
+                                      color="#ffffff"
+                                      name="Coverage Check">
+                                    A check that each defined lemma is covered by either a proof or test/animation. See "evidencefre.xlsx!Contract Verification#Lemma Coverage".
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f09435de0"
+                                    color="#ffffff"
+                                    name="Lemmas to Prove are Proven">
+                                  The lemmas of the specification are proven against the specification.
+
+                                  <a
+                                      id="__gsn__17f09435de1"
+                                      color="#ffffff"
+                                      name="Assumption">
+                                    Sufficiently trustworthy proof assistant tool such as PVS.
+                                  </a>
+
+                                  <s
+                                      id="__gsn__17f09435de2"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    By sufficient properties for proof results
+
+                                    <g
+                                        id="__gsn__17f09435de3"
+                                        color="#ffffff"
+                                        name="Well-Defined">
+                                      Those lemmas that are proven are clearly differentiated from those that are not.
+
+                                      <e
+                                          id="__gsn__17f09435de4"
+                                          color="#ffffff"
+                                          name="Proof Certificate">
+                                        Certificate of complete proof for a given lemma.See "evidence-fre.xlsx!Contract Verification #Proof Certificate".
+                                      </e>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17f09435de5"
+                                        color="#ffffff"
+                                        name="Proven">
+                                      The lemmas defined to be proven are proven.
+
+                                      <e
+                                          id="__gsn__17f09435de6"
+                                          color="#ffffff"
+                                          name="PVS Proof File">
+                                        Formal proof of each lemma with assistance from a verification tool such as PVS. See "evidence-fre.xlsx!Contract Verification #Proof Files" for proof file of each lemma.
+                                      </e>
+
+                                      <e
+                                          id="__gsn__17f09435de7"
+                                          color="#ffffff"
+                                          name="Peer Review of Proof">
+                                        Proofs are reviewed by the team in the context of the proven lemmas. See "evidence-fre.xlsx!Contract Verification #Proof Review Sign-Off"
+                                      </e>
+                                    </g>
+                                  </s>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f09435de8"
+                                    color="#ffffff"
+                                    name="Lemmas to Test/Animate are Verified">
+                                  The lemmas to be verified by testing are so verified.
+
+                                  <s
+                                      id="__gsn__17f09435de9"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    By arguing that the tests are adequate and pass.
+
+                                    <g
+                                        id="__gsn__17f09435dea"
+                                        color="#ffffff"
+                                        name="Tests are Adequate">
+                                      The tests of the formal specification are {adequate} to determine specification satisfaction of the guarantees verified.
+
+                                      <c
+                                          id="__gsn__17f09435deb"
+                                          color="#ffffff"
+                                          name="[adequate]">
+                                        Adequacy is assessed as the tests correctly testing the intended property of the specification over the intended set of inputs.
+                                      </c>
+
+                                      <e
+                                          id="__gsn__17f09435dec"
+                                          color="#ffffff"
+                                          name="Peer Review">
+                                        The team reviews all tests written against animation/execution of the formal specification for capturing the correct intended property to test and accurately determining it against the specification over the intended input set. See "evidence-fre.xlsx!Contract Verification#Specification Test Intention Review Sign-Off"
+                                      </e>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17f09435ded"
+                                        color="#ffffff"
+                                        name="Tests Pass">
+                                      All tests used to verify contract guarantees pass. See
+
+                                      <e
+                                          id="__gsn__17f09435dee"
+                                          color="#ffffff"
+                                          name="Test Passes Check">
+                                        Check that each test has passed, based on log output from the test in the correct environment.See "evidence-fre.xlsx!Contract Verification#Specification Test Passes"
+                                      </e>
+
+                                      <e
+                                          id="__gsn__17f09435def"
+                                          color="#ffffff"
+                                          name="Test Log">
+                                        Log of all test executions/animations with sufficient status information. See "evidence-fre.xlsx!Contract Verification#Specification Test Log"
+                                      </e>
+                                    </g>
+                                  </s>
+                                </g>
+                              </s>
+                            </g>
+                          </s>
+                        </g>
+                      </s>
+                    </g>
+
+                    <g
+                        id="__gsn__17f0943dcf1"
+                        color="#ffffff"
+                        name="Adequately Correct and Complete Implementation of Specification">
+                      The implementation of the formal specification is such that the properties verified on the formal specification remain {adequately correct} on the source code implementation.
+
+                      <c
+                          id="__gsn__17f0943dcf2"
+                          color="#ffffff"
+                          name="[source code implementation]">
+                        An implementation of software that is stated in a source code language that is either compiled or interpreted to operate in an executable hardware environment.
+                      </c>
+
+                      <c
+                          id="__gsn__17f0943dcf3"
+                          color="#ffffff"
+                          name="[adequately correct]">
+                        Having been verified on the specification, the extent to which properties hold is sufficient for the contract guarantees they imply to hold on the implementation.
+                      </c>
+
+                      <s
+                          id="__gsn__17f0943dcf4"
+                          color="#ffffff"
+                          name="Strategy">
+                        By showing that the source code is {correct within accumulated scalar value error} and that that such possible error does not violate any properties verified against the specification.
+
+                        <c
+                            id="__gsn__17f0943dcf5"
+                            color="#ffffff"
+                            name="[correct to within accumulated scalar value error]">
+                          Given the same input to a specified function, the output of the specified function and its source code implementation will only vary by error in the output's scalar values that accumulates from imprecision. Conditional execution of operations will be identical. So will resulting non-atomic data instances.
+                        </c>
+
+                        <c
+                            id="__gsn__17f0943dcf6"
+                            color="#ffffff"
+                            name="[retrenchment models]">
+                          Models mapping between value types on a specification and corresponding source code. The mapping includes mapping all values of the data type domain on the specification to corresponding values from the domain of the representative data type in the source code. Also included are rules for how all operations involving the data types compute values in the specification and the source code. For example, an real number in a PVS specification can be retrenched as IEEE floating-point numbers in Spark Ada, with configuration of small number normalization and disallowing overflow and underflow on operations, etc.
+                        </c>
+
+                        <g
+                            id="__gsn__17f0943dcf7"
+                            color="#ffffff"
+                            name="Correct To Within Accumulated Scalar Value Error">
+                          The implementation of the source code is {correct to within accumulating scalar value error} with respect to the formal specification.
+
+                          <s
+                              id="__gsn__17f0943dcf8"
+                              color="#ffffff"
+                              name="Strategy">
+                            By showing that this is true under the application of valid retrenchment models.
+
+                            <j
+                                id="__gsn__17f0943dcf9"
+                                color="#ffffff"
+                                name="Justification">
+                              {Retrenchment models} define
+                            </j>
+
+                            <g
+                                id="__gsn__17f0943dcfa"
+                                color="#ffffff"
+                                name="Valid Retrenchment Models">
+                              {Valid retrenchment models} are defined for the formally specified program in the implementation and platform under applied operating system and hardware constraints.
+
+                              <c
+                                  id="__gsn__17f0943dcfb"
+                                  color="#ffffff"
+                                  name="[valid retrenchment models]">
+                                Valid retrenchment models are defined such that the data types and operations are accepted in the chosen specification and source code language.
+                              </c>
+
+                              <s
+                                  id="__gsn__17f0943dcfc"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                Through showing that sufficient retrenchment models are defined correctly and with sufficient completeness.
+
+                                <g
+                                    id="__gsn__17f0943dcfd"
+                                    color="#ffffff"
+                                    name="Complete Models">
+                                  All data types of the specification have a defined retrenchment model.
+
+                                  <e
+                                      id="__gsn__17f0943dcfe"
+                                      color="#ffffff"
+                                      name="Complete Identification Sign-Off">
+                                    Sign-off that the formal specification has been fully analyzed to identify and list explicit and implicit data types. See "evidence.fre.xlsx#Retrechment Models#Data Types Identification Sign-Off".
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dcff"
+                                      color="#ffffff"
+                                      name="Data Type Enumeration">
+                                    The data types identified in the specification for retrenchment model development. See "evidence-fre.xlsx#Retrenchment Models#Specification Data Type".
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0943dd00"
+                                    color="#ffffff"
+                                    name="Correct and Sufficiently Complete Retrenchment Rules">
+                                  For each data type identified, the retrenchment rules defining the type are accurate and complete over value mapping and operations of the specification and source code language.
+
+                                  <e
+                                      id="__gsn__17f0943dd01"
+                                      color="#ffffff"
+                                      name="Correctness Sign-Off">
+                                    Sign-off for each data value type that's its explicitly stated retrenchment model is correct and complete for value mapping, range limitations, overflow and underflow, and discrete approximation mapping, as well as operations utilized on the specification and/or source code. See "evidence-fre.xlsx#Retrenchemnt Models#Data Type Retrenchment Sign-Off".
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd02"
+                                      color="#ffffff"
+                                      name="Retrenchment Models for Inspection">
+                                    The rules of each retrenchment model are available for reader inspection. See "evidence-fre.xlsx#Retrenchemnt Models".
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17f0943dd03"
+                                color="#ffffff"
+                                name="Correct To Within Accumulated Scalar Value Error under Retrenchment Models">
+                              All functions (procedures, methods, etc) of the source code implementation are {correct to within accumulated scalar value error} with respect to their respective formal specifications under the defined {retrenchment models}.
+
+                              <s
+                                  id="__gsn__17f0943dd04"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By showing that a partition of the specification into parts, reasoned over separately, results in production of a total source code implementation that is {correct to within accumultated scalar value error}.
+
+                                <g
+                                    id="__gsn__17f0943dd05"
+                                    color="#ffffff"
+                                    name="Composing Partition">
+                                  A specification is correctly and completely composed from a partition of the functions of in its interprocedural call graph with data structures included.
+
+                                  <e
+                                      id="__gsn__17f0943dd06"
+                                      color="#ffffff"
+                                      name="Partition Table">
+                                    The definition of the partition of the formal specification. See 'evidence-fre.xlsx!Specification Partition"
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd07"
+                                      color="#ffffff"
+                                      name="Partition Team Review">
+                                    Peer review and sign-off on the membership of the partition and the concreteness of the definition of each part. See 'evidence-fre.xlsx!Specification Partition#Partition Review Sign-Off"
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd08"
+                                      color="#ffffff"
+                                      name="Parts Team Review">
+                                    Peer review and sign-off on the membership of the partition and the concreteness of the definition of each part. See 'evidence-fre.xlsx!Specification Partition#Part Team Review Sign-Off"
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0943dd09"
+                                    color="#ffffff"
+                                    name="All Parts of Specification Correctly Implemented">
+                                  Each of the sub-specifications defined in the partition has a source code implementation that is {correct to within accumulated scalar value error}.
+
+                                  <a
+                                      id="__gsn__17f0943dd0a"
+                                      color="#ffffff"
+                                      name="Assumption">
+                                    Valid and consistent retrenchment rules
+                                  </a>
+
+                                  <s
+                                      id="__gsn__17f0943dd0b"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    Show for each partition cell of the specification
+
+                                    <g
+                                        id="__gsn__17f094499c2"
+                                        color="#ffffff"
+                                        repeat="true"
+                                        name="Part Correct to Within Scalar Value Error">
+                                      The source code implementation of the formal operational specification part {-Part-} is {correct to within accumulated scalar value error} under the defined {retrenchment models}.
+
+                                      <c
+                                          id="__gsn__17f094499c3"
+                                          color="#ffffff"
+                                          name="[correct to within accumulated scalar value error]">
+                                        Given the same input to a specified function, the output of the specified function and its source code implementation will only vary by error in the output's scalar values that accumulates from imprecision in the inherently finitely countable data types of computers.
+                                      </c>
+
+                                      <s
+                                          id="__gsn__17f094499c4"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        By arguing that the the implementation is a correct implementation for the operations and data of the specification part, with the resulting implementation stepwise simulated by its specification to within scalar value error.
+
+                                        <j
+                                            id="__gsn__17f094499c5"
+                                            color="#ffffff"
+                                            name="Justification">
+                                          Specifications for which source code correctly implements formal semantics under clear retrenchment models, can be shown to step-wise simulate their source code to within accumulating scalar value error, when certain conditions are met.
+                                        </j>
+
+                                        <c
+                                            id="__gsn__17f094499c6"
+                                            color="#ffffff"
+                                            name="[stepwise simulation]">
+                                          A specification is a stepwise simulation of its implementation if for any inputs to any function of the specification, the corresponding inputs to its implementation (under retrenchment mapping) results in the same operational sequences occurring in the specification and implementation on the same corresponding data values under retrenchment.
+                                        </c>
+
+                                        <c
+                                            id="__gsn__17f094499c7"
+                                            color="#ffffff"
+                                            name="[stepwise simulation to within scalar value error]">
+                                          A specification is a stepwise simulation to within scalar value error of its implementation, if it would be a stepwise simulation of its implementation, save accumulating error in scalar values accumulating between the specification and implementation, but all operational sequences remain corresponding.
+                                        </c>
+
+                                        <c
+                                            id="__gsn__17f094499c8"
+                                            color="#ffffff"
+                                            name="Context">
+                                          Under the Retrenchment Rules defined for the source language part, mapping from its specification part.
+                                        </c>
+
+                                        <g
+                                            id="__gsn__17f094499c9"
+                                            color="#ffffff"
+                                            name="Correct Operation and Data Implementation">
+                                          Source code is written so as to correctly implement the data and operations of the formal specification under the defined retrenchment rules.
+
+                                          <g
+                                              id="__gsn__17f0945f228"
+                                              color="#ffffff"
+                                              name="Mirroring Implementation">
+                                            The implementation of data types and functions is practicably correct with respect to their specification using a set of mirroring rules.
+
+                                            <c
+                                                id="__gsn__17f0945f229"
+                                                color="#ffffff"
+                                                name="Mirroring">
+                                              Each operation of the specification applies the semantically equivalent operation in the source language, as well as correspondence of data types, save the defined differences under {retrenchment rules}.
+                                            </c>
+
+                                            <s
+                                                id="__gsn__17f0945f22a"
+                                                color="#ffffff"
+                                                name="Strategy">
+                                              Through a mirroring implementation of the specification in SPARK Ada, such that all possible data value computations remain in implementation range and supporting proof of invariant conditions on the implementation as specified in the specification.
+
+                                              <c
+                                                  id="__gsn__17f0945f22b"
+                                                  color="#ffffff"
+                                                  name="[practicably correctly synthesized]">
+                                                Careful implementation of the Spark Ada source code from the formal specification has been produced, using Spark Ada proof against carefully mapped specification to post-conditions as a verification technique.
+                                              </c>
+
+                                              <a
+                                                  id="__gsn__17f0945f22c"
+                                                  color="#ffffff"
+                                                  name="Implementation Approach using SPARK Ada">
+                                                The developers write SPARK Ada code to mirror the functions, expressions and operational sequences of the specification, and utilize the specification as precondition/postcondition invariants to prove on the implementation.
+                                              </a>
+
+                                              <g
+                                                  id="__gsn__17f0945f22d"
+                                                  color="#ffffff"
+                                                  name="Practicably Correct, Mirroring Implementation">
+                                                The implementation has been {practicably correctly synthesized} from the formal specification into correct implementation.
+
+                                                <s
+                                                    id="__gsn__17f0945f22e"
+                                                    color="#ffffff"
+                                                    name="Strategy">
+                                                  Through mirroring functional and type units with required proofs from Spark Ada discharged
+
+                                                  <a
+                                                      id="__gsn__17f0945f22f"
+                                                      color="#ffffff"
+                                                      name="Assumption">
+                                                    This sub-argument applies Spark Ada concept of VS discharge where VCs are verification conditions that must be proven.
+                                                  </a>
+
+                                                  <j
+                                                      id="__gsn__17f0945f230"
+                                                      color="#ffffff"
+                                                      name="Justification">
+                                                    In Spark Ada, one writes a program in Ada with well-defined Ada types and pre and postconditions on procedures and functions. Spark Ada then generates the proofs that are sufficient to prove correctness of the Ada source code in meeting those pre and postconditions and attempts to discharge them.
+                                                  </j>
+
+                                                  <g
+                                                      id="__gsn__17f0945f231"
+                                                      color="#ffffff"
+                                                      name="Correct Value Type Mirroring">
+                                                    The implementation of specification part {-Part-}'s value types correctly implement corresponding types under the defined retrenchment rules.
+
+                                                    <s
+                                                        id="__gsn__17f0945f232"
+                                                        color="#ffffff"
+                                                        name="Strategy">
+                                                      By arguing over components of the Spark Ada mapping from PVS data types.
+
+                                                      <g
+                                                          id="__gsn__17f0945f233"
+                                                          color="#ffffff"
+                                                          name="Correct Type Data Model">
+                                                        The data model of types is a correct representation of the PVS data types utilized in the formal specification.
+
+                                                        <s
+                                                            id="__gsn__17f0945f234"
+                                                            color="#ffffff"
+                                                            name="Strategy">
+                                                          Completeness, implementing correctness, and non-extraneous properties.
+
+                                                          <g
+                                                              id="__gsn__17f0945f235"
+                                                              color="#ffffff"
+                                                              name="Correct Data Type Mirroring">
+                                                            The data types of PVS are mirrored properly in Spark Ada.
+
+                                                            <s
+                                                                id="__gsn__17f0945f236"
+                                                                color="#ffffff"
+                                                                name="Strategy">
+                                                              By mapping model developed for mapping from PVS to SPARK Ada data types.
+
+                                                              <g
+                                                                  id="__gsn__17f0945f237"
+                                                                  color="#ffffff"
+                                                                  name="Primitive Type Conversion Matches Defined Retrenchment Rules">
+                                                                The primitive types map correctly under the defined retrenchment rules,.
+
+                                                                <c
+                                                                    id="__gsn__17f0945f238"
+                                                                    color="#ffffff"
+                                                                    name="Example">
+                                                                  integers in PVS map correctly to the definition of 32 or 64-bit or larger integers in SPARK Ada.
+                                                                </c>
+
+                                                                <e
+                                                                    id="__gsn__17f0945f239"
+                                                                    color="#ffffff"
+                                                                    name="Review">
+                                                                  Team review that each primitive type of the data entity is mapped correctly. See "evidence-fre.xlsx!Mirrored Data Types#Primitive Type Conversion Matches".
+                                                                </e>
+                                                              </g>
+
+                                                              <g
+                                                                  id="__gsn__17f0945f23a"
+                                                                  color="#ffffff"
+                                                                  name="Standard Structures are Handled Correctly">
+                                                                All fields match by type and subtype
+
+                                                                <e
+                                                                    id="__gsn__17f0945f23b"
+                                                                    color="#ffffff"
+                                                                    name="Review">
+                                                                  Team review that each standard structure is mapped correctly. See "evidence-fre.xlsx!Mirrored Data Types#Standard Structures Handled Correctly".
+                                                                </e>
+                                                              </g>
+
+                                                              <g
+                                                                  id="__gsn__17f0945f23c"
+                                                                  color="#ffffff"
+                                                                  name="Anonymous Records are Handled Correctly">
+
+                                                                <e
+                                                                    id="__gsn__17f0945f23e"
+                                                                    color="#ffffff"
+                                                                    name="Review">
+                                                                  Team review that each anonymous record structure is mapped correctly. See "evidence-fre.xlsx!Mirrored Data Types#Anonymous Records Handled Correctly".
+                                                                </e>
+
+                                                                <comment
+                                                                    id="__gsn__17f0945f23d"
+                                                                    color="#ffffff"
+                                                                    name="Comment">
+                                                                  Issue 10
+                                                                </comment>
+                                                              </g>
+
+                                                              <g
+                                                                  id="__gsn__17f0945f23f"
+                                                                  color="#ffffff"
+                                                                  name="List Structures are Handled Correctly">
+                                                                PVS lists are defined properly as Spark Ada data types.
+
+                                                                <e
+                                                                    id="__gsn__17f0945f241"
+                                                                    color="#ffffff"
+                                                                    name="Review">
+                                                                  Team review that each list structure is mapped correctly. See "evidence-fre.xlsx!Mirrored Data Types#List Structures Handled Correctly".
+                                                                </e>
+
+                                                                <comment
+                                                                    id="__gsn__17f0945f240"
+                                                                    color="#ffffff"
+                                                                    name="Comment">
+                                                                  issue 10
+                                                                </comment>
+                                                              </g>
+                                                            </s>
+                                                          </g>
+
+                                                          <g
+                                                              id="__gsn__17f0945f242"
+                                                              color="#ffffff"
+                                                              name="Complete and Non-Extraneous">
+                                                            All Spark Ada data declaration models all and only PVS data types.
+
+                                                            <s
+                                                                id="__gsn__17f0945f243"
+                                                                color="#ffffff"
+                                                                name="Strategy">
+                                                              By showing bi-directional traceability
+
+                                                              <g
+                                                                  id="__gsn__17f0945f244"
+                                                                  color="#ffffff"
+                                                                  name="Bidirectional Traceability">
+                                                                All and only PVS data types map to all Spark Ada declared data types and predicates for the implementation of the specification part, {-Part-}.
+
+                                                                <g
+                                                                    id="__gsn__17f0945f245"
+                                                                    color="#ffffff"
+                                                                    name="Forward Tracing">
+                                                                  All data types of the specification part are mirrored in its implementation.
+
+                                                                  <e
+                                                                      id="__gsn__17f0945f246"
+                                                                      color="#ffffff"
+                                                                      name="Forward Tracing">
+                                                                    A table showing how each declared data type of the specification corresponds to checked implementation. See "evidence-fre.xlsx!Mirrored Data Types".
+                                                                  </e>
+
+                                                                  <e
+                                                                      id="__gsn__17f0945f247"
+                                                                      color="#ffffff"
+                                                                      name="Completenes Review">
+                                                                    Team review indicates that all data types of the specification part are mirrored in the implementation and present in the table. See "evidence-fre.xlsx!Mirrored Data Types#All Types Mirrored Sign-Off"
+                                                                  </e>
+                                                                </g>
+
+                                                                <g
+                                                                    id="__gsn__17f0945f248"
+                                                                    color="#ffffff"
+                                                                    name="Backwards Tracing">
+                                                                  Each data type of the implementation corresponds to a mirrored data type of the specification.
+
+                                                                  <e
+                                                                      id="__gsn__17f0945f249"
+                                                                      color="#ffffff"
+                                                                      name="Tracing">
+                                                                    A table showing how each declared data type of the specification corresponds to checked implementation. See "evidence-fre.xlsx!Mirrored Data Types#No Extraneous Types Review Sign-Off".
+                                                                  </e>
+                                                                </g>
+                                                              </g>
+                                                            </s>
+                                                          </g>
+                                                        </s>
+                                                      </g>
+
+                                                      <g
+                                                          id="__gsn__17f0945f24a"
+                                                          color="#ffffff"
+                                                          name="Correct Type Predicates">
+                                                        A correct and complete model of type predicates in SPARK Ada is applied.
+
+                                                        <s
+                                                            id="__gsn__17f0945f24b"
+                                                            color="#ffffff"
+                                                            name="Strategy">
+                                                          For the two types of type predicates required
+
+                                                          <g
+                                                              id="__gsn__17f0945f24c"
+                                                              color="#ffffff"
+                                                              name="Constraints from PVS">
+                                                            Correct and complete definition of all PVS constraints (predicates) and type predicates in SPARK Ada.
+
+                                                            <s
+                                                                id="__gsn__17f0945f24d"
+                                                                color="#ffffff"
+                                                                name="Strategy">
+                                                              By implicating property of mapping
+
+                                                              <g
+                                                                  id="__gsn__17f0945f24e"
+                                                                  color="#ffffff"
+                                                                  name="Correct and Complete Type Predicate Mapping">
+                                                                All type predicates defined in PVS have been defined as type predicates in SPARK Ada on the appropriate data types.
+
+                                                                <e
+                                                                    id="__gsn__17f0945f24f"
+                                                                    color="#ffffff"
+                                                                    name="Inspection and Review">
+                                                                  Inspection and review by comparison of each Spark Ada defined type such that for each predicate defined in PVS comment section maps to a predicate in the associated Spark Ada data type.
+                                                                </e>
+                                                              </g>
+                                                            </s>
+                                                          </g>
+
+                                                          <g
+                                                              id="__gsn__17f0945f250"
+                                                              color="#ffffff"
+                                                              name="Implications of Range Retrenchment">
+                                                            Correct and complete implications limiting use of complex types to valid ranges of primitives under retrenchment are defined for all data types.
+
+                                                            <s
+                                                                id="__gsn__17f0945f251"
+                                                                color="#ffffff"
+                                                                name="Strategy">
+                                                              By a property of the SPARK Pro tools that does not arise.
+
+                                                              <a
+                                                                  id="__gsn__17f0945f252"
+                                                                  color="#ffffff"
+                                                                  name="Assumption">
+                                                                All VCs are discharged.
+                                                              </a>
+
+                                                              <g
+                                                                  id="__gsn__17f0945f253"
+                                                                  color="#ffffff"
+                                                                  name="VCs generated for all potential Overflows and Underflows">
+                                                                If ranges are not constrained under produced retrenchement rules, VCs will be generated by SPARK Pro indicating potential overflows and/or underflows.
+
+                                                                <e
+                                                                    id="__gsn__17f0945f254"
+                                                                    color="#cdcdcd"
+                                                                    name="Spark Ada Tool Property">
+                                                                  SPARK Pro creates VCs for all potential data overflows and underflows.
+                                                                </e>
+                                                              </g>
+                                                            </s>
+                                                          </g>
+                                                        </s>
+                                                      </g>
+                                                    </s>
+                                                  </g>
+
+                                                  <g
+                                                      id="__gsn__17f0945f255"
+                                                      color="#ffffff"
+                                                      name="Correct Operation Sequence Implementation">
+                                                    All executable sequences of operations defined in the specification part {-Part-} are correctly implemented by the implementation as source code with postconditions as defined by the specification.
+
+                                                    <s
+                                                        id="__gsn__17f0945f256"
+                                                        color="#ffffff"
+                                                        name="Strategy">
+                                                      Show that each pure functional unit of the PVS formal operational specification part {-Part-} has been implemented by mirroring its operations to the extent possible, and further proven against its PVS specification as postconditions in Spark Ada.
+
+                                                      <g
+                                                          id="__gsn__17f0945f257"
+                                                          color="#ffffff"
+                                                          name="Successful Operational Mapping">
+                                                        The function as implemented mirrors the inputs and return types (under types defined under retrenchment rules) and the operational sequence of the defined function in the specification.
+
+                                                        <j
+                                                            id="__gsn__17f0945f258"
+                                                            color="#ffffff"
+                                                            name="Justification">
+                                                          Note, this is a helper claim. The proof of pre and postconditions is sufficient. But this lends credence to function-level synthesis correctness.
+                                                        </j>
+
+                                                        <s
+                                                            id="__gsn__17f0945f259"
+                                                            color="#ffffff"
+                                                            name="Strategy">
+                                                          By showing that a series of translation rules have been applied correctly and a reviewer agrees with the overall function mapping results.
+
+                                                          <c
+                                                              id="__gsn__17f0945f25a"
+                                                              color="#ffffff"
+                                                              name="Translation Rules">
+                                                            A series of rules that map from operations of PVS to operations of Spark Ada.
+                                                          </c>
+
+                                                          <g
+                                                              id="__gsn__17f0945f25b"
+                                                              color="#ffffff"
+                                                              name="Translation Agreement from Team">
+                                                            Translation rules have been applied correctly
+
+                                                            <e
+                                                                id="__gsn__17f0945f25c"
+                                                                color="#ffffff"
+                                                                name="Evidence">
+                                                              Through peer review of the correct application of each translation rule on each function. See "evidence-fre.xlsx!Mirrored Functions#Translation Team Review Sign-Off".
+                                                            </e>
+                                                          </g>
+
+                                                          <g
+                                                              id="__gsn__17f0945f25d"
+                                                              color="#ffffff"
+                                                              name="Functional Matching Agreement from Team">
+                                                            Peers agree that the functions as implemented is the functions of the operational specification.
+
+                                                            <e
+                                                                id="__gsn__17f0945f25e"
+                                                                color="#ffffff"
+                                                                name="Peer Review">
+                                                              Signoff by peer on review of the function as implemented in source code as compared to the function as defined in the formal specification. See "evidence-fre.xlsx!Mirrored Functions#Function Team Review Sign-Off".
+                                                            </e>
+                                                          </g>
+                                                        </s>
+                                                      </g>
+
+                                                      <g
+                                                          id="__gsn__17f0945f25f"
+                                                          color="#ffffff"
+                                                          name="Successful Pre and Postcondition Encoding">
+                                                        The pre and postconditions of the specifiation {-Part-} are succesfully encoded in the preambles of function definitions in the SPARK language.
+
+                                                        <e
+                                                            id="__gsn__17f0945f260"
+                                                            color="#ffffff"
+                                                            name="PVS to Spark Ada Condition Check">
+                                                          Check by peer that the pre and postcondition representation of the Spark Ada PVS specification of each function is complete and correct. See "evidence-fre.xlsx!Mirrored Functions#Proof Conditions Team Review Sign-Off".
+                                                        </e>
+                                                      </g>
+
+                                                      <g
+                                                          id="__gsn__17f0945f261"
+                                                          color="#ffffff"
+                                                          name="No Extraneous Implementation">
+                                                        No implementation code exists that does not directly implement some set of sequences of executable operations of the specification part {-Part-}.
+
+                                                        <g
+                                                            id="__gsn__17f0945f262"
+                                                            color="#ffffff"
+                                                            name="Code Traceability">
+                                                          All implementation code directly traces to a function of the PVS formal specification.
+
+                                                          <e
+                                                              id="__gsn__17f0945f263"
+                                                              color="#ffffff"
+                                                              name="Code Trace">
+                                                            Verification and sign-off that all code of the implementation is in a function labelled as implementing a given function of the specification. See "evidence-fre.xlsx!Mirrored Functions#No Extraneous Functions Review Sign-Off".
+                                                          </e>
+                                                        </g>
+                                                      </g>
+
+                                                      <g
+                                                          id="__gsn__17f0945f264"
+                                                          color="#ffffff"
+                                                          name="Complete Function Implementation">
+                                                        All functions of the specification part have an implementation.
+
+                                                        <e
+                                                            id="__gsn__17f0945f265"
+                                                            color="#ffffff"
+                                                            name="Specification Trace">
+                                                          Verification and sign-off that all functions of the specification part are implemented in its implementation. See "evidence-fre.xlsx!Mirrored Functions#Complete Functions Team Review Sign-Off".
+                                                        </e>
+                                                      </g>
+                                                    </s>
+                                                  </g>
+                                                </s>
+                                              </g>
+
+                                              <g
+                                                  id="__gsn__17f0945f266"
+                                                  color="#ffffff"
+                                                  name="Acceptable Values on Implementation">
+                                                Possible values on implementation are sufficient for general mirroring correctness under the retrenchment models.
+
+                                                <g
+                                                    id="__gsn__17f0945f267"
+                                                    color="#ffffff"
+                                                    name="Acceptable Finite Ranges Without Overflow and Underflow">
+                                                  The retrenchment mapping will allow all required input and output without underflow or overflow of computable values.
+
+                                                  <j
+                                                      id="__gsn__17f0945f268"
+                                                      color="#ffffff"
+                                                      name="Justification">
+                                                    Here we show that the specification part appears to only accumulate reasonable error in output values.Higher up in the larger argument, it is shown that further verification of {interface contract} guarantees has been verified under the implementation as a whole.
+                                                  </j>
+
+                                                  <s
+                                                      id="__gsn__17f0945f269"
+                                                      color="#ffffff"
+                                                      name="Strategy">
+                                                    Through showing values in the implementation suffer no unreasonable boundary limitations nor error against general-case use.
+
+                                                    <g
+                                                        id="__gsn__17f0945f26a"
+                                                        color="#ffffff"
+                                                        name="Acceptable Implementation Input Ranges">
+                                                      The input ranges required by the formally specification part {-Part-} are representable in the data types of the implementation language and platform under the defined synthesis mapping.
+
+                                                      <e
+                                                          id="__gsn__17f0945f26b"
+                                                          color="#ffffff"
+                                                          name="Input Range and Accuracy Checking">
+                                                        A check that the range and accuracy requirement of each input is satisfied by the implementation and platform representation range and accuracy for the applied data type of each input. For structures, this is determined recursively for sub-structure types. See "evidence-fre.xlsx#Retrenchment Checks#Retrenchment Rules Satisfy Input Ranges".
+                                                      </e>
+                                                    </g>
+
+                                                    <g
+                                                        id="__gsn__17f0945f26c"
+                                                        color="#ffffff"
+                                                        name="No Underflow or Overflow">
+                                                      The value ranges of the specification part {-Part-} are such that sound bounds indicate no overflow, underflow of computed values will occur in implementation execution under the defined synthesis mapping.
+
+                                                      <e
+                                                          id="__gsn__17f0945f26d"
+                                                          color="#ffffff"
+                                                          name="Absence of Overflow and Underflow">
+                                                        Automatic checking or proof that all sound bounds ranges fall within representable value range overflow and underflow bounds for computable value types. See "evidence-fre.xlsx#Retrenchment Checks#Absence of Overflow and Underflow".
+                                                      </e>
+                                                    </g>
+                                                  </s>
+                                                </g>
+
+                                                <g
+                                                    id="__gsn__17f0945f26e"
+                                                    color="#ffffff"
+                                                    name="Acceptable Finite Structures">
+                                                  The finite limitations on the size of structures storable by the program is acceptable.
+
+                                                  <e
+                                                      id="__gsn__17f0945f270"
+                                                      color="#ffffff"
+                                                      name="Maximum Structure Size Check">
+                                                    .
+                                                  </e>
+
+                                                  <comment
+                                                      id="__gsn__17f0945f26f"
+                                                      color="#ffffff"
+                                                      name="TBD">
+                                                    default text
+                                                  </comment>
+                                                </g>
+                                              </g>
+
+                                              <public-goal
+                                                  id="__gsn__17f0945f271"
+                                                  color="#ffffff"
+                                                  name="Addressed All VCs">
+                                                All {verification condition}s generated by SPARK Ada in support of applied preconditions and postconditions have been addressed.
+
+                                                <c
+                                                    id="__gsn__17f0945f272"
+                                                    color="#ffffff"
+                                                    name="[VCs]">
+                                                  The verification conditions generated for proof by SPARK Ada.
+                                                </c>
+
+                                                <s
+                                                    id="__gsn__17f0945f273"
+                                                    color="#ffffff"
+                                                    name="Strategy">
+                                                  By complete and correct handling properties
+
+                                                  <g
+                                                      id="__gsn__17f0945f274"
+                                                      color="#ffffff"
+                                                      name="Complete Knowledge">
+                                                    All VCs are accounted for and either automatically discharged or noted by the Spark Ada tool as un-discharged.
+
+                                                    <a
+                                                        id="__gsn__17f0945f275"
+                                                        color="#ffffff"
+                                                        name="Assumption">
+                                                      Trusted SPARK Pro toolset outside of addressed and known bugs.
+                                                    </a>
+
+                                                    <e
+                                                        id="__gsn__17f0945f276"
+                                                        color="#ffffff"
+                                                        name="VC Difference Computation by Reader">
+                                                      Reader compares complete table of VCs from tooling mapped in "evidence-fre.xlsx#VCs#VS Satisfaction", compare with entries there not satisfied against "evidence-fre.xlsx#VCs#Undischarged VSs" list.
+                                                    </e>
+                                                  </g>
+
+                                                  <g
+                                                      id="__gsn__17f0945f277"
+                                                      color="#ffffff"
+                                                      name="Non-discharged  VCs Adequately Addressed">
+                                                    All VCs not automatically discharged by the SPAR Ada tool are adequately addressed.
+
+                                                    <s
+                                                        id="__gsn__17f0945f278"
+                                                        color="#ffffff"
+                                                        name="Strategy">
+                                                      By Complete and Correct handling properties
+
+                                                      <g
+                                                          id="__gsn__17f0945f279"
+                                                          color="#ffffff"
+                                                          name="Complete Addressing of All Undischarged VCs">
+                                                        All VCs that are not automatically discharged by the SPARK Pro tool have been sufficiently addressed.
+
+                                                        <e
+                                                            id="__gsn__17f0945f27a"
+                                                            color="#ffffff"
+                                                            name="Undischarged VC Table">
+                                                          A table of all of the undischarged verification conditions generated for the source code and where the proof is performed or an argument has been created. See "evidence-fre.xlsx!VCs#Undischarged VCs".
+                                                        </e>
+                                                      </g>
+
+                                                      <g
+                                                          id="__gsn__17f0945f27b"
+                                                          color="#ffffff"
+                                                          name="Addressing of Undischarged VCs Accepted">
+                                                        Proofs and arguments provided from outside the SPARK Pro tool are accepted by domain experts and stakeholders.
+
+                                                        <e
+                                                            id="__gsn__17f0945f27c"
+                                                            color="#ffffff"
+                                                            name="Outside VCs DIscharge Rational">
+                                                          External proof and/or argument for why the VC is discharged outside the tool.See "evidence-fre.xlsx!VCs#Outside VS Discharge Rationale".
+                                                        </e>
+
+                                                        <e
+                                                            id="__gsn__17f0945f27d"
+                                                            color="#ffffff"
+                                                            name="Spark Pro VC Output Report">
+                                                          The report produced by Spark Pro indicating generated VCs, errors, and undischarged VCs. See "evidence-fre.xlsx!VCs#VS Satisfaction".
+                                                        </e>
+
+                                                        <e
+                                                            id="__gsn__17f0945f27e"
+                                                            color="#ffffff"
+                                                            name="Sign-off on Undischarged VCs">
+                                                          Sign-off from stakeholders and domain expert reviewers for each of the VCs with an external proof and/or argument in the VC sheet. See "evidence-fre.xlsx!VCs#Undischarged VC SIgn-Off".
+                                                        </e>
+                                                      </g>
+                                                    </s>
+                                                  </g>
+                                                </s>
+                                              </public-goal>
+                                            </s>
+                                          </g>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17f094499cc"
+                                            color="#ffffff"
+                                            name="Stepwise Simulation within Scalar Value Error Under Correct Operations and Data  Implementation">
+                                          Under correct operation and data implementation under the retrenchment rules, a stepwise simulation condition is maintained between the specification and the implementation.
+
+                                          <a
+                                              id="__gsn__17f094499cd"
+                                              color="#ffffff"
+                                              name="Assumption">
+                                            The implementation of expressions and functions correctly mirrors the expressions and functions of the specification. This is asserted elsewhere in this argument.
+                                          </a>
+
+                                          <s
+                                              id="__gsn__17f094499ce"
+                                              color="#ffffff"
+                                              name="Strategy">
+                                            By arguing that stepwise simulation can hold for the formal specification part's class.
+
+                                            <j
+                                                id="__gsn__17f094499cf"
+                                                name="Justification">
+                                              We have explored two different forms of specification with different restrictions on allowed specified data types.
+                                            </j>
+
+                                            <c
+                                                id="__gsn__17f094499d0"
+                                                color="#ffffff"
+                                                name="Choose">
+                                              Of of the below sub-arguments depending on the type of limited refinement relationship between the specification and implementation intended.
+                                            </c>
+
+                                            <g
+                                                id="__gsn__17f094499d1"
+                                                color="#ffffff"
+                                                optional="true"
+                                                name="Stepwise Nondeterministic Simulation Will Hold for Sound Nondeterministic Specification">
+                                              Stepwise simulation with scalar value error will hold for the nondeterministic specification under valid retrenchment and correct operational implementation.
+
+                                              <c
+                                                  id="__gsn__17f094499d2"
+                                                  color="#ffffff"
+                                                  name="Use">
+                                                This is used when lemmas specify bound error ranges or /or are proven over complex conditionerror interval ranges in the specification between specification data values and precision error in implementation values.
+                                              </c>
+
+                                              <c
+                                                  id="__gsn__17f094499d3"
+                                                  color="#ffffff"
+                                                  name="[Nondeterministic Specification]">
+                                                A nondeterministic specification assumes accumulating error on scalar uncountably infinite data types on a computer implementation. Lemmas account for this nondeterminism and state useful properties by assuming bounded limits to accumulating error. Proof is over nondeterministic conditional expression evaluation (branch divergence) and further requires showing that bound error accumulation error assumptions are sound for a correct implementation.
+                                              </c>
+
+                                              <c
+                                                  id="__gsn__17f094499d4"
+                                                  color="#ffffff"
+                                                  name="Note on Typical Numeric Stability Analysis">
+                                                Analyzing sufficiency of numerical stability on simple loops with some accumulating error is a special case of nondeterministic specification analysis.
+                                              </c>
+
+                                              <s
+                                                  id="__gsn__17f094499d5"
+                                                  color="#ffffff"
+                                                  name="Strategy">
+                                                By arguing why it will hold for a nondeterministic specification with sound value bounds.
+
+                                                <j
+                                                    id="__gsn__17f094499d6"
+                                                    color="#ffffff"
+                                                    name="Justification">
+                                                  A nondeterministic specification specifies all ideal values that are not computable on interval range value types. It also specifies constrained uncertainty of the computable equivalent of the value (under retrenchment rules) by defining a finite ranges on resulting interval bounds. Properties are proven for the specification against the interval arithmetic with constrained bounds. One then shows that the constraint bounds of the specification hold for the implementation under retrenchment rules.
+                                                </j>
+
+                                                <g
+                                                    id="__gsn__17f094499d7"
+                                                    color="#ffffff"
+                                                    name="Simulation by Non-Deterministic Specification with Sound Value Bounds">
+                                                  A proper {nondeterministic specification} with sound computed value bounds under implementable retrenchment rules is a stepwise operational simulation of a {correct operational implementation}.
+
+                                                  <c
+                                                      id="__gsn__17f094499d8"
+                                                      color="#ffffff"
+                                                      name="Note">
+                                                    This is non-deterministic simulation of the source code implementation by the specification.
+                                                  </c>
+
+                                                  <e
+                                                      id="__gsn__17f094499d9"
+                                                      color="#cdcdcd"
+                                                      name="Paper Proof">
+
+                                                    <c
+                                                        id="__gsn__17f094499da"
+                                                        name="See Appendix">
+                                                      See ND Paper in appendices
+                                                    </c>
+                                                  </e>
+                                                </g>
+
+                                                <g
+                                                    id="__gsn__17f094499db"
+                                                    color="#ffffff"
+                                                    name="Sound Value Bounds">
+                                                  The defined computable value bounds of the nondeterministic specification part {-Part-} are sound (satisfied by the implementation execution) under the defined retrenchment rules.
+
+                                                  <e
+                                                      id="__gsn__17f094499dc"
+                                                      color="#ffffff"
+                                                      name="Retrenchment Rule Check">
+                                                    Confirmation that the retrenchment rules match those used in the sound bounds computation analysis/tools. See "evidence-fre.xlsx!Retrenchment Checks#Analysis Retrenchment Match".
+                                                  </e>
+
+                                                  <e
+                                                      id="__gsn__17f094499dd"
+                                                      color="#ffffff"
+                                                      name="Sound Bounds Analysis">
+                                                    Production of sound bounds on the ideal real values in the specification possible from valid inputs to the specification. E.G. Output from the PRECiSA tool for PVS formal specifications. See "evidence-fre.xlsx!Retrenchment Checks#Analysis Data".
+                                                  </e>
+
+                                                  <e
+                                                      id="__gsn__17f094499de"
+                                                      color="#ffffff"
+                                                      name="Sound Bounds Confirmed">
+                                                    Confirmation from analysis data that the bounds of analysis satisfy those defined on specification part lemmas and bounds of all lemmas and axioms on which those lemmas rely. See "evidence-fre.xlsx!Retrenchment Checks!Sound Bounds Confirmed".
+                                                  </e>
+                                                </g>
+                                              </s>
+                                            </g>
+
+                                            <g
+                                                id="__gsn__17f094499df"
+                                                color="#ffffff"
+                                                optional="true"
+                                                name="Stepwise Deterministic Simulation by Refinement">
+                                              Stepwise simulation with scalar value error will hold for the simple deterministic specification under valid retrenchment and correct operational implementation.
+
+                                              <s
+                                                  id="__gsn__17f094499e0"
+                                                  color="#ffffff"
+                                                  name="Strategy">
+                                                By showing that all value types of the specification have values that map under range restrictions one to one with values representable in the implementation language.
+
+                                                <g
+                                                    id="__gsn__17f094499e1"
+                                                    color="#ffffff"
+                                                    name="Simulation by Deterministic Specification with Sound Value Bounds">
+                                                  A proper deterministic specification where all executed values on any valid input to the implementation map one-to-one to values of the specification, is stepwise operationally simulated by the specification for a {correct operational implementation}
+
+                                                  <e
+                                                      id="__gsn__17f094499e2"
+                                                      color="#cdcdcd"
+                                                      name="Proof">
+                                                    Same as ND paper proof, minus consideration of nondeterministic branch simulation.
+
+                                                    <c
+                                                        id="__gsn__17f094499e3"
+                                                        name="See Appendix">
+                                                      See ND Paper in appendices
+                                                    </c>
+                                                  </e>
+                                                </g>
+
+                                                <g
+                                                    id="__gsn__17f094499e4"
+                                                    color="#ffffff"
+                                                    name="One-to-One Values in Finite Ranges">
+                                                  All value types of the specification part {-Part-} have values that map under range restrictions one to one with values representable in the implementation language.
+
+                                                  <e
+                                                      id="__gsn__17f094499e5"
+                                                      color="#ffffff"
+                                                      name="Retrenchment Rules Check">
+                                                    Check and sign-off that al of the retrenchment rules are one-to-one and onto within the allowed finite ranges of the implementation. See "evidence-fre.xlsx#Retrenchment Checks#Data Refinement"
+                                                  </e>
+                                                </g>
+                                              </s>
+                                            </g>
+
+                                            <g
+                                                id="__gsn__17f094499e6"
+                                                color="#ffffff"
+                                                optional="true"
+                                                name="Deterministic Stepwise Simulation by a Closed Form Function Definition">
+                                              Stepwise simulation with scalar value error will hold for the simple deterministic specification as a single operational atomic unit under valid retrenchment and correct operational implementation.
+
+                                              <c
+                                                  id="__gsn__17f094499e7"
+                                                  color="#ffffff"
+                                                  name="Context">
+                                                A specification of a function in a closed form such that it does not contain any conditionally evaluated expressions.
+                                              </c>
+
+                                              <c
+                                                  id="__gsn__17f094499e8"
+                                                  color="#ffffff"
+                                                  name="Concept">
+                                                As the specification does not declare any conditional expressions can be evaluated in a closed form.
+                                              </c>
+
+                                              <s
+                                                  id="__gsn__17f094499e9"
+                                                  color="#ffffff"
+                                                  name="Strategy">
+                                                By showing that the specification's preconditions and postconditions can be entirely encoded as preconditions and postconditions in a Spark Ada implementation such that {refinement fitness conditions} are satisfied.
+
+                                                <c
+                                                    id="__gsn__17f094499ea"
+                                                    color="#ffffff"
+                                                    name="[refinement fitness conditions]">
+                                                  The condition that all preconditions of the specification imply all preconditions of the Spark Ada implementation, and all postconditions of the Spark Ada implementation imply the PVS specification.
+                                                </c>
+
+                                                <g
+                                                    id="__gsn__17f094499eb"
+                                                    color="#ffffff"
+                                                    name="Refinement">
+                                                  Any function that is a refinement of its specification under the specification's fully defined preconditions and postconditions is step-wise simulated by the abstraction of that specification to a single operation defined by the specification's preconditions and postconditions.
+
+                                                  <s
+                                                      id="__gsn__17f094499ec"
+                                                      color="#ffffff"
+                                                      name="Strategy">
+                                                    By class of defining a spec by a closed form set of postconditions on preconditions against which one can prove source code.
+
+                                                    <g
+                                                        id="__gsn__17f094499ed"
+                                                        color="#ffffff"
+                                                        name="Operational Abstraction">
+                                                      An operational specification with complete and correct preconditions and postconditions defined is abstracted as a single operation is entirely and correctly implemented and defined by those preconditions and postconditions.
+
+                                                      <e
+                                                          id="__gsn__17f094499ee"
+                                                          color="#cdcdcd"
+                                                          name="Literature">
+                                                        Nature of Floyd-Hoare logic.
+                                                      </e>
+                                                    </g>
+
+                                                    <g
+                                                        id="__gsn__17f094499ef"
+                                                        color="#ffffff"
+                                                        name="Abstract Simulation">
+                                                      An operational refinement of a a correct and complete operational abstraction step-wise simulates any implementation implying its postconditions given its preconditions.
+
+                                                      <e
+                                                          id="__gsn__17f094499f0"
+                                                          color="#cdcdcd"
+                                                          name="Literature">
+                                                        Nature of Floyd-Hoare logic.
+                                                      </e>
+                                                    </g>
+                                                  </s>
+                                                </g>
+
+                                                <g
+                                                    id="__gsn__17f094499f1"
+                                                    color="#ffffff"
+                                                    name="Satisfaction of Function by Implementation">
+                                                  The preconditions of the specification satisfy the preconditions of the Spark Ada implementation, and the implementation implies the Spark Ada functional specification.
+
+                                                  <s
+                                                      id="__gsn__17f094499f2"
+                                                      color="#ffffff"
+                                                      name="Strategy">
+                                                    By showing that the precondition and postconditions {refinement fitness conditions} hold between the specification part and their statement in Spark ADA preconditions and conditions in the source code.
+
+                                                    <j
+                                                        id="__gsn__17f094499f3"
+                                                        color="#ffffff"
+                                                        name="Justification">
+                                                      We show elsewhere that all proof conditions on the SPARK Ada have been discharged.
+                                                    </j>
+
+                                                    <g
+                                                        id="__gsn__17f094499f4"
+                                                        color="#ffffff"
+                                                        name="Successful Pre and Postcondition Encoding">
+                                                      The pre and postconditions of the specifiation {-Part-} are succesfully encoded in the preambles of function definitions in the SPARK language.
+
+                                                      <e
+                                                          id="__gsn__17f094499f5"
+                                                          color="#ffffff"
+                                                          name="PVS to Spark Ada Condition Check">
+                                                        Check by peer that the pre and postcondition representation of the Spark Ada PVS specification of each function is complete and correct. See "evidence-fre.xlsx!Mirrored Functions#Proof Conditions Team Review Sign-Off".
+                                                      </e>
+                                                    </g>
+                                                  </s>
+                                                </g>
+                                              </s>
+                                            </g>
+                                          </s>
+                                        </g>
+                                      </s>
+                                    </g>
+                                  </s>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0943dd0f"
+                                    color="#ffffff"
+                                    name="Correct Under Composition">
+                                  Under composition from its parts, the total source code implementation is {correct to within accumulated scalar value error}.
+
+                                  <e
+                                      id="__gsn__17f0943dd10"
+                                      color="#cdcdcd"
+                                      name="Basic Conclusion on Program Flow">
+                                    Given that each part is [correct to within scalar value error}, and that only data values flow between parts on input and output from functions while satisfying the retrenchment rules, it holds that the sum of the parts is {correct to within accumulated scalar value error}.
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+                          </s>
+                        </g>
+
+                        <g
+                            id="__gsn__17f0943dd11"
+                            color="#ffffff"
+                            name="Properties Hold Under Possible Scalar Error">
+                          The possible accumulating scalar value error in the executing implementation do not violate any of the properties from which {interface contract} guarantees are implied.
+
+                          <a
+                              id="__gsn__17f0943dd12"
+                              color="#ffffff"
+                              name="Assumption">
+                            The implementation is {correct within accumulating scalar value error}.
+                          </a>
+
+                          <s
+                              id="__gsn__17f0943dd13"
+                              color="#ffffff"
+                              name="Strategy">
+                            By showing that all properties verified on the specification are considered, and those that did not explicit state allowed scalar value error are shown to not violate contract guarantees.
+
+                            <j
+                                id="__gsn__17f0943dd14"
+                                color="#ffffff"
+                                name="Justification">
+                              Properties verified on the specification that were verified against possible accumulating scalar value error need not be reconsidered. All remaining properties verified on the specification must be considered for the impact scalar value error has, in aggregate, on implication of contract guarantees.
+                            </j>
+
+                            <g
+                                id="__gsn__17f0943dd15"
+                                color="#ffffff"
+                                optional="true"
+                                name="All Explicit Error-Stating Properties Known">
+                              All properties that were verified against explicit allowed scalar error have been identified.
+
+                              <c
+                                  id="__gsn__17f0943dd16"
+                                  color="#ffffff"
+                                  name="Note">
+                                If one's properties are stated in lemmas of nondeterministic specifications, then those lemmas likely describe bound ranges of scalar value error under which they hold. In that case, one can simply show that they were already determined to hold for possible scalar value error in satisfying the specification.
+                              </c>
+
+                              <e
+                                  id="__gsn__17f0943dd17"
+                                  color="#ffffff"
+                                  name="Explicit Handling Accounted For">
+                                Those properties that explicitly stated bound sound value error in specification are accounted for and need not be checked. See "evidence-fre.xlsx!ContractVerification#Property Requires Scalar Value Error Analysis".
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17f0943dd18"
+                                color="#ffffff"
+                                optional="true"
+                                name="All Remaining Properties Hold">
+                              Properties that do not explicitly state tolerated scalar value error are shown to hold under all possible accumulating scalar value error.
+
+                              <c
+                                  id="__gsn__17f0943dd19"
+                                  color="#ffffff"
+                                  name="Note">
+                                If one has implied contract guarantees for properties that were not shown to hold under possible scalar value error, then one must explicitly reason about why those properties still hold in the implementation under the possible scalar value error from any utilized execution.
+                              </c>
+
+                              <s
+                                  id="__gsn__17f0943dd1a"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By showing that all impacting data with potential scalar value error impacting each property is known, and each property is then shown to hold over potential error in those data values,.
+
+                                <g
+                                    id="__gsn__17f0943dd1b"
+                                    color="#ffffff"
+                                    name="Impacting Data Known">
+                                  All data and their types for which scalar value error occurs impacting each property are known.
+
+                                  <e
+                                      id="__gsn__17f0943dd1c"
+                                      color="#ffffff"
+                                      name="Impacting Data List">
+                                    Impacting data list for each property where late scalar value error acceptability needs be determined. See "evidence-fre.xlsx!ContractVerification#Impacting Data".
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd1d"
+                                      color="#ffffff"
+                                      name="Completeness of Impacting Data   Sign-Off">
+                                    Team signs off that the impacting data for properties to analyze are completely and correctly determined for each property. See "evidence-fre.xlsx!ContractVerification#Impacting Data Completeness Sign-Off".
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17f0943dd1e"
+                                    color="#ffffff"
+                                    name="Properties Hold">
+                                  All properties where late accumulated scalar error needs to be analyzed to see if properties hold shows that those properties hold.
+
+                                  <e
+                                      id="__gsn__17f0943dd1f"
+                                      color="#ffffff"
+                                      name="Rationale">
+                                    The rationale under which the given property holds under the possible scalar value error.See "evidence-fre.xlsx!ContractVerification#Acceptable Precision Sign-Off".
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd20"
+                                      color="#ffffff"
+                                      name="Precision Analysis">
+                                    Analysis products and rationale for acceptability of Scalar Value error for each affectable contract guarantee. See "evidence-fre.xlsx#ContractRetrenchmentAnalysis#Precision Analysis Data".
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17f0943dd21"
+                                      color="#ffffff"
+                                      name="Acceptable Precision Sign-Off">
+                                    The team lead signs here if the team agrees that analysis of possible scalar value error and rationale fors for properties holding are correct. See "evidence-fre.xlsx!ContractVerification#Acceptable Scalar Error Rationale".
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+                          </s>
+                        </g>
+                      </s>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17f0941238a"
+                    color="#ffffff"
+                    name="Direct Verified Properties">
+                  A subset of properties are adequately directly verified on the source code.
+
+                  <s
+                      id="__gsn__17f0941238c"
+                      color="#ffffff"
+                      name="Strategy">
+                    By arguing that the tests are adequate and pass.
+
+                    <j
+                        id="__gsn__17f0941238d"
+                        color="#ffffff"
+                        name="Justification">
+                      We currently expect most users will utilize testing. In order to have complete data without working on more V and V techniques, we assume testing for now
+                    </j>
+
+                    <g
+                        id="__gsn__17f0941238e"
+                        color="#ffffff"
+                        name="Source Code Testing">
+                      Properties are directly determined by teseting against the source code implementation.
+
+                      <a
+                          id="__gsn__17f0941238f"
+                          color="#ffffff"
+                          name="Assumption">
+                        Appropriate OS/Hardware/Environment(s) for target systems.
+                      </a>
+
+                      <a
+                          id="__gsn__17f09412390"
+                          color="#ffffff"
+                          name="Assumption">
+                        Appropriate source code application tools (compilers, interpreters, etc.)
+                      </a>
+
+                      <g
+                          id="__gsn__17f09412391"
+                          color="#ffffff"
+                          name="Tests are Adequate">
+                        The tests of the formal specification are {adequate} to determine specification satisfaction of the guarantees verified.
+
+                        <c
+                            id="__gsn__17f09412392"
+                            color="#ffffff"
+                            name="[adequate]">
+                          Adequacy is assessed as the tests correctly testing the intended property of the specification over the intended set of inputs.
+                        </c>
+
+                        <e
+                            id="__gsn__17f09412393"
+                            color="#ffffff"
+                            name="Peer Review">
+                          The team reviews all tests written against animation/execution of the formal specification for capturing the correct intended property to test and accurately determining it against the specification over the intended input set. See "evidence-fre.xlsx!Contract Verification#Source Code Test Review Sign-Off"
+                        </e>
+
+                        <e
+                            id="__gsn__17f09412394"
+                            color="#ffffff"
+                            name="Inspection">
+                          Reader can inspect the test.See "evidence-fre.xlsx!Contract Verification#Source Code Test"
+                        </e>
+                      </g>
+
+                      <g
+                          id="__gsn__17f09412395"
+                          color="#ffffff"
+                          name="Tests Pass">
+                        All tests used to verify contract guarantees pass. See
+
+                        <e
+                            id="__gsn__17f09412396"
+                            color="#ffffff"
+                            name="Test Pass">
+                          Indication that all tests have passed based on their output. See "evidence-fre.xlsx!Contract Verification#Source Code Test Passes"
+                        </e>
+
+                        <e
+                            id="__gsn__17f09412397"
+                            color="#ffffff"
+                            name="Test Log">
+                          Log of all test executions/animations with sufficient status information. See "evidence-fre.xlsx!Contract Verification#Source Code Test Log"
+                        </e>
+                      </g>
+                    </g>
+
+                    <m
+                        id="__gsn__17f09412398"
+                        color="#cdcdcd"
+                        optional="true"
+                        name="Microstandard: Source Code V and V">
+                      A Microstandard for general V and V techniques.
+
+                      <comment
+                          id="__gsn__17f09412399"
+                          color="#ffffff"
+                          name="Note">
+                        Could be improved with deeper testing microstandard or other v and v techniques as indicated by this optional microstandard placeholder.
+                      </comment>
+                    </m>
+                  </s>
+
+                  <comment
+                      id="__gsn__17f0941238b"
+                      color="#ffffff"
+                      name="Comment">
+                    PUT GUIDANCE MATERIAL THAT SOME OF THIS TESTING SHOULD HAPPEN EARLY TO FIND ERRORS IN SPECIFICATION CHEAPLY BEFORE EXPENSIVE PROOF WORK IS DONE. CITE GALOIS PEOPLE.
+                  </comment>
+                </g>
+
+                <comment
+                    id="__gsn__17f09412380"
+                    color="#ffffff"
+                    name="Comment">
+                  Standard could be extended to address overlap in the two sets bolstering {adequate assurance}. For now, one should only argue in the one of the two sets where the assurance is sufficient.
+                </comment>
+              </s>
+            </g>
+          </s>
+        </g>
+
+        <g
+            id="__gsn__17f093ea1ca"
+            color="#ffffff"
+            name="Innocuity">
+          The prime software module's unintended behaviors do not have an {unacceptable impact} on systems' {qualities of interest} under {foreseeable conditions}.
+
+          <c
+              id="__gsn__17f093ea1cb"
+              color="#ffffff"
+              name="[innocuity]">
+            Any part of the implementation that is not required by the {defined intended behavior} has no {unacceptable impact} on intended services.
+          </c>
+
+          <away-context
+              id="__gsn__17f093ea1cd"
+              name="[defined intended behavior]">
+            See Intent: Defined Intended Behavior
+          </away-context>
+
+          <c
+              id="__gsn__17f093ea1ce"
+              name="[unacceptable impact]">
+            An impact that compromises the dependability assessment.
+          </c>
+
+          <c
+              id="__gsn__17f093ea1cf"
+              color="#ffffff"
+              name="Module">
+            oap-innocuity.gsn
+          </c>
+
+          <s
+              id="__gsn__17f093f6eb1"
+              color="#ffffff"
+              name="Strategy">
+            By assurance through the sufficiency of interface contracts, and the optional verification at the system service-level.
+
+            <c
+                id="__gsn__17f093f6eb2"
+                color="#ffffff"
+                name="Microstandard Context">
+              See the informalReverseEngineering microstandard.
+            </c>
+
+            <j
+                id="__gsn__17f093f6eb3"
+                color="#ffffff"
+                name="Justification">
+              If one has high assurance of source code satisfyimg necessary properties for guarantees, and believes everything is correct, the argument to the left works. But likely, one iwll want to shore-up this with further direct verificaiton.
+            </j>
+
+            <g
+                id="__gsn__17f093f6eb4"
+                color="#ffffff"
+                name="Innocuos Through Contract Fulfillment">
+              The nature of satisfied correct and complete interface contracts precludes harmful behavior for qualities of interest for defined system services.
+
+              <s
+                  id="__gsn__17f093f6eb5"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that a correct implementation of correct and complete interface contracts satisfies innocuity, and that we have already shown that those contracts are correct and complete, and satisfied by the module source code.
+
+                <g
+                    id="__gsn__17f093f6eb6"
+                    color="#ffffff"
+                    name="Contracts Define Sufficient Innocuity">
+                  Correct and complete interface contracts define requirements of intended module behavior, both prescriptively and proscriptively, that together are sufficient to satisfy qualities of interest in system services.
+
+                  <s
+                      id="__gsn__17f093f6eb7"
+                      color="#ffffff"
+                      name="Strategy">
+                    By arguing over the nature of interface contracts expressing complete and correct required behavior to satisfy service requirements.
+
+                    <a
+                        id="__gsn__17f093f6eb8"
+                        color="#ffffff"
+                        name="Assumption">
+                      Required behavior is both prescriptive and proscriptive so as to satisfy the requirements of system services for all qualities of interest.
+                    </a>
+
+                    <away-goal
+                        id="__gsn__17f093f6eb9"
+                        color="#ffffff"
+                        name="Interface Point Contracts are Sufficient">
+                      Contracts at {interface point}s of a {target module} in a {target system} can express complete and correct required behavior of the {target module} in the {target system}.
+                    </away-goal>
+                  </s>
+                </g>
+
+                <away-goal
+                    id="__gsn__17f093f6eba"
+                    color="#ffffff"
+                    name="Intent">
+                  The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+                </away-goal>
+
+                <away-goal
+                    id="__gsn__17f093f6ebb"
+                    color="#ffffff"
+                    name="Correctness">
+                  The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+                </away-goal>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17f093f6ebc"
+                color="#ffffff"
+                optional="true"
+                name="Innocuity of Source Code">
+              The unintended behaviors of the target software module do not violate system service-level requirements.
+
+              <m
+                  id="__gsn__17f093f6ebd"
+                  color="#cdcdcd"
+                  optional="true"
+                  name="Innocuity of Source Code via Symbolic Execution Analysis">
+                The unintended behavior of the source code of the prime software module is innocuous for the {qualities of interest} of the {systems of interest}
+
+                <c
+                    id="__gsn__17f093f6ebe"
+                    color="#ffffff"
+                    name="Microstandard: Innocuity Through Symbolic Execution Analysis">
+                  innocuityThroughSymbolicExecutionAnalysis.gsn
+                </c>
+              </m>
+
+              <m
+                  id="__gsn__17f093f6ebf"
+                  color="#cdcdcd"
+                  optional="true"
+                  name="Module">
+                System-in-the-loop Coverage Testing
+              </m>
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

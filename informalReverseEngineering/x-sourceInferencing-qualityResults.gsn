@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17b2bfbc2b8"
+        color="#ffffff"
+        name="Quality Results">
+      The resulting intermediate and final contract products of the analysis are of high quality.
+
+      <s
+          id="__gsn__17b2bfc2858"
+          color="#ffffff"
+          name="Strategy">
+        For intermediate products and final products
+
+        <g
+            id="__gsn__17b2bfc2859"
+            color="#ffffff"
+            name="Quality Intermediate Reverse Engineering Products">
+          The analysis spreadsheets contain quality analysis.
+
+          <g
+              id="__gsn__17b2bfc285a"
+              color="#ffffff"
+              name="Reverse Engineering Team Agreement">
+            The reverse engineering team agrees that the analysis products are complete and correct.
+
+            <e
+                id="__gsn__17b2bfc285b"
+                color="#ffffff"
+                name="Team Sign-Off">
+              Document
+            </e>
+          </g>
+
+          <g
+              id="__gsn__17b2bfc285c"
+              color="#ffffff"
+              name="Direct Cursory Inspection">
+            The reader can directly inspect the analyses in comparison with the source code to get a sense of the depth, breadth, and quality of analysis.
+
+            <e
+                id="__gsn__17b2bfc285d"
+                color="#ffffff"
+                name="Intermediate Analyses">
+              In excel spreadsheets. Link
+            </e>
+
+            <e
+                id="__gsn__17b2bfc285e"
+                color="#ffffff"
+                name="Source Artifacts">
+              For the {target systems} including {target module}.
+            </e>
+          </g>
+        </g>
+
+        <g
+            id="__gsn__17b2bfc285f"
+            color="#ffffff"
+            name="Quality Contracts">
+          The contracts produced for the {target module} in the {target systems} are of adequate quality.
+
+          <s
+              id="__gsn__17b2bfc2860"
+              color="#ffffff"
+              name="Strategy">
+            Through demonstration that the contract terms have the qualities of quality requirements.
+
+            <c
+                id="__gsn__17b2c0cd933"
+                color="#ffffff"
+                name="Context">
+              The contract terms are treated as a set of functional and non-functional requirements at their appropriate application points.
+            </c>
+
+            <m
+                id="__gsn__17b2bfc2861"
+                color="#ffffff"
+                name="Quality Requirements">
+              The resulting {requirements} are of sufficient quality.
+
+              <c
+                  id="__gsn__17b2bfc2862"
+                  color="#ffffff"
+                  name="Module">
+                requirementsQuality.gsn
+              </c>
+            </m>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

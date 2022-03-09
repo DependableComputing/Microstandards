@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17702c644ee"
+        color="#ffffff"
+        name="Properties Verified Against Formal Specification">
+      The {formal specification} {adequately verifies} a set of {invariant properties} of the software module.
+
+      <c
+          id="__gsn__17702c7d692"
+          color="#ffffff"
+          name="[formal specification]">
+        A specification for which all data and functions/procedures are formally defined with clear semantics against which invariant run-time properties might this be proven.
+      </c>
+
+      <c
+          id="__gsn__17eb1f582d0"
+          color="#ffffff"
+          name="[invariant properties]">
+        Properties that can be expressed as invariants of the specification's content in one or more logics.
+      </c>
+
+      <c
+          id="__gsn__17ec0daec88"
+          color="#ffffff"
+          name="[adequately verified]">
+        Having been verified to an extent that is practicable with available verification and validation methods that is deemed acceptable for the criticality level of target systems.
+      </c>
+
+      <s
+          id="__gsn__17eb1f73ddd"
+          color="#ffffff"
+          name="Strategy">
+        By arguing verification coverage of all properties through formal verification and/or animation/testing.
+
+        <c
+            id="__gsn__17ec0cf6a0c"
+            color="#ffffff"
+            name="Use of PVS">
+          We try to keep the argument general for application under different formal specification and analysis methods, however, the standard is targeted at {PVS} as a motivating example at this time.
+        </c>
+
+        <c
+            id="__gsn__17702c7d69d"
+            color="#ffffff"
+            name="[PVS]">
+          A system to define a {formal specification} consisting of axioms, theorems and lemmas, over a functional specification, and tools to facilitate proof of those theorems and lemmas against the operational specification. (SEE PVS docs)
+        </c>
+
+        <g
+            id="__gsn__17dbb5050ff"
+            color="#ffffff"
+            name="Property Coverage by Lemmas">
+          Each {invariant property} to be verified on the specification is defined formally as a lemma.
+
+          <e
+              id="__gsn__17dbb50b410"
+              color="#ffffff"
+              name="Coverage Table">
+            Indication that each {invariant properties} to be verified on the specification are formally defined as a lemma. See "evidence-fre.xlsx!Contract Verification#Lemma" in association with properties.
+          </e>
+        </g>
+
+        <g
+            id="__gsn__17ed03727db"
+            color="#ffffff"
+            name="Properties Verified by Lemmas">
+          Each lemma for each property is {adequately verified} for the formal specification.
+
+          <s
+              id="__gsn__17ed060397d"
+              color="#ffffff"
+              name="Strategy">
+            By showing that all lemmas are correct, and that all lemmas are covered by proof or test.
+
+            <g
+                id="__gsn__17ed054a1fc"
+                color="#ffffff"
+                name="Correct Lemma and Axiom Specification">
+              All lemmas and axioms are correct for verification of intended properties.
+
+              <s
+                  id="__gsn__17ed037620f"
+                  color="#ffffff"
+                  name="Strategy">
+                By arguing that all lemmas and axioms are correct. This includes all lemmas that support primary lemmas for {invariant properties}.
+
+                <g
+                    id="__gsn__17ed0376210"
+                    color="#ffffff"
+                    name="Lemmas are Correct">
+                  Each property to verify is accurately stated as a lemma with correct support lemmas in the formal specification.
+
+                  <s
+                      id="__gsn__17ed0376211"
+                      color="#ffffff"
+                      name="Strategy">
+                    By arguing that the lemmas state what is intended, rely only on acceptable axiomatics, and are free from common design faults.
+
+                    <g
+                        id="__gsn__17ed0376212"
+                        color="#ffffff"
+                        name="Correct Encoding">
+                      Each lemma states the property that is intended for it to state.
+
+                      <e
+                          id="__gsn__17ed0376213"
+                          color="#ffffff"
+                          name="Intent Peer Review">
+                        Peer review and sign-off on the correct encoding of the lemma against the intent of the lemma in the implication for which it is written. See "evidence-fre.xlsx!Contract Verification#Lemma Intention Review Sign-Off"
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17ed0376214"
+                        color="#ffffff"
+                        name="Common Design Faults Eliminated">
+                      Common design faults in formal specification are eliminated to the extent reasonable practicable by formal methods practticioners.
+
+                      <g
+                          id="__gsn__17ed0376215"
+                          color="#ffffff"
+                          name="Circular Logic is Identified and Repaired">
+                        Circular logic across the combined set of lemmas, axioms, and declared types are detected and eliminated.
+
+                        <e
+                            id="__gsn__17ed0376216"
+                            color="#ffffff"
+                            name="Peer Review">
+                          Peers have reviewed proof and sign-off on no circular logic issues remaining across lemmas, axioms, and types. See "evidence-fre.xlsx!Contract Verification#Circular Logic Not Present Sign-Off"
+                        </e>
+                      </g>
+
+                      <g
+                          id="__gsn__17ed0376217"
+                          color="#ffffff"
+                          repeat="true"
+                          name="{-Other-} is Identified and Repaired">
+                      </g>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17ed0376218"
+                    color="#ffffff"
+                    name="Axiomatics is Acceptable">
+                  Axioms of the formal specification utilized by the lemmas are acceptable.
+
+                  <s
+                      id="__gsn__17ed0376219"
+                      color="#ffffff"
+                      name="Strategy">
+                    By classes of points at which axiomatic premises emerge in PVS formal specifications.
+
+                    <g
+                        id="__gsn__17ed037621a"
+                        color="#ffffff"
+                        name="Acceptable Explicit Axioms">
+                      The axioms of the PVS specification are believed to be true.
+
+                      <e
+                          id="__gsn__17ed037621b"
+                          color="#ffffff"
+                          name="Agreement from Domain Experts and Stakeholders">
+                        Each explicit axiom has sign-off from domain experts and specification team. See "evidence-fre.xlsx!Contract Verification#Explicit Axiom Review Sign-Off"
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17ed037621c"
+                        color="#ffffff"
+                        name="Implicit Axiomatics are Acceptable">
+                      All {implicit axioms} are identified and deemed acceptable.
+
+                      <c
+                          id="__gsn__17ed037621d"
+                          color="#ffffff"
+                          name="[implicit axioms]">
+                        An axiom that is present as a result of implicit shared information between lemmas, axioms, and types in a formal specification.
+                      </c>
+
+                      <s
+                          id="__gsn__17ed037621e"
+                          color="#ffffff"
+                          name="Strategy">
+                        By showing complete identification and acceptability of all identified implicit axioms.
+
+                        <a
+                            id="__gsn__17ed037621f"
+                            color="#ffffff"
+                            name="Assumption">
+                          The team has knowledge about what libraries they rely on in a dependency chain and what implicit axioms might exist in those libraries.
+                        </a>
+
+                        <g
+                            id="__gsn__17ed0376220"
+                            color="#ffffff"
+                            name="Acceptably Complete Implicit Axioms Identification">
+                          An acceptably complete set of implicit axioms in the generated specification and lemmas are identified.
+
+                          <e
+                              id="__gsn__17ed0376221"
+                              color="#ffffff"
+                              name="Identified Sources of Implicit Axioms">
+                            Identification of all libraries that may contain implicit axioms, with identification of domains in which they might exist. See "evidence-fre.xlsx!Contract Verification#Implicit Axioms"
+                          </e>
+                        </g>
+
+                        <g
+                            id="__gsn__17ed0376222"
+                            color="#ffffff"
+                            name="Implicit Axioms are Acceptable">
+                          All implicit axioms identified are acceptable.
+
+                          <e
+                              id="__gsn__17ed0376223"
+                              color="#ffffff"
+                              name="Agreement from Domain Experts and Stakeholders">
+                            Each implicit axiom has sign-off from domain experts and specification team. See "evidence-fre.xlsx!Contract Verification#Implicit Axiom Review Sign-Off"
+                          </e>
+                        </g>
+                      </s>
+                    </g>
+                  </s>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17ed0612d5f"
+                color="#ffffff"
+                name="All Lemmas Verified">
+              All lemmas are verified against the specification.
+
+              <s
+                  id="__gsn__17ed008342c"
+                  color="#ffffff"
+                  name="Strategy">
+                Through proof or testing/animation against the specification.
+
+                <g
+                    id="__gsn__17ed0089ef0"
+                    color="#ffffff"
+                    name="Lemma Coverage">
+                  Each lemma is proven or tested through interpretation/animation, or both.
+
+                  <e
+                      id="__gsn__17ed03c6ebf"
+                      color="#ffffff"
+                      name="Coverage Check">
+                    A check that each defined lemma is covered by either a proof or test/animation. See "evidencefre.xlsx!Contract Verification#Lemma Coverage".
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17702c7d6a6"
+                    color="#ffffff"
+                    name="Lemmas to Prove are Proven">
+                  The lemmas of the specification are proven against the specification.
+
+                  <a
+                      id="__gsn__17de8f31367"
+                      color="#ffffff"
+                      name="Assumption">
+                    Sufficiently trustworthy proof assistant tool such as PVS.
+                  </a>
+
+                  <s
+                      id="__gsn__17f08f1a58f"
+                      color="#ffffff"
+                      name="Strategy">
+                    By sufficient properties for proof results
+
+                    <g
+                        id="__gsn__17ed07324e6"
+                        color="#ffffff"
+                        name="Well-Defined">
+                      Those lemmas that are proven are clearly differentiated from those that are not.
+
+                      <e
+                          id="__gsn__17ed074cce9"
+                          color="#ffffff"
+                          name="Proof Certificate">
+                        Certificate of complete proof for a given lemma.See "evidence-fre.xlsx!Contract Verification #Proof Certificate".
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17ed0732870"
+                        color="#ffffff"
+                        name="Proven">
+                      The lemmas defined to be proven are proven.
+
+                      <e
+                          id="__gsn__17702c7d6a7"
+                          color="#ffffff"
+                          name="PVS Proof File">
+                        Formal proof of each lemma with assistance from a verification tool such as PVS. See "evidence-fre.xlsx!Contract Verification #Proof Files" for proof file of each lemma.
+                      </e>
+
+                      <e
+                          id="__gsn__17de8f15a72"
+                          color="#ffffff"
+                          name="Peer Review of Proof">
+                        Proofs are reviewed by the team in the context of the proven lemmas. See "evidence-fre.xlsx!Contract Verification #Proof Review Sign-Off"
+                      </e>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17ed0099462"
+                    color="#ffffff"
+                    name="Lemmas to Test/Animate are Verified">
+                  The lemmas to be verified by testing are so verified.
+
+                  <s
+                      id="__gsn__17ed0099463"
+                      color="#ffffff"
+                      name="Strategy">
+                    By arguing that the tests are adequate and pass.
+
+                    <g
+                        id="__gsn__17ed0099464"
+                        color="#ffffff"
+                        name="Tests are Adequate">
+                      The tests of the formal specification are {adequate} to determine specification satisfaction of the guarantees verified.
+
+                      <c
+                          id="__gsn__17ed0099465"
+                          color="#ffffff"
+                          name="[adequate]">
+                        Adequacy is assessed as the tests correctly testing the intended property of the specification over the intended set of inputs.
+                      </c>
+
+                      <e
+                          id="__gsn__17ed0099466"
+                          color="#ffffff"
+                          name="Peer Review">
+                        The team reviews all tests written against animation/execution of the formal specification for capturing the correct intended property to test and accurately determining it against the specification over the intended input set. See "evidence-fre.xlsx!Contract Verification#Specification Test Intention Review Sign-Off"
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17ed0099467"
+                        color="#ffffff"
+                        name="Tests Pass">
+                      All tests used to verify contract guarantees pass. See
+
+                      <e
+                          id="__gsn__17ed069430b"
+                          color="#ffffff"
+                          name="Test Passes Check">
+                        Check that each test has passed, based on log output from the test in the correct environment.See "evidence-fre.xlsx!Contract Verification#Specification Test Passes"
+                      </e>
+
+                      <e
+                          id="__gsn__17ed0099468"
+                          color="#ffffff"
+                          name="Test Log">
+                        Log of all test executions/animations with sufficient status information. See "evidence-fre.xlsx!Contract Verification#Specification Test Log"
+                      </e>
+                    </g>
+                  </s>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17702c644ee"
+        color="#ffffff"
+        name="Adequately Correct and Complete Implementation of Specification">
+      The implementation of the formal specification is such that the properties verified on the formal specification remain {adequately correct} on the source code implementation.
+
+      <c
+          id="__gsn__17702c7d695"
+          color="#ffffff"
+          name="[source code implementation]">
+        An implementation of software that is stated in a source code language that is either compiled or interpreted to operate in an executable hardware environment.
+      </c>
+
+      <c
+          id="__gsn__17ec0f1c85f"
+          color="#ffffff"
+          name="[adequately correct]">
+        Having been verified on the specification, the extent to which properties hold is sufficient for the contract guarantees they imply to hold on the implementation.
+      </c>
+
+      <s
+          id="__gsn__17ec0f61c4b"
+          color="#ffffff"
+          name="Strategy">
+        By showing that the source code is {correct within accumulated scalar value error} and that that such possible error does not violate any properties verified against the specification.
+
+        <c
+            id="__gsn__17ebb967198"
+            color="#ffffff"
+            name="[correct to within accumulated scalar value error]">
+          Given the same input to a specified function, the output of the specified function and its source code implementation will only vary by error in the output's scalar values that accumulates from imprecision. Conditional execution of operations will be identical. So will resulting non-atomic data instances.
+        </c>
+
+        <c
+            id="__gsn__17ebb4a024f"
+            color="#ffffff"
+            name="[retrenchment models]">
+          Models mapping between value types on a specification and corresponding source code. The mapping includes mapping all values of the data type domain on the specification to corresponding values from the domain of the representative data type in the source code. Also included are rules for how all operations involving the data types compute values in the specification and the source code. For example, an real number in a PVS specification can be retrenched as IEEE floating-point numbers in Spark Ada, with configuration of small number normalization and disallowing overflow and underflow on operations, etc.
+        </c>
+
+        <g
+            id="__gsn__17f08f8e173"
+            color="#ffffff"
+            name="Correct To Within Accumulated Scalar Value Error">
+          The implementation of the source code is {correct to within accumulating scalar value error} with respect to the formal specification.
+
+          <s
+              id="__gsn__17f08fa32fe"
+              color="#ffffff"
+              name="Strategy">
+            By showing that this is true under the application of valid retrenchment models.
+
+            <j
+                id="__gsn__17f08fb3b09"
+                color="#ffffff"
+                name="Justification">
+              {Retrenchment models} define
+            </j>
+
+            <g
+                id="__gsn__17ebaf55ca4"
+                color="#ffffff"
+                name="Valid Retrenchment Models">
+              {Valid retrenchment models} are defined for the formally specified program in the implementation and platform under applied operating system and hardware constraints.
+
+              <c
+                  id="__gsn__17ec1090e0d"
+                  color="#ffffff"
+                  name="[valid retrenchment models]">
+                Valid retrenchment models are defined such that the data types and operations are accepted in the chosen specification and source code language.
+              </c>
+
+              <s
+                  id="__gsn__17ebaf55ca6"
+                  color="#ffffff"
+                  name="Strategy">
+                Through showing that sufficient retrenchment models are defined correctly and with sufficient completeness.
+
+                <g
+                    id="__gsn__17ebafb285c"
+                    color="#ffffff"
+                    name="Complete Models">
+                  All data types of the specification have a defined retrenchment model.
+
+                  <e
+                      id="__gsn__17ebafbd8fe"
+                      color="#ffffff"
+                      name="Complete Identification Sign-Off">
+                    Sign-off that the formal specification has been fully analyzed to identify and list explicit and implicit data types. See "evidence.fre.xlsx#Retrechment Models#Data Types Identification Sign-Off".
+                  </e>
+
+                  <e
+                      id="__gsn__17ebafbd6a8"
+                      color="#ffffff"
+                      name="Data Type Enumeration">
+                    The data types identified in the specification for retrenchment model development. See "evidence-fre.xlsx#Retrenchment Models#Specification Data Type".
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17ebb15b2ce"
+                    color="#ffffff"
+                    name="Correct and Sufficiently Complete Retrenchment Rules">
+                  For each data type identified, the retrenchment rules defining the type are accurate and complete over value mapping and operations of the specification and source code language.
+
+                  <e
+                      id="__gsn__17ebb367165"
+                      color="#ffffff"
+                      name="Correctness Sign-Off">
+                    Sign-off for each data value type that's its explicitly stated retrenchment model is correct and complete for value mapping, range limitations, overflow and underflow, and discrete approximation mapping, as well as operations utilized on the specification and/or source code. See "evidence-fre.xlsx#Retrenchemnt Models#Data Type Retrenchment Sign-Off".
+                  </e>
+
+                  <e
+                      id="__gsn__17ec11634ed"
+                      color="#ffffff"
+                      name="Retrenchment Models for Inspection">
+                    The rules of each retrenchment model are available for reader inspection. See "evidence-fre.xlsx#Retrenchemnt Models".
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17ec10803d7"
+                color="#ffffff"
+                name="Correct To Within Accumulated Scalar Value Error under Retrenchment Models">
+              All functions (procedures, methods, etc) of the source code implementation are {correct to within accumulated scalar value error} with respect to their respective formal specifications under the defined {retrenchment models}.
+
+              <s
+                  id="__gsn__17ec11b74b7"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that a partition of the specification into parts, reasoned over separately, results in production of a total source code implementation that is {correct to within accumultated scalar value error}.
+
+                <g
+                    id="__gsn__17d34116f1b"
+                    color="#ffffff"
+                    name="Composing Partition">
+                  A specification is correctly and completely composed from a partition of the functions of in its interprocedural call graph with data structures included.
+
+                  <e
+                      id="__gsn__17d34136c03"
+                      color="#ffffff"
+                      name="Partition Table">
+                    The definition of the partition of the formal specification. See 'evidence-fre.xlsx!Specification Partition"
+                  </e>
+
+                  <e
+                      id="__gsn__17d340ef31f"
+                      color="#ffffff"
+                      name="Partition Team Review">
+                    Peer review and sign-off on the membership of the partition and the concreteness of the definition of each part. See 'evidence-fre.xlsx!Specification Partition#Partition Review Sign-Off"
+                  </e>
+
+                  <e
+                      id="__gsn__17dee2e76ee"
+                      color="#ffffff"
+                      name="Parts Team Review">
+                    Peer review and sign-off on the membership of the partition and the concreteness of the definition of each part. See 'evidence-fre.xlsx!Specification Partition#Part Team Review Sign-Off"
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17d340ead40"
+                    color="#ffffff"
+                    name="All Parts of Specification Correctly Implemented">
+                  Each of the sub-specifications defined in the partition has a source code implementation that is {correct to within accumulated scalar value error}.
+
+                  <a
+                      id="__gsn__17ebb517510"
+                      color="#ffffff"
+                      name="Assumption">
+                    Valid and consistent retrenchment rules
+                  </a>
+
+                  <s
+                      id="__gsn__17d3413bd38"
+                      color="#ffffff"
+                      name="Strategy">
+                    Show for each partition cell of the specification
+
+                    <g
+                        id="__gsn__17d34142acb"
+                        color="#ffffff"
+                        repeat="true"
+                        name="Implementation of Part {-Part-} is Sufficiently Correct">
+                      The implementation of specification part {-Part-} is {correct to within accumulated scalar value error}.
+
+                      <m
+                          id="__gsn__17d345b01a7"
+                          color="#ffffff"
+                          name="Correct by Simulation Condition">
+                        The source code implementation of the formal operational specification part {-Part-} is practicably {correct to within accumulated scalar value error}.
+
+                        <c
+                            id="__gsn__17d346073a0"
+                            color="#ffffff"
+                            name="Module">
+                          4-practicablyCorrectAndCompleteImplementation.gsn
+                        </c>
+                      </m>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17ec131e47e"
+                    color="#ffffff"
+                    name="Correct Under Composition">
+                  Under composition from its parts, the total source code implementation is {correct to within accumulated scalar value error}.
+
+                  <e
+                      id="__gsn__17ec1326c1f"
+                      color="#cdcdcd"
+                      name="Basic Conclusion on Program Flow">
+                    Given that each part is [correct to within scalar value error}, and that only data values flow between parts on input and output from functions while satisfying the retrenchment rules, it holds that the sum of the parts is {correct to within accumulated scalar value error}.
+                  </e>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+
+        <g
+            id="__gsn__17ebb561c68"
+            color="#ffffff"
+            name="Properties Hold Under Possible Scalar Error">
+          The possible accumulating scalar value error in the executing implementation do not violate any of the properties from which {interface contract} guarantees are implied.
+
+          <a
+              id="__gsn__17ec11fb913"
+              color="#ffffff"
+              name="Assumption">
+            The implementation is {correct within accumulating scalar value error}.
+          </a>
+
+          <s
+              id="__gsn__17ed0f3f380"
+              color="#ffffff"
+              name="Strategy">
+            By showing that all properties verified on the specification are considered, and those that did not explicit state allowed scalar value error are shown to not violate contract guarantees.
+
+            <j
+                id="__gsn__17ed11d5e51"
+                color="#ffffff"
+                name="Justification">
+              Properties verified on the specification that were verified against possible accumulating scalar value error need not be reconsidered. All remaining properties verified on the specification must be considered for the impact scalar value error has, in aggregate, on implication of contract guarantees.
+            </j>
+
+            <g
+                id="__gsn__17ed0c79a48"
+                color="#ffffff"
+                optional="true"
+                name="All Explicit Error-Stating Properties Known">
+              All properties that were verified against explicit allowed scalar error have been identified.
+
+              <c
+                  id="__gsn__17eea848230"
+                  color="#ffffff"
+                  name="Note">
+                If one's properties are stated in lemmas of nondeterministic specifications, then those lemmas likely describe bound ranges of scalar value error under which they hold. In that case, one can simply show that they were already determined to hold for possible scalar value error in satisfying the specification.
+              </c>
+
+              <e
+                  id="__gsn__17ed0c61c29"
+                  color="#ffffff"
+                  name="Explicit Handling Accounted For">
+                Those properties that explicitly stated bound sound value error in specification are accounted for and need not be checked. See "evidence-fre.xlsx!ContractVerification#Property Requires Scalar Value Error Analysis".
+              </e>
+            </g>
+
+            <g
+                id="__gsn__17ed0f62887"
+                color="#ffffff"
+                optional="true"
+                name="All Remaining Properties Hold">
+              Properties that do not explicitly state tolerated scalar value error are shown to hold under all possible accumulating scalar value error.
+
+              <c
+                  id="__gsn__17eea8698a7"
+                  color="#ffffff"
+                  name="Note">
+                If one has implied contract guarantees for properties that were not shown to hold under possible scalar value error, then one must explicitly reason about why those properties still hold in the implementation under the possible scalar value error from any utilized execution.
+              </c>
+
+              <s
+                  id="__gsn__17eef78b984"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that all impacting data with potential scalar value error impacting each property is known, and each property is then shown to hold over potential error in those data values,.
+
+                <g
+                    id="__gsn__17eef7437b0"
+                    color="#ffffff"
+                    name="Impacting Data Known">
+                  All data and their types for which scalar value error occurs impacting each property are known.
+
+                  <e
+                      id="__gsn__17eef74b13c"
+                      color="#ffffff"
+                      name="Impacting Data List">
+                    Impacting data list for each property where late scalar value error acceptability needs be determined. See "evidence-fre.xlsx!ContractVerification#Impacting Data".
+                  </e>
+
+                  <e
+                      id="__gsn__17eef754f12"
+                      color="#ffffff"
+                      name="Completeness of Impacting Data   Sign-Off">
+                    Team signs off that the impacting data for properties to analyze are completely and correctly determined for each property. See "evidence-fre.xlsx!ContractVerification#Impacting Data Completeness Sign-Off".
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17eef743a06"
+                    color="#ffffff"
+                    name="Properties Hold">
+                  All properties where late accumulated scalar error needs to be analyzed to see if properties hold shows that those properties hold.
+
+                  <e
+                      id="__gsn__17eeb5b90f9"
+                      color="#ffffff"
+                      name="Rationale">
+                    The rationale under which the given property holds under the possible scalar value error.See "evidence-fre.xlsx!ContractVerification#Acceptable Precision Sign-Off".
+                  </e>
+
+                  <e
+                      id="__gsn__17ed1222fb3"
+                      color="#ffffff"
+                      name="Precision Analysis">
+                    Analysis products and rationale for acceptability of Scalar Value error for each affectable contract guarantee. See "evidence-fre.xlsx#ContractRetrenchmentAnalysis#Precision Analysis Data".
+                  </e>
+
+                  <e
+                      id="__gsn__17ebb561c6a"
+                      color="#ffffff"
+                      name="Acceptable Precision Sign-Off">
+                    The team lead signs here if the team agrees that analysis of possible scalar value error and rationale fors for properties holding are correct. See "evidence-fre.xlsx!ContractVerification#Acceptable Scalar Error Rationale".
+                  </e>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

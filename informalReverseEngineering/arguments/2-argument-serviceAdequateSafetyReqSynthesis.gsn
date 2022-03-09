@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__178c74b615f"
+        color="#ffffff"
+        name="Safety Synthesis">
+      A safety analysis defines safety requirements over the services and {interface source}s of the module {-M-} for safety of system {-S-}.
+
+      <s
+          id="__gsn__178c74f8ef8"
+          color="#ffffff"
+          name="Strategy">
+        Show that produced safety requirements cover desired loss and accident prevention that might result from use of module {M} in system {S}.
+
+        <a
+            id="__gsn__178c74fe3b0"
+            color="#ffffff"
+            name="Assumption">
+          Correct stakeholders utilized
+        </a>
+
+        <g
+            id="__gsn__178c74f93b6"
+            color="#ffffff"
+            name="Accidents and Losses">
+          Unacceptable accident and loss for system {-S-} are well defined.
+
+          <e
+              id="__gsn__178c76221e7"
+              color="#ffffff"
+              name="Accident and Loss Model and Sign-off">
+            The accident and loss model for system {-S-} in informalReverseEngineering.xlsx#'Service FHA'
+          </e>
+        </g>
+
+        <g
+            id="__gsn__178c74f966e"
+            color="#ffffff"
+            name="Hazards Identified">
+          Hazardous states that might lead to unacceptable accident or loss are adequately identified.
+
+          <e
+              id="__gsn__17bcb5298cc"
+              color="#ffffff"
+              name="Hazard Model and Sign-off">
+            The hazard model for system {-S-} in informalReverseEngineering.xlsx#'Service FHA'
+          </e>
+        </g>
+
+        <g
+            id="__gsn__178c763d40d"
+            color="#ffffff"
+            name="Hazard Contributions of {-M-} Services">
+          Contributions to safety hazards for system {-S-} from module {-M-}'s services have been adequately identified.
+
+          <e
+              id="__gsn__178c7660c4c"
+              color="#ffffff"
+              name="Process Artifact Review">
+            Review of the process arguments by an acceptable expert for the approach applied.
+
+            <c
+                id="__gsn__178c7bb9b69"
+                color="#ffffff"
+                name="Example Recommended Processes">
+              STPA, FMEA, FHA
+            </c>
+
+            <c
+                id="__gsn__17b419bdbd9"
+                color="#ffffff"
+                name="Example">
+              Source inferencing, Service FHA spreadsheet.
+            </c>
+          </e>
+
+          <e
+              id="__gsn__178c7c08d0a"
+              color="#ffffff"
+              name="Hazard Contribution Model and Sign-Off">
+            informalReverseEngineering.xlsx#'Service FHA'
+          </e>
+        </g>
+
+        <g
+            id="__gsn__178c7680f3f"
+            color="#ffffff"
+            name="Mitigation Requirements">
+          All hazard contributions are adequately mitigated by their mitigation requirements.
+
+          <e
+              id="__gsn__178c76ac136"
+              color="#ffffff"
+              name="Hazard Mitigation Entailment">
+            informalReverseEngineering.xlsx#'Failure Mitigations'
+          </e>
+
+          <e
+              id="__gsn__17b2ce5f618"
+              color="#ffffff"
+              name="Mitigation in Service Flow">
+            Informal source inferencing,  informalReverseEngineering.xlsx#'Requirement-Labeled Flowgraph'
+          </e>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

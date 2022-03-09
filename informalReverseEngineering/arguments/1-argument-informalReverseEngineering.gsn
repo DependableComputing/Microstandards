@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17823e97c5a"
+        color="#ffffff"
+        name="Informal Source Code Inferencing">
+      A sufficiently correct and complete set of inferred behavior for {attributes of interest} of {target module} {-M-} in {target system set} {-S-}, relative to actual behavior, has been documented and captured through informal analysis of source code.
+
+      <c
+          id="__gsn__17bc1168581"
+          color="#ffffff"
+          name="{-M-}">
+        (-The software module, by sufficient identifier, that is to be informally reverse engineered-)
+      </c>
+
+      <c
+          id="__gsn__17bc116aeaa"
+          color="#ffffff"
+          name="{-S-}">
+        (-The set of systems, by sufficient identifiers, for which the software module is to be reengineered to have correct and complete desired behavior.-)
+      </c>
+
+      <c
+          id="__gsn__17bc1419d57"
+          color="#ffffff"
+          name="[target module]">
+        The source code of the current software module {-M-} in the target systems of interest.
+      </c>
+
+      <c
+          id="__gsn__17bc141a159"
+          color="#ffffff"
+          name="[target system]">
+        One of the systems of the target system set {-S-}.
+      </c>
+
+      <c
+          id="__gsn__17bc1162529"
+          color="#ffffff"
+          name="[attributes of interest]">
+        Function and dependability.
+      </c>
+
+      <s
+          id="__gsn__17bc13bdf0c"
+          color="#ffffff"
+          name="Strategy">
+        By showing that a contract model is sufficient and that its has been determined correctly and completely for the {target module} on the {target system}.
+
+        <c
+            id="__gsn__17bc13bdf0b"
+            color="#ffffff"
+            name="[interface point]">
+          A basic block or data defined by on the original sofware module{target module} source code where the {target module] and a {target system} behavior and/or state can affect one another. Often these are shared data or publicly exposed module procedures.
+        </c>
+
+        <c
+            id="__gsn__17bc14ee2d1"
+            color="#ffffff"
+            name="[interface point contract]">
+          An assume/guarantee contract on functional and nonfunctional behavior between a {target module} and a {target system}.
+        </c>
+
+        <c
+            id="__gsn__178eb05cb2b"
+            color="#ffffff"
+            name="[requirement hierarchy]">
+          A hierarchy of requirements that is topped with a set of defined services, each with a set of service requirements, each service supported underneath by requirements at the service interface, in turn supported by any stakeholder-desired design constraint requirements.
+
+          <c
+              id="__gsn__178eb05cb2c"
+              color="#ffffff"
+              name="[service requirement]">
+            A functional or nonfunctional requirement that defines a service provided by a module's source code.
+          </c>
+
+          <c
+              id="__gsn__178eb05cb2d"
+              color="#ffffff"
+              name="[service interface requirement]">
+            A functional or nonfunctional requirement on the interface of service provision by the software module.
+          </c>
+
+          <c
+              id="__gsn__178eb05cb2e"
+              color="#ffffff"
+              name="[design constraint requirement]">
+            A nonfunctional requirement that constrains a solution design for a given set of functional requirements. For a reverse-engineered system, these will often be implementation/design constraints to any valid solution to a reengineering, often either maintaining or explicitly changing, some design of the original module's source code.
+          </c>
+        </c>
+
+        <public-goal
+            id="__gsn__17bc13bdf0e"
+            color="#ffffff"
+            name="Interface Point Contracts are Sufficient">
+          Contracts at {interface point}s of a {target module} in a {target system} can express complete and correct required behavior of the {target module} in the {target system}.
+
+          <e
+              id="__gsn__17bc13bdf0f"
+              color="#aaaaaa"
+              name="Literature">
+            The body of literature on contractual definition of software interfaces through assume/guarantee contracts.
+          </e>
+        </public-goal>
+
+        <g
+            id="__gsn__17bc145142a"
+            color="#ffffff"
+            name="Acceptably Complete and Correct Interface Point Contracts">
+          An acceptably complete and correct set of {interface point contract}s covering {attributes of interest} has been defined software module {-M-} for target systems set {-S-}.
+
+          <s
+              id="__gsn__17bc18d51bb"
+              color="#ffffff"
+              name="Strategy">
+            By showing that a correct and complete {interface point contract} has been defined for each {interface point} of a correct and complete {interface point set} against the correct version of the {target module} and {target systems set}.
+
+            <g
+                id="__gsn__17bc163679f"
+                color="#ffffff"
+                name="Correct Analysis Targets">
+              The correct version of the {target module} {-M-} was analyzed in the correct versions of systems in the {target system set} {-S-}.
+
+              <e
+                  id="__gsn__17bc163f066"
+                  color="#ffffff"
+                  name="Artifact Identification">
+                infromalReverseEngineering.xlsx#target
+              </e>
+            </g>
+
+            <public-goal
+                id="__gsn__17bc1959a26"
+                color="#ffffff"
+                name="All Interface Points Identified">
+              All {interface point}s of the {target module} {-M-} are identified.
+
+              <s
+                  id="__gsn__17bc1a5468c"
+                  color="#ffffff"
+                  name="Strategy">
+                Through thorough analysis that analysts agree was performed well.
+
+                <g
+                    id="__gsn__17bc1a98b92"
+                    color="#ffffff"
+                    name="Thorough Adequate Module Source Analysis">
+                  The code, data, and class structure of the {target module}'s source have been sufficiently analyzed to identify where systems can activate behavior of the {target module}.
+
+                  <c
+                      id="__gsn__17bc1a5468e"
+                      color="#ffffff"
+                      name="Analysis">
+                    The user performs analysis of the code, data, and class makeup of the {target module}, to identify all {interface points}.
+                  </c>
+
+                  <a
+                      id="__gsn__17bc1a5468d"
+                      color="#ffffff"
+                      name="Assumption">
+                    Code, data, and (optional) class analysis in combination are sufficient to identify all {behavior point}s in a source code module in common programming languages.
+                  </a>
+
+                  <s
+                      id="__gsn__17bc1ab7558"
+                      color="#ffffff"
+                      name="Strategy">
+                    By source component
+
+                    <g
+                        id="__gsn__17bc1a5468f"
+                        color="#ffffff"
+                        name="Sufficient Module Code Analysis">
+                      The functions and methods of {target module} {-M-}'s source code have been sufficiently analyzed to determine what source code is executable from code outside the {target module}.
+
+                      <e
+                          id="__gsn__17bc1a54690"
+                          color="#ffffff"
+                          name="Analysis Results">
+                        informalReverseEngineering.xlsx#'Module Code Analysis'
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17bc1a54691"
+                        color="#ffffff"
+                        name="Sufficient Module Data Analysis">
+                      The data of {target module} {-M-}'s source have been sufficiently analyzed to determine where they can be written to from external systems.
+
+                      <e
+                          id="__gsn__17bc1a54692"
+                          color="#ffffff"
+                          name="Analysis Results">
+                        informalReverseEngineering.xlsx#'Module Data Analysis'
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17bc1a54693"
+                        color="#ffffff"
+                        name="Sufficient Module Class Analysis">
+                      The class definitions of {target module} {-M-}'s source code have been sufficiently analyzed to determine where friend or other access models can access data and methods from external systems.
+
+                      <e
+                          id="__gsn__17bc1a54694"
+                          color="#ffffff"
+                          name="Analysis Results">
+                        informalReverseEngineering.xlsx#'Module Class Analysis'
+                      </e>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17bc1a7a0a5"
+                    color="#ffffff"
+                    name="Complete and Good Practice">
+                  All participating analysts reasonably believe that the analysis of the {target module} was sufficiently well-performed.
+
+                  <e
+                      id="__gsn__17bc1a8b94e"
+                      color="#ffffff"
+                      name="Analysis Sign-Off">
+                    informalReverseEngineering.xlsx#'Module Analysis Sign-Off'
+                  </e>
+                </g>
+              </s>
+            </public-goal>
+
+            <g
+                id="__gsn__17bc1b4875c"
+                color="#ffffff"
+                name="Each Interface Points Has a Correct and Complete Contract">
+              A complete and correct {interface point contract} covering {attributes of interest} for the {{target systems set} {-S-} has been defined for each identified {interface point}.
+
+              <s
+                  id="__gsn__17bc1cf633c"
+                  color="#ffffff"
+                  name="Strategy">
+                By arguing correct construction of contracts through conjunction for all {target system}.
+
+                <a
+                    id="__gsn__17bc1cfb7b5"
+                    color="#ffffff"
+                    name="Assumption">
+                  Separate contract construction for each {interface point} utilized by each {target system}, followed by merging of contracts for each {interface point} by intersection of constraints (conjunction), is sound and accurate.
+                </a>
+
+                <g
+                    id="__gsn__17bc1d0cc9f"
+                    color="#ffffff"
+                    name="Correct Interface Point Contracts for Target Systems">
+                  A complete and correct {interface point contract} under {attributes of interest} has been constructed for each {interface point} for each {target system}.
+
+                  <s
+                      id="__gsn__17bc18fc588"
+                      color="#ffffff"
+                      name="Strategy">
+                    Argue for each system from {-S-}
+
+                    <g
+                        id="__gsn__17bc1bb7fb3"
+                        color="#ffffff"
+                        repeat="true"
+                        name="Correct Interface Point Contracts for System {-Sys-}">
+                      Acceptably complete and correct {interface point contract}s have been defined covering {attributes of interest} for target system {-Sys-}.
+
+                      <s
+                          id="__gsn__17bc1d91433"
+                          color="#ffffff"
+                          name="Strategy">
+                        Show that we can develop interface point contracts from sufficiently complete and correct {labelled control-and-dataflow graph}s, those graphs have been satisfactorily produced, and we have correctly extracted interface point contracts from the graphs.
+
+                        <a
+                            id="__gsn__17bc1ccd003"
+                            color="#ffffff"
+                            name="Null Contract Terms">
+                          A system contributes an unconstrained contract (contains no terms) to an unused interface point.
+                        </a>
+
+                        <g
+                            id="__gsn__17bc62b8bd1"
+                            color="#ffffff"
+                            name="Effective Process for Contract Extraction from a Graph">
+                          Sound and complete {interface points contract}s can be extracted from {complete and sound, labeled control-and-data-flow graph}s.
+
+                          <c
+                              id="__gsn__17d14993da0"
+                              color="#ffffff"
+                              name="[complete and sound, labeled control-and-data-flow graph]">
+                            A {sound, labeled control-and-data-flow graph} where the graph is {complete and correct} and the preconditions and requirements are both {sound} and sufficiently {complete} for functionality and non-functional attributes of interest.
+                          </c>
+
+                          <c
+                              id="__gsn__17bc6938b77"
+                              color="#ffffff"
+                              name="[sound, labeled control-and-data-flow graph]">
+                            A {complete and correct}, {labeled control-and-data-flow graph} where for all edges of the graph, the preconditions and requirements labelling each edge are sound conclusions from the source code of the system and target module using static analysis techniques.
+                          </c>
+
+                          <c
+                              id="__gsn__17bc6461521"
+                              color="#ffffff"
+                              name="[labeled control-and-data-flow graph]">
+                            A {control-and-data-flow graph} a graph edge can be labelled with a set of requirements for, and preconditions that are true of, the destination node of the graph edge.
+                          </c>
+
+                          <c
+                              id="__gsn__17bc64b7619"
+                              color="#ffffff"
+                              name="[complete and correct control-and-data-flow graph]">
+                            A {control-and-data-flow graph} that captures all control and data flow paths from all {service points} of a {target system} to all {behavior points} of the {target module}, and from all {behavior points} of the target module to all {control points} of the target module, and captures no non-existent edges of the {target system} and {target module}.
+                          </c>
+
+                          <c
+                              id="__gsn__17bc647cdc7"
+                              color="#ffffff"
+                              name="[control-and-data-flow graph]">
+                            A directed graph representing inter-procedural control-flow and data-flow of a system's source code as determined by static source code analysis.
+                          </c>
+
+                          <c
+                              id="__gsn__17bc649d883"
+                              color="#ffffff"
+                              name="[service point]">
+                            A procedure/method/function or persistent data item in a {target system} with clear and complete service-level requirements and preconditions can be discerned from stakeholders and that source object alone.
+                          </c>
+
+                          <s
+                              id="__gsn__17bc6b4f52c"
+                              color="#ffffff"
+                              name="Strategy">
+                            Show by implication from the definition of a {sound, complete and correct, mixed-control-and-data-flow graph set}.
+
+                            <g
+                                id="__gsn__17bc6bddbba"
+                                color="#ffffff"
+                                name="Completeness of Direct Edges to each and every Interface Point">
+                              The set of all direct edges to a given {interface point} from a {complete and correct mixed-control-and-data-flow graph set} define all behavior edges interacting directly with that {interface point}.
+
+                              <e
+                                  id="__gsn__17bc6bfdaec"
+                                  color="#aaaaaa"
+                                  name="By Definition">
+                                Definition of a {complete and correct mixed-control-and-data-flow graph}.
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17bc6aeaa46"
+                                color="#ffffff"
+                                name="Fully Representative Requirements and Preconditions Set">
+                              The requirements and preconditions on edges of a {complete and sound, labeled control-and-data-flow graph} that terminate at any specific {interface point} of the {target module} define a complete set of all all and only the requirements and preconditions on that {behavior point} in the {target system} as represented in the graph set.
+
+                              <e
+                                  id="__gsn__17bc6b00d8e"
+                                  color="#aaaaaa"
+                                  name="Definition of Complete and Sound">
+                                For a {labeled control-and-data-flow graph}.
+                              </e>
+
+                              <e
+                                  id="__gsn__17bc6b0c920"
+                                  color="#aaaaaa"
+                                  name="Floyd-Hoare Logic">
+                                See literature on static analysis of procedural programs
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17d14d62279"
+                                color="#ffffff"
+                                name="Edge Term Conjunction">
+                              In the aggregate, the preconditions at a graph node are the possibility of any one incoming path having been followed, while the requirements for every incoming path will hold on static code and data declaration that have been derived from static source code analysis.
+
+                              <e
+                                  id="__gsn__17d14d72801"
+                                  color="#aaaaaa"
+                                  name="Floyd-Hoare Logic">
+                                See literature on static analysis of procedural programs
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17d14da63e2"
+                                color="#ffffff"
+                                name="Preconditions and Requirements as Assumptions and Guarantees">
+                              In an assume/guarantee contract, sound preconditions are a sound set of assumptions and requirements are a sound set of guarantees.
+
+                              <e
+                                  id="__gsn__17d14dae034"
+                                  color="#aaaaaa"
+                                  name="Literature">
+                                Basic literature relating Floyd/Hoare logic of preconditions and postconditions to assume/guarantee contracts.
+                              </e>
+                            </g>
+                          </s>
+                        </g>
+
+                        <public-goal
+                            id="__gsn__17d1486e22c"
+                            color="#ffffff"
+                            name="Sufficient Input Graph">
+                          A {complete and sound labeling} of a {correct and complete control-and-data-flow graph} has been created for target module {-M-} situated in target system {-Sys-}.
+
+                          <s
+                              id="__gsn__17d1505463a"
+                              color="#ffffff"
+                              name="Strategy">
+                            Through successful performance of an effective process to label graphs with requirements and preconditions, performed on a {correct and complete control-and-data-flow graph} input.
+
+                            <g
+                                id="__gsn__17d15054c3d"
+                                color="#ffffff"
+                                name="Effective Graph Labeling Process">
+                              Iterative, forward-flow, static analysis is an effective method, when carefully performed by hand, to produce complete and sound requirements and preconditions on all edges of a {correct control-and-dataflow graph} for a system with necessary source code available.
+
+                              <s
+                                  id="__gsn__17d15237cc5"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                Induction in the theory of iterative static analysis.
+
+                                <j
+                                    id="__gsn__17d1525115f"
+                                    color="#ffffff"
+                                    name="Clear Hierarchy Top and Bottom Points">
+                                  The starting and stopping points for constructing requirements and preconditions over a {correct and complete control-and-data-flow graph} are clearly defined in the flow graph as its {service points} and {control points}, respectively.
+                                </j>
+
+                                <g
+                                    id="__gsn__17d15237cca"
+                                    color="#ffffff"
+                                    name="Top-Level Service Requirements and Preconditions Are Injectable">
+                                  For each service point in a flow graph, the top-level service requirements and preconditions for its represented services can be directly defined for each service point as an abstract edge (with no source) entering the service point node.
+
+                                  <e
+                                      id="__gsn__17d15237ccb"
+                                      color="#aaaaaa"
+                                      name="Self-Evident">
+                                    The requirements on a service can be assigned to the control and data flow implementing the service directly from an initiation point (code block or input data ojbect) for the system.
+                                  </e>
+
+                                  <e
+                                      id="__gsn__17d15237ccc"
+                                      color="#aaaaaa"
+                                      name="Standard Techniques for Non-Functional Requirement Dev">
+                                    For Safety (FHA, FMEA, STPA), Security, etc.
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17d15237ccd"
+                                    color="#ffffff"
+                                    name="Immediately Complete and Sound Requirements Computation on Outgoing Node Edges">
+                                  Statically deducible requirements and preconditions of edges leaving a graph node can be determined from the preconditions and requirements of incoming edges to a graph node and static analysis, by hand, of the source code for the node.
+
+                                  <e
+                                      id="__gsn__17d15237cce"
+                                      color="#aaaaaa"
+                                      name="Literature">
+                                    The basic literature on Floyd-Hoare logic of preconditions and postconditions in flow graphs, and the extended literature on static analysis of computer programs.
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17d152bf5e9"
+                                    color="#ffffff"
+                                    name="Closure">
+                                  Under repeated iteration on all edges, requirements and preconditions on edges will reach a stable set of requirements and preconditions on edges that can be deduced from static analysis while remaining invariantly sound.
+
+                                  <e
+                                      id="__gsn__17d152ca257"
+                                      color="#aaaaaa"
+                                      name="Literature">
+                                    The basic literature on Floyd-Hoare logic of preconditions and postconditions in flow graphs.
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17d1584ef3f"
+                                color="#ffffff"
+                                name="Correct and Complete Inputs">
+                              The inputs to the graph labeling process are correct and complete.
+
+                              <s
+                                  id="__gsn__17d158543e1"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By input
+
+                                <g
+                                    id="__gsn__17d15857207"
+                                    color="#ffffff"
+                                    name="Correct and Complete Service Requirements and Preconditions">
+                                  The requirements and preconditions of identified services are correct and complete for functionality and nonfunctional {attributes of interest}.
+
+                                  <c
+                                      id="__gsn__17d158706d6"
+                                      color="#ffffff"
+                                      name="[attributes of interest]">
+                                    functionality and dependability.
+                                  </c>
+
+                                  <s
+                                      id="__gsn__17d158706d7"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    By Property Class
+
+                                    <g
+                                        id="__gsn__17d158706d8"
+                                        color="#ffffff"
+                                        name="Adequate Functional Requirements and Preconditions">
+                                      Adequate, Service-Level, Functional Requirements and Preconditions have been defined for the {target system} for {attributes of interest}.
+
+                                      <e
+                                          id="__gsn__17d15894b79"
+                                          color="#ffffff"
+                                          name="Reader Inspection">
+                                        Reader inspection of the service requirements and preconditions as found on the null source edges to service points in "informalReverseEngineering.xlsx#'Labeled Flowgraph-{-Sys-}".
+                                      </e>
+
+                                      <e
+                                          id="__gsn__17d1589ec39"
+                                          color="#ffffff"
+                                          name="Peer and Stakeholder Review">
+                                        Review and Signoff on the service-level requirements by peers and stakeholders on the null starting edges to service points in "informalReverseEngineering.xlsx#'Labeled Flowgraph-{-Sys-}".
+                                      </e>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17d158706da"
+                                        color="#ffffff"
+                                        name="Adequate Nonfunctional Requirements and Preconditions">
+                                      Adequate, Service-Level. Nonfunctional Requirements and Preconditions have been defined for the {target system} for {attributes of interest}.
+
+                                      <s
+                                          id="__gsn__17d158706db"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        By synthesis or mining for dependability requirement type over the original software module as reference.
+
+                                        <m
+                                            id="__gsn__17d158706dc"
+                                            color="#cdcdcd"
+                                            optional="true"
+                                            name="Availability Synthesis">
+                                          An availability synthesis defines availability requirements over the services and {interface source}s of the module {-M-}.
+                                        </m>
+
+                                        <m
+                                            id="__gsn__17d158706dd"
+                                            color="#cdcdcd"
+                                            optional="true"
+                                            name="Reliability Synthesis">
+                                          A reliability synthesis defines reliability requirements over the services and {interface source}s of the module {-M-}.
+
+                                          <c
+                                              id="__gsn__17d158706de"
+                                              color="#ffffff"
+                                              name="Module">
+                                            reliability-synthesis.gns
+                                          </c>
+                                        </m>
+
+                                        <m
+                                            id="__gsn__17d158706df"
+                                            color="#cdcdcd"
+                                            optional="true"
+                                            name="Security Synthesis">
+                                          Safety Synthesis -- A safety analysis defines safety requirements over the services and {interface source}s of the module {-M-} for safety of system {-S-}.
+                                        </m>
+
+                                        <m
+                                            id="__gsn__17d158706e0"
+                                            color="#ffffff"
+                                            optional="true"
+                                            name="Safety Synthesis">
+                                          A safety analysis defines safety requirements over the services and {interface source}s of the module {-M-}.
+
+                                          <c
+                                              id="__gsn__17d158706e1"
+                                              color="#ffffff"
+                                              name="Module">
+                                            argument-serviceAdequateSafetyReqSynthesis.gsn
+                                          </c>
+                                        </m>
+
+                                        <m
+                                            id="__gsn__17d158706e2"
+                                            color="#cdcdcd"
+                                            optional="true"
+                                            name="Maintainability Synthesis">
+                                          A maintainability synthesis defines maintainability requirements over the services and {interface source}s of the the module {-M-}.
+
+                                          <c
+                                              id="__gsn__17d158706e3"
+                                              color="#ffffff"
+                                              name="Note">
+                                            maintainability against specification and source code and documentation.
+                                          </c>
+                                        </m>
+                                      </s>
+
+                                      <e
+                                          id="__gsn__17d158706e4"
+                                          color="#ffffff"
+                                          name="Requirement Hierarchy: Analysis Results and Sign-Off">
+                                        informalReverseEngineering.xlsx#'Labeled Flowgraph-{-Sys-}'
+                                      </e>
+                                    </g>
+                                  </s>
+                                </g>
+
+                                <g
+                                    id="__gsn__17d15448629"
+                                    color="#ffffff"
+                                    name="Correct and Complete Graph Input">
+                                  The input to the labeling process is a a {correct and complete control-and-data-flow graph} for the {target module} {-M-} in the {target system} {-Sys-}.
+
+                                  <s
+                                      id="__gsn__17d1562188f"
+                                      color="#ffffff"
+                                      name="Strategy">
+                                    Through successful performance of an effective process to construct a complete and correct {control-and-data-flow graph} for the {target system} with respect to the {target module}.
+
+                                    <g
+                                        id="__gsn__17d151ff2c0"
+                                        color="#ffffff"
+                                        name="Effective Graph Construction Process">
+                                      Static analysis is an effective method to produce complete and sound, labeled, correct and complete control-and-dataflow graphs covering system services, and all flow paths through all {interface points} of the {target module}.
+
+                                      <s
+                                          id="__gsn__17d151ff2c4"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        By showing that the graph is correct and complete under correctly performed backwards-flowing static analysis from {interface points}.
+
+                                        <a
+                                            id="__gsn__17d151ff2c5"
+                                            color="#ffffff"
+                                            name="Assumption">
+                                          A backwards flow analysis can be performed to determine the control-and-data-flow graph from all {behavior point}s to all {control point}s of the target software module.
+                                        </a>
+
+                                        <c
+                                            id="__gsn__17d151ff2c3"
+                                            color="#ffffff"
+                                            name="Intra-procedural Analysis">
+                                          The {control and data flow graph} is is constructed from backwards flow-analysis to the point of sufficient completion for service requirements impacting the target module {M}.
+                                        </c>
+
+                                        <g
+                                            id="__gsn__17d151ff2c6"
+                                            color="#ffffff"
+                                            name="Performable Target Module Backwards Flow Analysis">
+                                          A backwards-flowing analysis from {control points} to {behavior points} of the {target module} {correct and complete control-and-data-flow graph} from {control points} to {behavior points} of the {target module}
+
+                                          <e
+                                              id="__gsn__17d151ff2c7"
+                                              color="#aaaaaa"
+                                              name="Static Analysis">
+                                            Basic literature for reverse-direction static analysis.
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17d151ff2c8"
+                                            color="#ffffff"
+                                            name="Performable System Flow Backwards Analysis">
+                                          A backwards static analysis of the {target system} from the {behavior point}s of the {target module} to {service points} of a {target system} constructs a {complete and correct control-and-data-flow graph} from {behavior points} to {detected service points}.
+
+                                          <e
+                                              id="__gsn__17d151ff2c9"
+                                              color="#aaaaaa"
+                                              name="Static Analysis">
+                                            Basic literature for reverse-direction static analysis.
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17d151ff2ca"
+                                            color="#ffffff"
+                                            name="Complete Service Points Always Determinable by Backwards Flow Analysis">
+                                          In a backwards flow analysis, a sufficiently correct and complete set of {service points} can always be detected.
+
+                                          <a
+                                              id="__gsn__17d151ff2cb"
+                                              color="#ffffff"
+                                              name="Assumption">
+                                            The intended services provided by the system are well understood.
+                                          </a>
+
+                                          <s
+                                              id="__gsn__17d151ff2cc"
+                                              color="#ffffff"
+                                              name="Strategy">
+                                            By show that the degenerate, fall-back case will always succeed, but that more efficient solutions might be found.
+
+                                            <g
+                                                id="__gsn__17d151ff2cd"
+                                                color="#ffffff"
+                                                name="Always Clear, Finite Service Points">
+                                              In the worst case, for all {target system}s and {services of interest}, the set of starting points of execution in the inter-procedural control flow will always be a correct and complete set of {service points} covering all of the flow graphs paths to utilized behavior points.
+
+                                              <a
+                                                  id="__gsn__17d151ff2ce"
+                                                  color="#ffffff"
+                                                  name="Assumption">
+                                                For any given service, there are a set of covering nodes of the {mixed-control-and-data-flow graph set} such that all control and data flow passes through the covering node set from the start points of the program, such that service-level requirements can be imposed on the that set of nodes with clarity.
+                                              </a>
+
+                                              <e
+                                                  id="__gsn__17d151ff2cf"
+                                                  color="#aaaaaa"
+                                                  name="Axiom">
+                                                All services can be defined by requirements at the starting points of execution of the system, and all control and data flow flows through the start nodes as all paths start there.
+                                              </e>
+                                            </g>
+
+                                            <g
+                                                id="__gsn__17d151ff2d0"
+                                                color="#ffffff"
+                                                name="More Efficient Sets Might Be Found Closer to Behavior Points">
+                                              In a backwards flow analysis, any node representing a procedure or persistent data for which one can clearly define a subset of a service's requirements can be defined as a {service point}, such that all further flow backwards from this node can be disregarded.
+
+                                              <e
+                                                  id="__gsn__17d151ff2d1"
+                                                  color="#aaaaaa"
+                                                  name="Algorithm">
+                                                For a given set of recognized services, the {mixed-control-and-data flow} of a {target system} can be analyzed backwards until {service point}s for all {services of interest} are reached in the target system.
+                                              </e>
+                                            </g>
+                                          </s>
+                                        </g>
+                                      </s>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17d156349ba"
+                                        color="#ffffff"
+                                        name="Correct Source Code Input">
+                                      The correct version of the {target system} and {target module} source code was applied for in the analysis procedure.
+
+                                      <s
+                                          id="__gsn__17d156eaaec"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        Enumerating over all inputs and considering them separately and as a whole.
+
+                                        <g
+                                            id="__gsn__17d156ebc61"
+                                            color="#ffffff"
+                                            name="Correct Source Code Input">
+                                          The correct version of the {target system} and {target module} source code was applied for in the analysis procedure.
+
+                                          <e
+                                              id="__gsn__17d156ebc62"
+                                              color="#ffffff"
+                                              name="Artifact Identification">
+                                            infromalReverseEngineering.xlsx#target
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17d15770d5d"
+                                            color="#ffffff"
+                                            name="Correct Services List">
+                                          A correct and complete list of services provided by the {target system} utilizing the {target module} in part, has been developed.
+
+                                          <e
+                                              id="__gsn__17d1577dcda"
+                                              color="#ffffff"
+                                              name="Reader Inspection of Services List">
+                                            The list of identified services in the the worksheet "informalReverseEngineering.xlsx#Service Analysis-{-Sys-}'
+                                          </e>
+
+                                          <e
+                                              id="__gsn__17d1578babd"
+                                              color="#ffffff"
+                                              name="Stakeholder Signoff">
+                                            The list of Signoff by stakeholders on the sufficiency of the services identified. Signatures found in "informalReverseEngineering.xlsx#Service Analysis-{-Sys-}'
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17d1581d0fc"
+                                            color="#ffffff"
+                                            name="Correct Input Interface Points">
+                                          The correct set of {interface point}s of the {target module} are input to the analysis.
+
+                                          <away-goal
+                                              id="__gsn__17d157c088a"
+                                              color="#ffffff"
+                                              name="All Interface Points Identified">
+                                            All {interface point}s of the {target module} {-M-} are identified.
+                                          </away-goal>
+                                        </g>
+                                      </s>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17d156e43bc"
+                                        color="#ffffff"
+                                        name="Correctly Performed Graph Construction">
+                                      Analysts have successfully performed and completed the {control-and-data-flow graph procedure}.
+
+                                      <s
+                                          id="__gsn__17d156e43bd"
+                                          color="#ffffff"
+                                          name="Strategy">
+                                        By arguing that the analysts believe they have completed this process, corroborated by the fact that issue tracking indicates that there are no remaining issues to be resolved.
+
+                                        <g
+                                            id="__gsn__17d156e43be"
+                                            color="#ffffff"
+                                            name="No Remaining Open Issues">
+                                          No issues remain open concerning the labeling analysis of the input {control-and-data-flow graph}.
+
+                                          <e
+                                              id="__gsn__17d156e43bf"
+                                              color="#ffffff"
+                                              name="Evidence">
+                                            Project Issue Tracking
+                                          </e>
+                                        </g>
+
+                                        <g
+                                            id="__gsn__17d156e43c0"
+                                            color="#ffffff"
+                                            name="All Activities Completed">
+                                          Analysts indicate that they have completed all edge labeling successfully for each edge of the input {control-and-data-flow graph}.
+
+                                          <e
+                                              id="__gsn__17d156e43c1"
+                                              color="#ffffff"
+                                              name="Analyst Signoff">
+                                            Analysts indicate that they have completed all graph development from all of the {interface point}s of the {target module} in the completion column of the "informalReverseEngineering.xlsx#ControlAndDataGraph-{-Sys-} and that they have identified covering {Service Points} for each required service in doing so.
+                                          </e>
+                                        </g>
+                                      </s>
+                                    </g>
+
+                                    <g
+                                        id="__gsn__17d156fe9c4"
+                                        color="#ffffff"
+                                        name="Correct and Complete Graph Results">
+                                      The produced {control-and-data-flow graph} is correct and complete with respect to the input {services} and {interface points}.
+
+                                      <g
+                                          id="__gsn__17d157bedf0"
+                                          color="#ffffff"
+                                          name="Covering Service Points Identified">
+                                        All {service point}s of the {target system} that interact with {target module} through control and data flow have been identified.
+
+                                        <e
+                                            id="__gsn__17d156fe9c5"
+                                            color="#ffffff"
+                                            name="Review and Sign-off">
+                                          Reviewers have reviewed the resulting {control-and-data-flow graph} and signed off on its completeness and correctness in the "informalReverseEngineering.xlsx#ControlAndDataflowSIgnoff-{-Sys-}" worksheet.
+                                        </e>
+
+                                        <e
+                                            id="__gsn__17d157f679c"
+                                            color="#ffffff"
+                                            name="Reviewer Signoff">
+                                          Service point signoff signatures found in "informalReverseEngineering.xlsx#Service Analysis-{-Sys-}'
+                                        </e>
+                                      </g>
+
+                                      <g
+                                          id="__gsn__17d157dae76"
+                                          color="#ffffff"
+                                          name="Graph is Complete and Correct">
+                                        The {control-and-data-flow graph} is complete and correct with respect to the correct and complete {interface point}s and the resulting discovered {service point}s for the {target system}.
+
+                                        <e
+                                            id="__gsn__17d156fe9c6"
+                                            color="#ffffff"
+                                            name="Artifact Inspection">
+                                          The reader can inspect the labeled graph in "informalReverseEngineering.xlsx#Labeled Flowgraph-{-Sys-}" worksheet, comparing it with {system source code} and the graph in the "ControlAndDataflowGraph-{-Sys-}" worksheet.
+                                        </e>
+                                      </g>
+                                    </g>
+                                  </s>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17d1544f4bb"
+                                color="#ffffff"
+                                name="Correctly Performed and Completed Graph Labeling">
+                              Analysts have successfully performed and completed the labeling procedure for the input {control-and-data-flow graph} against the {target system} source code.
+
+                              <s
+                                  id="__gsn__17d155b62d0"
+                                  color="#ffffff"
+                                  name="Strategy">
+                                By arguing that the analysts believe they have completed this process, corroborated by the fact that issue tracking indicates that there are no remaining issues to be resolved.
+
+                                <g
+                                    id="__gsn__17d1545eef9"
+                                    color="#ffffff"
+                                    name="No Remaining Open Issues">
+                                  No issues remain open concerning the labeling analysis of the input {control-and-data-flow graph}.
+
+                                  <e
+                                      id="__gsn__17d1545d00c"
+                                      color="#ffffff"
+                                      name="Evidence">
+                                    Project Issue Tracking
+                                  </e>
+                                </g>
+
+                                <g
+                                    id="__gsn__17d1545f2eb"
+                                    color="#ffffff"
+                                    name="All Activities Completed">
+                                  Analysts indicate that they have completed all edge labeling successfully for each edge of the input {control-and-data-flow graph}.
+
+                                  <e
+                                      id="__gsn__17d1546cbb6"
+                                      color="#ffffff"
+                                      name="Analyst Sign-off">
+                                    Analysts indicate that they have completed all edge labeling successfuly for each edge of the input {control-and-data-flow graph} in the completion column of the "informalReverseEngineering.xlsx#Labeled Flowgraph" worksheet.
+                                  </e>
+                                </g>
+                              </s>
+                            </g>
+
+                            <g
+                                id="__gsn__17d15055325"
+                                color="#ffffff"
+                                name="Sound and Complete Graph Labeling  Results">
+                              The produced labeling of the {correct and complete control-and-data-flow graph} is {complete and sound}.
+
+                              <g
+                                  id="__gsn__17d158d269f"
+                                  color="#ffffff"
+                                  name="Design Preservation Captured in Requirements">
+                                All aspects of the design/implementation to preserve under each {interface point} function are captured as nonfunctional design constraint requirements for each respective {interface point}.
+
+                                <c
+                                    id="__gsn__17d158d26a0"
+                                    color="#ffffff"
+                                    name="From">
+                                  sourceinferencing-sre.gsn
+                                </c>
+
+                                <c
+                                    id="__gsn__17d158d26a1"
+                                    color="#ffffff"
+                                    name="[design preservation capture]">
+                                  Elements of the original source code design called-out to be preserved in the reengineering.
+                                </c>
+
+                                <g
+                                    id="__gsn__17d158d26a2"
+                                    color="#ffffff"
+                                    name="Reviewed">
+                                  The requirements of the design preservation have been reviewed and deemed acceptable by the capture team.
+
+                                  <e
+                                      id="__gsn__17d158d26a3"
+                                      color="#ffffff"
+                                      name="Preservation Sign-off">
+                                    Sign-off column in informalReverseEngineering.xlsx#'Labeled Flowgraph' along with design preservation completion column being checked off for all flow edges involving nodes of the target module.
+                                  </e>
+                                </g>
+                              </g>
+
+                              <e
+                                  id="__gsn__17d153d9487"
+                                  color="#ffffff"
+                                  name="Artifact Inspection">
+                                The reader can inspect the labeled graph in "informalReverseEngineering.xlsx" in the "Requirement-Labeled Flowgraph" worksheet, comparing it with {system source code} and the graph in the "Control-and-Dataflow Graph" worksheet.
+                              </e>
+
+                              <e
+                                  id="__gsn__17d153da33e"
+                                  color="#ffffff"
+                                  name="Review and Sign-off">
+                                Reviewers have reviewed the resulting labeling and signed off on its completeness and soundness in the "informalReverseEngineering.xlsx" workbook in the "Requirement-Labeled Flowgraph" worksheet.
+                              </e>
+                            </g>
+                          </s>
+                        </public-goal>
+
+                        <g
+                            id="__gsn__17d15535cd3"
+                            color="#ffffff"
+                            name="Correctly Performed Contract Extraction">
+                          The analysts have successfully performed contract extraction from the input {labeled, control-and-data-flow graph}.
+
+                          <s
+                              id="__gsn__17d155c1e09"
+                              color="#ffffff"
+                              name="Strategy">
+                            By arguing that the analysts believe they have completed this process, corroborated by the fact that issue tracking indicates that there are no remaining issues to be resolved.
+
+                            <g
+                                id="__gsn__17d155c1e0a"
+                                color="#ffffff"
+                                name="No Remaining Open Issues">
+                              No issues remain open concerning the extraction of contracts for {interface point}s from the {labeled control-and-data-flow graph}.
+
+                              <e
+                                  id="__gsn__17d155c1e0b"
+                                  color="#ffffff"
+                                  name="Evidence">
+                                Project Issue Tracking
+                              </e>
+                            </g>
+
+                            <g
+                                id="__gsn__17d155c1e0c"
+                                color="#ffffff"
+                                name="All Activities Completed">
+                              Analysts indicate that they have completed extraction of contracts for {interface point}s from the {labeled control-and-data-flow graph}.
+
+                              <e
+                                  id="__gsn__17d155c1e0d"
+                                  color="#ffffff"
+                                  name="Review and Sign-off">
+                                Analysts indicate that they have completed all contract extraction for each interface point of the {control-and-data-flow graph} in the "informalReverseEngineering.xlsx#IP Contracts" worksheet.
+                              </e>
+                            </g>
+                          </s>
+                        </g>
+
+                        <g
+                            id="__gsn__17d14dea5b8"
+                            color="#ffffff"
+                            name="Successful Extraction of Contracts from Graph">
+                          Contracts for each {interface point} have been successfully extracted from the {labelled control-and-data-flow graph}.
+
+                          <e
+                              id="__gsn__17d14f6d37d"
+                              color="#ffffff"
+                              name="Review and Sign-off">
+                            Reviewers have reviewed the resulting contracts and signed off on their correctness and completeness with respect to identified {interface points} and {labeled control-and-data-flow graph} in {Requiremend-Labeled Flowgraph" in the "informalReverseEngineering.xlsx" workbook.
+                          </e>
+
+                          <e
+                              id="__gsn__17d14e76550"
+                              color="#ffffff"
+                              name="Artifact Inspection">
+                            The reader can inspect the contracts at "informalReverseEngineering.xlsx" in the "IP Contracts" worksheet, comparing them with the requirements and preconditions found in the "Requirement-Labeled Flowgraph" worksheet, applying requirement set conjunction and precondition set disjunction across graph edges.
+                          </e>
+                        </g>
+                      </s>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17bc1cecac6"
+                    color="#ffffff"
+                    name="Correct Intersection over Systems">
+                  The intersection of contracts for each target system is correct for each {interface point}.
+
+                  <a
+                      id="__gsn__17bc6cccb48"
+                      color="#ffffff"
+                      name="Assumption">
+                    The conjunction of subsets of requirements for an entity define all requirements for that entity.
+                  </a>
+
+                  <s
+                      id="__gsn__17d14687114"
+                      color="#ffffff"
+                      name="Strategy">
+                    By showing that contract combination is a basic logical operating that is performed properly.
+
+                    <g
+                        id="__gsn__17d1468bd5f"
+                        color="#ffffff"
+                        name="A Correct Contract Intersection Algorithm">
+                      Given two assume/ guarantee contracts, A and B, the correct contract for the intersection of A and B is a contract with guarantees that are the conjunction of the guarantees of contracts A and B, and assumptions that are the disjunction of the assumptions of contracts A and B.
+
+                      <e
+                          id="__gsn__17d146ae464"
+                          color="#aaaaaa"
+                          name="Literature">
+                        Basics of assume/guarantee contracts.
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17d1468bff0"
+                        color="#ffffff"
+                        name="Successful Intersection Work">
+                      The intersection of contracts for each interface point over the {target systems} have been correctly computed.
+
+                      <e
+                          id="__gsn__17bc6cd9cc8"
+                          color="#ffffff"
+                          name="Conjunction Work and Sign-Off">
+                        informalReverseEngineering.xlsx#'Contract Conjunction Work'
+                      </e>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17d15aadf0e"
+                    color="#ffffff"
+                    name="Quality">
+                  The natural language requirements and preconditions of the contracts basic quality standards for requirements.
+
+                  <m
+                      id="__gsn__17d15ab4ea4"
+                      color="#ffffff"
+                      name="Microstandard">
+                    Requirements Quality
+                  </m>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

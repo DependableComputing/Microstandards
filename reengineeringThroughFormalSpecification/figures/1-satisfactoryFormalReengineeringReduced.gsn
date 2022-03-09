@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__176dabcab3a"
+        color="#ffffff"
+        name="Satisfactory Reengineered Module {-M-}">
+      The {reengineered implementation} of {-M-} situated in system set {-S-} satisfies its functional, design, and dependability requirements.
+
+      <c
+          id="__gsn__1778ce06dcb"
+          color="#ffffff"
+          name="[-M-]">
+        {definition of the subject software module}
+      </c>
+
+      <c
+          id="__gsn__1778ce0e009"
+          color="#ffffff"
+          name="[-S-]">
+        {definition of the subject system of which the subject software module is a component}
+      </c>
+
+      <c
+          id="__gsn__177260a96f6"
+          name="[reengineered implementation]">
+        A reimplementation of an existing system module intended to replace the previous module implementation.
+      </c>
+
+      <s
+          id="__gsn__176dabff1b4"
+          color="#ffffff"
+          name="Strategy">
+        Utilizing Overarching Properties for Dependable Systems, arguing for satisfaction in the reengineering of the {original software module} as a {prime software module}.
+
+        <c
+            id="__gsn__1778cdf06cd"
+            color="#ffffff"
+            name="[prime software module]">
+          The software module as designed and implemented as output of the reengineering process.
+        </c>
+
+        <m
+            id="__gsn__176dac050f0"
+            color="#ffffff"
+            name="Intent">
+          The defined intent of the prime software module {-M-} is correct and complete with respect to the desired behavior of the software module situated within system set {-S-}.
+        </m>
+
+        <m
+            id="__gsn__176dac07e39"
+            color="#ffffff"
+            name="Correctness">
+          The prime software module {-M-} {implementation} is correct with respect to the defined intent.
+        </m>
+
+        <m
+            id="__gsn__176dac27cff"
+            color="#ffffff"
+            name="Innocuity">
+          The prime software module is {innocuous} with respect to the defined intent.
+        </m>
+      </s>
+    </g>
+  </gsn>
+</argument>

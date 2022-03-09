@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__176dabcab3a"
+        color="#ffffff"
+        name="Satisfactory Reengineered Module {-M-}">
+      The {reengineered implementation} of {-M-} situated in system set {-S-} satisfies its functional, design, and {qualities of interest}.
+
+      <c
+          id="__gsn__1778ce06dcb"
+          color="#ffffff"
+          name="[-M-]">
+        {definition of the subject software module}
+      </c>
+
+      <c
+          id="__gsn__1778ce0e009"
+          color="#ffffff"
+          name="[-S-]">
+        {definition of the subject system of which the subject software module is a component}
+      </c>
+
+      <c
+          id="__gsn__177260a96f6"
+          name="[reengineered implementation]">
+        A reimplementation of an existing system module intended to replace the previous module implementation.
+      </c>
+
+      <c
+          id="__gsn__17efd413de9"
+          color="#ffffff"
+          name="[qualities of interest]">
+        Non-functional qualities such as availability, reliability, security, maintainability, observability, etc.
+      </c>
+
+      <s
+          id="__gsn__176dabff1b4"
+          color="#ffffff"
+          name="Strategy">
+        Through the overarching properties on the prime software module, M'. Where intent of the software Module M' is captured in {interface contract}s.
+
+        <j
+            id="__gsn__176ff7654f1"
+            name="Justification">
+          The Overarching Properties are intended to define a sufficient set of properties for making approval decisions because if an implementation satisfies them, then it is believed that the implementation invariantly satisfies the desired behavior.
+        </j>
+
+        <c
+            id="__gsn__1778cdf7a3b"
+            color="#ffffff"
+            name="[original software module]">
+          The software module to be replaced by its reengineered (prime) form.
+        </c>
+
+        <c
+            id="__gsn__1778cdf06cd"
+            color="#ffffff"
+            name="[prime software module]">
+          The software module as designed and implemented as output of the reengineering process.
+        </c>
+
+        <c
+            id="__gsn__17ebbc350e9"
+            color="#ffffff"
+            name="{interface contract}">
+          A contract that completely defines the assumptions and guarantees of the behavior of the prime software module at an interfacing point of the module utilized by systems of interest. Each assumption or guarantee is written as a natural language statement in a form similar to a requirement.
+        </c>
+
+        <m
+            id="__gsn__176dac050f0"
+            color="#ffffff"
+            name="Intent">
+          The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+
+          <c
+              id="__gsn__176dac0cce7"
+              color="#ffffff"
+              name="[intent]">
+            The {defined intended behavior} is correct and complete with respect to the {desired behavior}.
+          </c>
+
+          <c
+              id="__gsn__176ff7941d1"
+              name="[defined intended behavior]">
+            The record of the desired behavior. These are the "actual requirements" as defined by John C. Knight in "Fundamentals of Dependable Engineering for Software Engineers".
+          </c>
+
+          <c
+              id="__gsn__17ec64c0580"
+              color="#ffffff"
+              name="[attributes of Interest]">
+            Function and dependability.
+          </c>
+
+          <c
+              id="__gsn__176e3b2e85e"
+              color="#ffffff"
+              name="Module">
+            oap-intent.gsn
+          </c>
+        </m>
+
+        <m
+            id="__gsn__176dac07e39"
+            color="#ffffff"
+            name="Correctness">
+          The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+
+          <c
+              id="__gsn__176dac0adaa"
+              color="#ffffff"
+              name="[correctness]">
+            The {implementation} is correct with respect to its {defined intended behavior}, under {foreseeable operating conditions}.
+          </c>
+
+          <away-context
+              id="__gsn__176fdd8bfe4"
+              name="[defined intended behavior]">
+            See Intent: Defined Intended Behavior
+          </away-context>
+
+          <c
+              id="__gsn__17702c94a2a"
+              color="#ffffff"
+              name="Module">
+            oap-correctness.gsn
+          </c>
+        </m>
+
+        <m
+            id="__gsn__176dac27cff"
+            color="#ffffff"
+            name="Innocuity">
+          The prime software module's unintended behaviors do not have an {unacceptable impact} on systems' {qualities of interest} under {foreseeable conditions}.
+
+          <c
+              id="__gsn__17ebbce814f"
+              color="#ffffff"
+              name="[innocuity]">
+            Any part of the implementation that is not required by the {defined intended behavior} has no {unacceptable impact} on intended services.
+          </c>
+
+          <away-context
+              id="__gsn__17702c9bbc6"
+              name="[defined intended behavior]">
+            See Intent: Defined Intended Behavior
+          </away-context>
+
+          <c
+              id="__gsn__176e36a1355"
+              name="[unacceptable impact]">
+            An impact that compromises the dependability assessment.
+          </c>
+
+          <c
+              id="__gsn__17702c55461"
+              color="#ffffff"
+              name="Module">
+            oap-innocuity.gsn
+          </c>
+        </m>
+      </s>
+    </g>
+  </gsn>
+</argument>

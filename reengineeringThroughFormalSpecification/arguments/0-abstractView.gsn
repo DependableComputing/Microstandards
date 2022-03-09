@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17ebbf5baee"
+        color="#ffffff"
+        name="A: Satisfactory M’">
+      by Generalized Overarching Properties on functionality and qualities of interest.
+
+      <g
+          id="__gsn__17ebbf72f3e"
+          color="#ffffff"
+          name="B: Intent">
+        Correct and Complete Interface Contracts for M’
+
+        <g
+            id="__gsn__17ebbfa9203"
+            color="#ffffff"
+            name="E: Correct Software Targets">
+          for module M and systems of interest.
+        </g>
+
+        <g
+            id="__gsn__17ebbfb142a"
+            color="#ffffff"
+            name="F: Correct and Complete Interface Contracts">
+          For M' from the current software module and systems of interest for all qualities of interest.
+
+          <g
+              id="__gsn__17ebbfd2126"
+              color="#ffffff"
+              name="L: Correct Current Contracts">
+            For actual behavior of the current software module
+
+            <m
+                id="__gsn__17ebc181089"
+                color="#cdcdcd"
+                name="Microstandard: Contracts from Source Code Inference">
+              A microstandard for correct and complete interface contracts for a software module inferred from its source code within the source code of target systems.
+            </m>
+          </g>
+
+          <g
+              id="__gsn__17ebc008001"
+              color="#ffffff"
+              name="M: Corrected Contracts">
+            From identified erroneous behavior of the current software module.
+          </g>
+        </g>
+
+        <g
+            id="__gsn__17ebc0199d3"
+            color="#ffffff"
+            name="G: Updated Contracts">
+          Relative to intent of M.
+        </g>
+      </g>
+
+      <g
+          id="__gsn__17ebbf731a3"
+          color="#ffffff"
+          name="C: Correctness">
+        M’ Source Code Satisfies Interface Contracts
+
+        <g
+            id="__gsn__17ebc533111"
+            color="#ffffff"
+            name="H: Implied  Contract Guarantees">
+          Each contract is satisfied by a set of properties of M'.
+        </g>
+
+        <g
+            id="__gsn__17ec5bfd668"
+            color="#ffffff"
+            name="I: Verified Properties">
+          All properties are verified on M'.
+
+          <g
+              id="__gsn__17ec5c97689"
+              color="#ffffff"
+              name="N: Property Verification Coverage">
+            All properties are verified on the reengineered module.
+          </g>
+
+          <g
+              id="__gsn__17ec5c09d20"
+              color="#ffffff"
+              name="O: Indirectly Verified Properties">
+            On the formal specification of M'.
+
+            <g
+                id="__gsn__17ec5c55dc0"
+                color="#ffffff"
+                name="R: Properties Verified on Formal Specification">
+              of M'.
+
+              <g
+                  id="__gsn__17ec5c712eb"
+                  color="#ffffff"
+                  name="T: Lemma for Each Property">
+                In the formal specification.
+              </g>
+
+              <g
+                  id="__gsn__17ec5c753fa"
+                  color="#ffffff"
+                  name="U: Lemmas Verified">
+                All lemmas representing properties are adequately verified.
+
+                <g
+                    id="__gsn__17ec5c7b0f1"
+                    color="#ffffff"
+                    name="Y: Correct Lemmas and Axioms">
+                  To verify properties and provide required support.
+                </g>
+
+                <g
+                    id="__gsn__17ef99ee377"
+                    color="#ffffff"
+                    name="Z: All Lemmas Verified">
+                  Both those directly representing properties and supporting lemmas.
+
+                  <g
+                      id="__gsn__17ec5c7b300"
+                      color="#ffffff"
+                      name="BB: Lemmas are Proven">
+                    A subset of lemmas are proven
+                  </g>
+
+                  <g
+                      id="__gsn__17ec5c7564b"
+                      color="#ffffff"
+                      name="CC: Lemmas are Tested">
+                    A subset of the lemmas are verified through sufficient testing/animation.
+                  </g>
+                </g>
+              </g>
+            </g>
+
+            <g
+                id="__gsn__17ec5c56206"
+                color="#ffffff"
+                name="S: Sufficiently Correct Source Code">
+              for the properties verified on the specification to hold on the source code implementation.
+
+              <g
+                  id="__gsn__17ec5cb53b7"
+                  color="#ffffff"
+                  name="W: Correct Source Code">
+                to Within accumulated scalar value error under the retrenchment models.
+
+                <g
+                    id="__gsn__17ec5d1740d"
+                    color="#ffffff"
+                    name="V: Valid Retrenchment Model">
+                  For the intended source language and OS/Hardware environment(s).
+                </g>
+
+                <g
+                    id="__gsn__17ec5d2149f"
+                    color="#ffffff"
+                    repeat="true"
+                    name="AA: Correct Part by Simulation Condition">
+                  A part of the specification is correct to within only accumulated scalar value error under the retrenchment model.
+
+                  <g
+                      id="__gsn__17ec5dfb83a"
+                      color="#ffffff"
+                      name="DD: Correct Implementation of Operations and Data">
+                    In Spark Ada for the Specification Part.
+
+                    <g
+                        id="__gsn__17efa99f5e3"
+                        color="#ffffff"
+                        name="FF: Correct In Spark Ada">
+                      of the spark ada part
+
+                      <g
+                          id="__gsn__17ef97894a8"
+                          color="#ffffff"
+                          name="JJ: Correct Mirrored Implementation">
+                        The operations and data types of the specification are mirrored correctly to source code.
+                      </g>
+
+                      <g
+                          id="__gsn__17ec5de1a2f"
+                          color="#ffffff"
+                          name="KK: Acceptable Ranges">
+                        The retrenchment mapping and source code stay within allowed ranges without overflow or underflow.
+                      </g>
+
+                      <g
+                          id="__gsn__17ef97916e4"
+                          color="#ffffff"
+                          name="LL: VCs Addressed">
+                        All verification conditions generated by Spark ADA are either satisfied or otherwise satisfactorily addressed.
+                      </g>
+                    </g>
+                  </g>
+
+                  <g
+                      id="__gsn__17ec5de2b49"
+                      color="#ffffff"
+                      name="EE: Simulation to within Scalar Value Error">
+                    The specification part's definition (down to operations) simulates the implementation part to within accumulating scalar value error (under the retrenchment model)
+
+                    <g
+                        id="__gsn__17ec5e2bf71"
+                        color="#ffffff"
+                        optional="true"
+                        name="GG: Nondeterministic Simulation">
+                      by Nondeterministic Specification with sound bound specified scalar error ranges.
+                    </g>
+
+                    <g
+                        id="__gsn__17ec5e2c257"
+                        color="#ffffff"
+                        optional="true"
+                        name="HH: Deterministic Simulation">
+                      By pure refinement given retrenchment models.
+                    </g>
+
+                    <g
+                        id="__gsn__17ec60a2d66"
+                        color="#ffffff"
+                        optional="true"
+                        name="II: Declarative Simulation">
+                      BY declarative specification as simulating preconditions and postconditions.
+                    </g>
+                  </g>
+                </g>
+              </g>
+
+              <g
+                  id="__gsn__17ec5cb56d2"
+                  color="#ffffff"
+                  name="X: Properties Hold">
+                Under possible scalar value error under the retrenchment rules.
+              </g>
+            </g>
+          </g>
+
+          <g
+              id="__gsn__17ec5c09f7a"
+              color="#ffffff"
+              name="P: Directly Verified Properties">
+            On source code of M'.
+
+            <m
+                id="__gsn__17ec5c52acf"
+                color="#cdcdcd"
+                optional="true"
+                name="Microstandard: Source Code V and V">
+              A Microstandard for general V and V techniques.
+            </m>
+          </g>
+        </g>
+      </g>
+
+      <g
+          id="__gsn__17ebbf733e4"
+          color="#ffffff"
+          name="D: Innocuity">
+        Unintended behavior of M’ does not undermine qualities of interest.
+
+        <g
+            id="__gsn__17ec6468090"
+            color="#ffffff"
+            name="J: Interface Contracts Guarantee Innocuity">
+          for attributes of interest
+
+          <away-goal
+              id="__gsn__17efd482169"
+              color="#ffffff"
+              name="Contracts are Sufficient Satisfaction of System Requirements">
+            for qualities of interest. This is a claim from within the informalReverseEngineering microstsandard.
+          </away-goal>
+        </g>
+
+        <g
+            id="__gsn__17efd468341"
+            color="#ffffff"
+            name="K: System Service-Level Verification">
+          by the prime source code module's behavior.
+
+          <g
+              id="__gsn__17efdd2a15a"
+              color="#ffffff"
+              name="Q: Invoked Function Behavior Satisfies">
+            Invoking Function Requirements
+
+            <away-goal
+                id="__gsn__17efdd267aa"
+                color="#ffffff"
+                name="Intent">
+              The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+            </away-goal>
+
+            <away-goal
+                id="__gsn__17efdd1e28c"
+                color="#ffffff"
+                name="Correctness">
+              The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+            </away-goal>
+          </g>
+
+          <m
+              id="__gsn__17efdd3c6b9"
+              color="#cdcdcd"
+              optional="true"
+              name="Innocuity of Source Code via Symbolic Execution Analysis">
+            The unintended behavior of the source code of the prime software module is innocuous for the {qualities of interest} of the {systems of interest}
+          </m>
+        </g>
+      </g>
+    </g>
+  </gsn>
+</argument>

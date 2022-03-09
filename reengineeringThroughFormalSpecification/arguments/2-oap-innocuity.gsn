@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17702c3f3b5"
+        color="#ffffff"
+        name="Innocuity">
+      The prime software module's unintended behaviors do not have an {unacceptable impact} on the systems {qualities of interest} under {foreseeable conditions}.
+
+      <c
+          id="__gsn__17702c4941a"
+          color="#ffffff"
+          name="[innocuity]">
+        Any part of the implementation that is not required by the {defined intended behavior} has no {unacceptable impact} on intended services.
+      </c>
+
+      <c
+          id="__gsn__17702c4a50c"
+          name="[unacceptable impact]">
+        An impact that compromises the dependability assessment.
+      </c>
+
+      <s
+          id="__gsn__17efda855f8"
+          color="#ffffff"
+          name="Strategy">
+        By assurance through the sufficiency of interface contracts, and the optional verification at the system service-level.
+
+        <c
+            id="__gsn__17f08bdc8f3"
+            color="#ffffff"
+            name="Microstandard Context">
+          See the informalReverseEngineering microstandard.
+        </c>
+
+        <j
+            id="__gsn__17f08e0645b"
+            color="#ffffff"
+            name="Justification">
+          If one has high assurance of source code satisfyimg necessary properties for guarantees, and believes everything is correct, the argument to the left works. But likely, one iwll want to shore-up this with further direct verificaiton.
+        </j>
+
+        <g
+            id="__gsn__17f08c3c2e7"
+            color="#ffffff"
+            name="Innocuos Through Contract Fulfillment">
+          The nature of satisfied correct and complete interface contracts precludes harmful behavior for qualities of interest for defined system services.
+
+          <s
+              id="__gsn__17f08c63b68"
+              color="#ffffff"
+              name="Strategy">
+            By showing that a correct implementation of correct and complete interface contracts satisfies innocuity, and that we have already shown that those contracts are correct and complete, and satisfied by the module source code.
+
+            <g
+                id="__gsn__17f08bf8efc"
+                color="#ffffff"
+                name="Contracts Define Sufficient Innocuity">
+              Correct and complete interface contracts define requirements of intended module behavior, both prescriptively and proscriptively, that together are sufficient to satisfy qualities of interest in system services.
+
+              <s
+                  id="__gsn__17f08c09ff8"
+                  color="#ffffff"
+                  name="Strategy">
+                By arguing over the nature of interface contracts expressing complete and correct required behavior to satisfy service requirements.
+
+                <a
+                    id="__gsn__17f08c5711c"
+                    color="#ffffff"
+                    name="Assumption">
+                  Required behavior is both prescriptive and proscriptive so as to satisfy the requirements of system services for all qualities of interest.
+                </a>
+
+                <away-goal
+                    id="__gsn__17f08bda1d3"
+                    color="#ffffff"
+                    name="Interface Point Contracts are Sufficient">
+                  Contracts at {interface point}s of a {target module} in a {target system} can express complete and correct required behavior of the {target module} in the {target system}.
+                </away-goal>
+              </s>
+            </g>
+
+            <away-goal
+                id="__gsn__17f08c2a9bf"
+                color="#ffffff"
+                name="Intent">
+              The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+            </away-goal>
+
+            <away-goal
+                id="__gsn__17f08b99cde"
+                color="#ffffff"
+                name="Correctness">
+              The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+            </away-goal>
+          </s>
+        </g>
+
+        <g
+            id="__gsn__17efd5a94bd"
+            color="#ffffff"
+            optional="true"
+            name="Innocuity of Source Code">
+          The unintended behaviors of the target software module do not violate system service-level requirements.
+
+          <m
+              id="__gsn__17efd79023c"
+              color="#cdcdcd"
+              optional="true"
+              name="Innocuity of Source Code via Symbolic Execution Analysis">
+            The unintended behavior of the source code of the prime software module is innocuous for the {qualities of interest} of the {systems of interest}
+
+            <c
+                id="__gsn__17efd795f2f"
+                color="#ffffff"
+                name="Microstandard: Innocuity Through Symbolic Execution Analysis">
+              innocuityThroughSymbolicExecutionAnalysis.gsn
+            </c>
+          </m>
+
+          <m
+              id="__gsn__17f08e12f8e"
+              color="#cdcdcd"
+              optional="true"
+              name="Module">
+            System-in-the-loop Coverage Testing
+          </m>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

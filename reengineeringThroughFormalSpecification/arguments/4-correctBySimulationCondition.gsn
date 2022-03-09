@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17672973333"
+        color="#ffffff"
+        name="Correct by Simulation Condition">
+      The source code implementation of the formal operational specification part {-Part-} is {correct to within accumulated scalar value error} under the defined {retrenchment models}.
+
+      <c
+          id="__gsn__17ec1564dde"
+          color="#ffffff"
+          name="[correct to within accumulated scalar value error]">
+        Given the same input to a specified function, the output of the specified function and its source code implementation will only vary by error in the output's scalar values that accumulates from imprecision in the inherently finitely countable data types of computers.
+      </c>
+
+      <s
+          id="__gsn__17ebb9c12c3"
+          color="#ffffff"
+          name="Strategy">
+        By arguing that the the implementation is a correct implementation for the operations and data of the specification part, with the resulting implementation stepwise simulated by its specification to within scalar value error.
+
+        <j
+            id="__gsn__17ec1a5682c"
+            color="#ffffff"
+            name="Justification">
+          Specifications for which source code correctly implements formal semantics under clear retrenchment models, can be shown to step-wise simulate their source code to within accumulating scalar value error, when certain conditions are met.
+        </j>
+
+        <c
+            id="__gsn__17ec1a01c4d"
+            color="#ffffff"
+            name="[stepwise simulation]">
+          A specification is a stepwise simulation of its implementation if for any inputs to any function of the specification, the corresponding inputs to its implementation (under retrenchment mapping) results in the same operational sequences occurring in the specification and implementation on the same corresponding data values under retrenchment.
+        </c>
+
+        <c
+            id="__gsn__17ec1a05378"
+            color="#ffffff"
+            name="[stepwise simulation to within scalar value error]">
+          A specification is a stepwise simulation to within scalar value error of its implementation, if it would be a stepwise simulation of its implementation, save accumulating error in scalar values accumulating between the specification and implementation, but all operational sequences remain corresponding.
+        </c>
+
+        <c
+            id="__gsn__17ebb40bc43"
+            color="#ffffff"
+            name="Context">
+          Under the Retrenchment Rules defined for the source language part, mapping from its specification part.
+        </c>
+
+        <g
+            id="__gsn__17ef94a1c88"
+            color="#ffffff"
+            name="Correct Operation and Data Implementation">
+          Source code is written so as to correctly implement the data and operations of the formal specification under the defined retrenchment rules.
+
+          <m
+              id="__gsn__17ebba774ab"
+              color="#ffffff"
+              name="Microstandard: Practicably Correct Implementation in Spark Ada Using Mirroring with Code Proofs">
+            The implementation of data types and functions is practicably correct with respect to their specification using a set of mirroring rules.
+
+            <c
+                id="__gsn__17ebba9c42f"
+                color="#ffffff"
+                name="Module">
+              5-mirroringImplementation.gsn
+            </c>
+          </m>
+        </g>
+
+        <g
+            id="__gsn__17ec19986d0"
+            color="#ffffff"
+            name="Stepwise Simulation within Scalar Value Error Under Correct Operations and Data  Implementation">
+          Under correct operation and data implementation under the retrenchment rules, a stepwise simulation condition is maintained between the specification and the implementation.
+
+          <a
+              id="__gsn__17ebb414dc4"
+              color="#ffffff"
+              name="Assumption">
+            The implementation of expressions and functions correctly mirrors the expressions and functions of the specification. This is asserted elsewhere in this argument.
+          </a>
+
+          <s
+              id="__gsn__17dbfa62953"
+              color="#ffffff"
+              name="Strategy">
+            By arguing that stepwise simulation can hold for the formal specification part's class.
+
+            <j
+                id="__gsn__17d3440928b"
+                name="Justification">
+              We have explored two different forms of specification with different restrictions on allowed specified data types.
+            </j>
+
+            <c
+                id="__gsn__17deea061f9"
+                color="#ffffff"
+                name="Choose">
+              Of of the below sub-arguments depending on the type of limited refinement relationship between the specification and implementation intended.
+            </c>
+
+            <g
+                id="__gsn__17dbfa693fe"
+                color="#ffffff"
+                optional="true"
+                name="Stepwise Nondeterministic Simulation Will Hold for Sound Nondeterministic Specification">
+              Stepwise simulation with scalar value error will hold for the nondeterministic specification under valid retrenchment and correct operational implementation.
+
+              <c
+                  id="__gsn__17ed0feaf16"
+                  color="#ffffff"
+                  name="Use">
+                This is used when lemmas specify bound error ranges or /or are proven over complex conditionerror interval ranges in the specification between specification data values and precision error in implementation values.
+              </c>
+
+              <c
+                  id="__gsn__17ed10095bc"
+                  color="#ffffff"
+                  name="[Nondeterministic Specification]">
+                A nondeterministic specification assumes accumulating error on scalar uncountably infinite data types on a computer implementation. Lemmas account for this nondeterminism and state useful properties by assuming bounded limits to accumulating error. Proof is over nondeterministic conditional expression evaluation (branch divergence) and further requires showing that bound error accumulation error assumptions are sound for a correct implementation.
+              </c>
+
+              <c
+                  id="__gsn__17ed14d6a2d"
+                  color="#ffffff"
+                  name="Note on Typical Numeric Stability Analysis">
+                Analyzing sufficiency of numerical stability on simple loops with some accumulating error is a special case of nondeterministic specification analysis.
+              </c>
+
+              <s
+                  id="__gsn__17dbface719"
+                  color="#ffffff"
+                  name="Strategy">
+                By arguing why it will hold for a nondeterministic specification with sound value bounds.
+
+                <j
+                    id="__gsn__17dbfae1bad"
+                    color="#ffffff"
+                    name="Justification">
+                  A nondeterministic specification specifies all ideal values that are not computable on interval range value types. It also specifies constrained uncertainty of the computable equivalent of the value (under retrenchment rules) by defining a finite ranges on resulting interval bounds. Properties are proven for the specification against the interval arithmetic with constrained bounds. One then shows that the constraint bounds of the specification hold for the implementation under retrenchment rules.
+                </j>
+
+                <g
+                    id="__gsn__17d3440928c"
+                    color="#ffffff"
+                    name="Simulation by Non-Deterministic Specification with Sound Value Bounds">
+                  A proper {nondeterministic specification} with sound computed value bounds under implementable retrenchment rules is a stepwise operational simulation of a {correct operational implementation}.
+
+                  <c
+                      id="__gsn__17ed10ae18d"
+                      color="#ffffff"
+                      name="Note">
+                    This is non-deterministic simulation of the source code implementation by the specification.
+                  </c>
+
+                  <e
+                      id="__gsn__17d3440928f"
+                      color="#cdcdcd"
+                      name="Paper Proof">
+
+                    <c
+                        id="__gsn__17d34409290"
+                        name="See Appendix">
+                      See ND Paper in appendices
+                    </c>
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17dbfad6808"
+                    color="#ffffff"
+                    name="Sound Value Bounds">
+                  The defined computable value bounds of the nondeterministic specification part {-Part-} are sound (satisfied by the implementation execution) under the defined retrenchment rules.
+
+                  <e
+                      id="__gsn__17dbfb046ad"
+                      color="#ffffff"
+                      name="Retrenchment Rule Check">
+                    Confirmation that the retrenchment rules match those used in the sound bounds computation analysis/tools. See "evidence-fre.xlsx!Retrenchment Checks#Analysis Retrenchment Match".
+                  </e>
+
+                  <e
+                      id="__gsn__17dbfb0443e"
+                      color="#ffffff"
+                      name="Sound Bounds Analysis">
+                    Production of sound bounds on the ideal real values in the specification possible from valid inputs to the specification. E.G. Output from the PRECiSA tool for PVS formal specifications. See "evidence-fre.xlsx!Retrenchment Checks#Analysis Data".
+                  </e>
+
+                  <e
+                      id="__gsn__17dee9c25c6"
+                      color="#ffffff"
+                      name="Sound Bounds Confirmed">
+                    Confirmation from analysis data that the bounds of analysis satisfy those defined on specification part lemmas and bounds of all lemmas and axioms on which those lemmas rely. See "evidence-fre.xlsx!Retrenchment Checks!Sound Bounds Confirmed".
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17dbfa69916"
+                color="#ffffff"
+                optional="true"
+                name="Stepwise Deterministic Simulation by Refinement">
+              Stepwise simulation with scalar value error will hold for the simple deterministic specification under valid retrenchment and correct operational implementation.
+
+              <s
+                  id="__gsn__17dbfb3e1dd"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that all value types of the specification have values that map under range restrictions one to one with values representable in the implementation language.
+
+                <g
+                    id="__gsn__17dbfb5f4a0"
+                    color="#ffffff"
+                    name="Simulation by Deterministic Specification with Sound Value Bounds">
+                  A proper deterministic specification where all executed values on any valid input to the implementation map one-to-one to values of the specification, is stepwise operationally simulated by the specification for a {correct operational implementation}
+
+                  <e
+                      id="__gsn__17dbfb70423"
+                      color="#cdcdcd"
+                      name="Proof">
+                    Same as ND paper proof, minus consideration of nondeterministic branch simulation.
+
+                    <c
+                        id="__gsn__17dbfb70424"
+                        name="See Appendix">
+                      See ND Paper in appendices
+                    </c>
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__17dbfb4ba9d"
+                    color="#ffffff"
+                    name="One-to-One Values in Finite Ranges">
+                  All value types of the specification part {-Part-} have values that map under range restrictions one to one with values representable in the implementation language.
+
+                  <e
+                      id="__gsn__17dbfb737bc"
+                      color="#ffffff"
+                      name="Retrenchment Rules Check">
+                    Check and sign-off that al of the retrenchment rules are one-to-one and onto within the allowed finite ranges of the implementation. See "evidence-fre.xlsx#Retrenchment Checks#Data Refinement"
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__17dbfed5570"
+                color="#ffffff"
+                optional="true"
+                name="Deterministic Stepwise Simulation by a Closed Form Function Definition">
+              Stepwise simulation with scalar value error will hold for the simple deterministic specification as a single operational atomic unit under valid retrenchment and correct operational implementation.
+
+              <c
+                  id="__gsn__17ed10c2c38"
+                  color="#ffffff"
+                  name="Context">
+                A specification of a function in a closed form such that it does not contain any conditionally evaluated expressions.
+              </c>
+
+              <c
+                  id="__gsn__17ed13f2dd4"
+                  color="#ffffff"
+                  name="Concept">
+                As the specification does not declare any conditional expressions can be evaluated in a closed form.
+              </c>
+
+              <s
+                  id="__gsn__17dbfee052d"
+                  color="#ffffff"
+                  name="Strategy">
+                By showing that the specification's preconditions and postconditions can be entirely encoded as preconditions and postconditions in a Spark Ada implementation such that {refinement fitness conditions} are satisfied.
+
+                <c
+                    id="__gsn__17dbfef06b1"
+                    color="#ffffff"
+                    name="[refinement fitness conditions]">
+                  The condition that all preconditions of the specification imply all preconditions of the Spark Ada implementation, and all postconditions of the Spark Ada implementation imply the PVS specification.
+                </c>
+
+                <g
+                    id="__gsn__17dbff04952"
+                    color="#ffffff"
+                    name="Refinement">
+                  Any function that is a refinement of its specification under the specification's fully defined preconditions and postconditions is step-wise simulated by the abstraction of that specification to a single operation defined by the specification's preconditions and postconditions.
+
+                  <s
+                      id="__gsn__17f090ade95"
+                      color="#ffffff"
+                      name="Strategy">
+                    By class of defining a spec by a closed form set of postconditions on preconditions against which one can prove source code.
+
+                    <g
+                        id="__gsn__17dbffaeaf6"
+                        color="#ffffff"
+                        name="Operational Abstraction">
+                      An operational specification with complete and correct preconditions and postconditions defined is abstracted as a single operation is entirely and correctly implemented and defined by those preconditions and postconditions.
+
+                      <e
+                          id="__gsn__17dbffb6de1"
+                          color="#cdcdcd"
+                          name="Literature">
+                        Nature of Floyd-Hoare logic.
+                      </e>
+                    </g>
+
+                    <g
+                        id="__gsn__17dbffaee0e"
+                        color="#ffffff"
+                        name="Abstract Simulation">
+                      An operational refinement of a a correct and complete operational abstraction step-wise simulates any implementation implying its postconditions given its preconditions.
+
+                      <e
+                          id="__gsn__17dbffcf13d"
+                          color="#cdcdcd"
+                          name="Literature">
+                        Nature of Floyd-Hoare logic.
+                      </e>
+                    </g>
+                  </s>
+                </g>
+
+                <g
+                    id="__gsn__17dbff04b35"
+                    color="#ffffff"
+                    name="Satisfaction of Function by Implementation">
+                  The preconditions of the specification satisfy the preconditions of the Spark Ada implementation, and the implementation implies the Spark Ada functional specification.
+
+                  <s
+                      id="__gsn__17dbff1f34d"
+                      color="#ffffff"
+                      name="Strategy">
+                    By showing that the precondition and postconditions {refinement fitness conditions} hold between the specification part and their statement in Spark ADA preconditions and conditions in the source code.
+
+                    <j
+                        id="__gsn__17eb85a2213"
+                        color="#ffffff"
+                        name="Justification">
+                      We show elsewhere that all proof conditions on the SPARK Ada have been discharged.
+                    </j>
+
+                    <g
+                        id="__gsn__17dee708512"
+                        color="#ffffff"
+                        name="Successful Pre and Postcondition Encoding">
+                      The pre and postconditions of the specifiation {-Part-} are succesfully encoded in the preambles of function definitions in the SPARK language.
+
+                      <e
+                          id="__gsn__17dee708513"
+                          color="#ffffff"
+                          name="PVS to Spark Ada Condition Check">
+                        Check by peer that the pre and postcondition representation of the Spark Ada PVS specification of each function is complete and correct. See "evidence-fre.xlsx!Mirrored Functions#Proof Conditions Team Review Sign-Off".
+                      </e>
+                    </g>
+                  </s>
+                </g>
+              </s>
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__17ebbe585e4"
+        color="#ffffff"
+        name="Satisfactory Reengineered Module {-M-}">
+      The {reengineered implementation} of {-M-} situated in system set {-S-} satisfies its functional, design, and dependability requirements.
+
+      <g
+          id="__gsn__17ebbe7a911"
+          color="#ffffff"
+          name="Intent">
+        The defined intent of the prime software module {-M-} defined in {interface contract}s is correct and complete with respect to the desired behavior of the software module situated within system set {-S-} for functionality and a set of nonfunctional {attributes of interest}.
+
+        <m
+            id="__gsn__17ebbe8862c"
+            color="#ffffff"
+            name="Microstandard">
+          Informal Source Code Inferencing
+        </m>
+
+        <m
+            id="__gsn__17ebbe8a7af"
+            color="#cdcdcd"
+            optional="true"
+            name="Microstandard: Documentation Mining">
+          Written documentation for {-M-} determines a correct and complete-as-possible set of intended and observed behavior.
+        </m>
+
+        <m
+            id="__gsn__17ebbe8feff"
+            color="#cdcdcd"
+            optional="true"
+            name="Microstandard: Algorithm Analysis">
+          The module {-M-} refers to an algorithm from which are derived a correct and adequately complete set of performance requirements for software module {-M-} in system set {-S-}.
+        </m>
+
+        <m
+            id="__gsn__17ebbe9f489"
+            color="#cdcdcd"
+            name="Microstandard: Interface Definition from Existing Requirements">
+          An existing requirement set has been successfully analyzed to capture, to the extent possible, the intended behavior for the current software module {-M-} in system set {-S-} as a set of {interface contract}s.
+        </m>
+      </g>
+
+      <g
+          id="__gsn__17ebbe667c1"
+          color="#ffffff"
+          name="Correctness">
+        The prime software module {-M-} {implementation} is correct and complete with respect to the defined {interface contracts} under foreseeable operating conditions.
+
+        <g
+            id="__gsn__17ebbea9923"
+            color="#ffffff"
+            name="Properties Verified Against Formal Specification">
+          The {formal specification} {adequately verifies} a set of {invariant properties} of the software module.
+        </g>
+
+        <g
+            id="__gsn__17ebbeae8b4"
+            color="#ffffff"
+            name="Sufficiently Correct and Complete Implementation">
+          The implementation of the formal specification is sufficiently correct and complete such that the properties verified on the formal specification remain {adequately verified} on the source code implementation.
+
+          <g
+              id="__gsn__17ec6ad0c05"
+              color="#ffffff"
+              repeat="true"
+              name="Correct Part by Simulation Condition">
+            The source code implementation of the formal operational specification part {-Part-} is practicably {correct to within accumulated scalar value error}.
+
+            <g
+                id="__gsn__17ec6ad5d09"
+                color="#ffffff"
+                name="Mirroring Implementation">
+              The implementation of data types and functions is practicably correct with respect to their specification using a set of mirroring rules.
+            </g>
+          </g>
+        </g>
+
+        <m
+            id="__gsn__17ebbeb5ca8"
+            color="#cdcdcd"
+            name="Microstandard: General V&amp;V of Software">
+          Microstandard for general V&amp;V techniques for software. Includes testing, static analysis, and symbolic execution.
+        </m>
+      </g>
+
+      <g
+          id="__gsn__17ebbe801d8"
+          color="#ffffff"
+          name="Innocuity">
+        The prime software module's unintended behaviors do not negatively impact the systems that utilize the {prime software module}.
+      </g>
+    </g>
+  </gsn>
+</argument>

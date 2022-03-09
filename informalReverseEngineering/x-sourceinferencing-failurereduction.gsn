@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <properties>
+    <title>
+      <![CDATA[New Argument]]>
+    </title>
+    <author>
+      <![CDATA[]]>
+    </author>
+    <version>
+      <![CDATA[]]>
+    </version>
+    <date>
+      <![CDATA[]]>
+    </date>
+    <status>
+      <![CDATA[]]>
+    </status>
+    <prefix>
+      <![CDATA[]]>
+    </prefix>
+    <confidence>
+      <![CDATA[false]]>
+    </confidence>
+    <note>
+      <![CDATA[]]>
+    </note>
+  </properties>
+
+  <gsn>
+    <g
+        id="__gsn__1785b7058ba"
+        color="#ffffff"
+        name="Potential Failures Reduced">
+      Potential failures in producing the correct inferences from analyzing the input and output model for the module are adequately reduced.
+
+      <c
+          id="__gsn__1785b70f492"
+          color="#ffffff"
+          name="From">
+        informal-inferencing.gsn
+      </c>
+
+      <s
+          id="__gsn__1785b707540"
+          color="#ffffff"
+          name="Strategy">
+        Through hazard enumeration and mitigation
+
+        <a
+            id="__gsn__1785b707541"
+            color="#ffffff"
+            name="Assumption">
+          Hazards sufficiently identified
+        </a>
+
+        <g
+            id="__gsn__1785b707542"
+            color="#ffffff"
+            name="Hazards Mitigated">
+          Hazards that jeopardize informal reverse engineering of requirements from the software are mitigated.
+
+          <s
+              id="__gsn__1785b707543"
+              color="#ffffff"
+              name="Strategy">
+            For each identified hazard to module input/output-based reverse engineering.
+
+            <g
+                id="__gsn__1785b707544"
+                color="#ffffff"
+                name="Misleading Code Documentation">
+              The hazard of misleading code documentation has been mitigated
+
+              <c
+                  id="__gsn__1785b707545"
+                  color="#ffffff"
+                  name="Hazard">
+                Incorrect and otherwise misleading source code documentation results in misinterperetation of the original software.
+              </c>
+
+              <s
+                  id="__gsn__1785b707546"
+                  color="#ffffff"
+                  name="Strategy">
+                Through group review of interpretation of comments and comparison with source code behavior.
+
+                <g
+                    id="__gsn__1785b707547"
+                    color="#ffffff"
+                    name="Issue Reporting">
+                  Issues with software comments were reported to the group.
+
+                  <e
+                      id="__gsn__1785b707548"
+                      color="#ffffff"
+                      name="Issue Log">
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__1785b707549"
+                    color="#ffffff"
+                    name="Consensus Issue Review">
+                  Issues found in source code documentation were discussed as a group to arrive at consensus comment interpretation.
+
+                  <e
+                      id="__gsn__1785b70754a"
+                      color="#ffffff"
+                      name="Group Sign-Off">
+                    A group sign-off on comment consensus for each issue found.
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__1785b70754b"
+                color="#ffffff"
+                name="Confusing Source Code">
+              The hazard of confusing software source code (with unclear meaning) has been mitigated.
+
+              <c
+                  id="__gsn__1785b70754c"
+                  color="#ffffff"
+                  name="Hazard">
+                Control structures, variable uses, and operations of the original software module are difficult to interpret
+              </c>
+
+              <s
+                  id="__gsn__1785b70754d"
+                  color="#ffffff"
+                  name="Strategy">
+                Through derived consensus of control structure interpretation
+
+                <g
+                    id="__gsn__1785b70754e"
+                    color="#ffffff"
+                    name="Derived Consensus">
+                  Sufficient peer review of control structures has been applied to derive consensus on the action of relevant functions.
+
+                  <e
+                      id="__gsn__1785b70754f"
+                      color="#ffffff"
+                      name="Peer Review Session">
+                    Sign-off on peer review of code and consensus on behavior from discussion sessions.
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__1785b707550"
+                color="#ffffff"
+                name="Missed Side-Effects">
+              The hazard of unidentified side-effects on which other modules depend has been mitigated.
+
+              <c
+                  id="__gsn__1785b707551"
+                  color="#ffffff"
+                  name="Hazard">
+                The source code for the original module to be reengineered contain undocumented implementation side-effects relied upon by downstream or upstream modules.
+              </c>
+
+              <s
+                  id="__gsn__1785b707552"
+                  color="#ffffff"
+                  name="Strategy">
+                Through adequate dependency analysis of upstream and downstream users of the reengineered module
+
+                <g
+                    id="__gsn__1785b707553"
+                    color="#ffffff"
+                    name="Systematic Review for Externalizing">
+                  The source code was searched for all externalizing command other than function return values.
+
+                  <c
+                      id="__gsn__1785b707554"
+                      color="#ffffff"
+                      name="Externalizing Behaviors">
+                    Input and output from streams an files, system calls.
+                  </c>
+
+                  <e
+                      id="__gsn__1785b707555"
+                      color="#ffffff"
+                      name="Search Sign-Off">
+                  </e>
+
+                  <e
+                      id="__gsn__1785b707556"
+                      color="#ffffff"
+                      name="Externalizations Trace">
+                    A log of all externalizations detected and their trace to produced requirements.
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__1785b707557"
+                    color="#ffffff"
+                    name="Empirical Edge-Case Study">
+                  Empirical Edge-Case study of the software attempted to induce operating system and hardware faults and reported results as part of observed behavior.
+
+                  <c
+                      id="__gsn__1785b707558"
+                      color="#ffffff"
+                      name="Example">
+                    Page faults, etc.
+                  </c>
+
+                  <e
+                      id="__gsn__1785b707559"
+                      color="#ffffff"
+                      name="Original Code Testing for OS/Hardware Faults">
+                    The resulting test suite and results that attempted to induce hardware and os faults for nominal operations of the module under test.
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__1785b70755a"
+                color="#ffffff"
+                name="Insufficient Edge Case Understanding">
+              The hazard of insufficient understanding of edge cases in the original software is mitigated
+
+              <s
+                  id="__gsn__1785b70755b"
+                  color="#ffffff"
+                  name="Strategy">
+                The hazard is mitigated through empirical study of edge cases and requirement patterning.
+
+                <g
+                    id="__gsn__1785b70755c"
+                    color="#ffffff"
+                    name="Empirical Edge-Case Study">
+                  The behavior of the software in a variety of nominal-but-edge-case and off-nominal inputs is iteratively hypothesized, tested, and confirmed through testing of the original source code.
+
+                  <e
+                      id="__gsn__1785b70755d"
+                      color="#ffffff"
+                      name="Original Code Testing">
+                    The resulting test suite developed for the original source code, and the resulting tests passing.
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__1785b70755e"
+                    color="#ffffff"
+                    name="Requirement Patterning">
+                  The requirements gathering approach systematically accounts for domain and ranges of parameters and return types on functions, as well as required data types applied external to the module.
+
+                  <e
+                      id="__gsn__1785b70755f"
+                      color="#ffffff"
+                      name="Requirements Document">
+                    The requirements document.
+                  </e>
+
+                  <e
+                      id="__gsn__1785b707560"
+                      color="#ffffff"
+                      name="Group Procedure">
+                    The group review of the requirements includes systematic review of input and output and data types for the module interface level.
+                  </e>
+                </g>
+
+                <g
+                    id="__gsn__1785b707561"
+                    color="#ffffff"
+                    optional="true"
+                    name="Proof">
+                  Build a formal model of parts of the software in question to prove that edge cases are met as expected.
+
+                  <e
+                      id="__gsn__1785b707562"
+                      color="#ffffff"
+                      name="Formal Specifications and Proof">
+                  </e>
+
+                  <e
+                      id="__gsn__1785b707563"
+                      color="#ffffff"
+                      name="Translation">
+                    Evidence that the model matches the source code.
+                  </e>
+                </g>
+              </s>
+            </g>
+
+            <g
+                id="__gsn__1790466e188"
+                color="#ffffff"
+                name="Missed Dependencies">
+              The hazard of missing dependencies between the original module and other system elements and environment is sufficiently mitigated.
+            </g>
+          </s>
+        </g>
+      </s>
+    </g>
+  </gsn>
+</argument>
